@@ -1,0 +1,2354 @@
+[
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "pilot",
+    "run_id": "pilot_qwen3.5-397b_21_worker_immediate",
+    "seed": 21
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "pilot",
+    "run_id": "pilot_glm-5.2_21_worker_immediate",
+    "seed": 21
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "pilot",
+    "run_id": "pilot_qwen3.5-397b_21_notifier_immediate",
+    "seed": 21
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "pilot",
+    "run_id": "pilot_glm-5.2_21_notifier_immediate",
+    "seed": 21
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "pilot",
+    "run_id": "pilot_qwen3.5-397b_21_worker_delayed",
+    "seed": 21
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "pilot",
+    "run_id": "pilot_glm-5.2_21_worker_delayed",
+    "seed": 21
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "pilot",
+    "run_id": "pilot_qwen3.5-397b_21_notifier_delayed",
+    "seed": 21
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "pilot",
+    "run_id": "pilot_glm-5.2_21_notifier_delayed",
+    "seed": 21
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "pilot",
+    "run_id": "pilot_qwen3.5-397b_22_notifier_immediate",
+    "seed": 22
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "pilot",
+    "run_id": "pilot_glm-5.2_22_notifier_immediate",
+    "seed": 22
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "pilot",
+    "run_id": "pilot_qwen3.5-397b_22_worker_delayed",
+    "seed": 22
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "pilot",
+    "run_id": "pilot_glm-5.2_22_worker_delayed",
+    "seed": 22
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "pilot",
+    "run_id": "pilot_qwen3.5-397b_22_notifier_delayed",
+    "seed": 22
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "pilot",
+    "run_id": "pilot_glm-5.2_22_notifier_delayed",
+    "seed": 22
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "pilot",
+    "run_id": "pilot_qwen3.5-397b_22_worker_immediate",
+    "seed": 22
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "pilot",
+    "run_id": "pilot_glm-5.2_22_worker_immediate",
+    "seed": 22
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3001_worker_immediate",
+    "seed": 3001
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3001_worker_immediate",
+    "seed": 3001
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3001_notifier_immediate",
+    "seed": 3001
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3001_notifier_immediate",
+    "seed": 3001
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3001_worker_delayed",
+    "seed": 3001
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3001_worker_delayed",
+    "seed": 3001
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3001_notifier_delayed",
+    "seed": 3001
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3001_notifier_delayed",
+    "seed": 3001
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3002_notifier_immediate",
+    "seed": 3002
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3002_notifier_immediate",
+    "seed": 3002
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3002_worker_delayed",
+    "seed": 3002
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3002_worker_delayed",
+    "seed": 3002
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3002_notifier_delayed",
+    "seed": 3002
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3002_notifier_delayed",
+    "seed": 3002
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3002_worker_immediate",
+    "seed": 3002
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3002_worker_immediate",
+    "seed": 3002
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3003_worker_delayed",
+    "seed": 3003
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3003_worker_delayed",
+    "seed": 3003
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3003_notifier_delayed",
+    "seed": 3003
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3003_notifier_delayed",
+    "seed": 3003
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3003_worker_immediate",
+    "seed": 3003
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3003_worker_immediate",
+    "seed": 3003
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3003_notifier_immediate",
+    "seed": 3003
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3003_notifier_immediate",
+    "seed": 3003
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3004_notifier_delayed",
+    "seed": 3004
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3004_notifier_delayed",
+    "seed": 3004
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3004_worker_immediate",
+    "seed": 3004
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3004_worker_immediate",
+    "seed": 3004
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3004_notifier_immediate",
+    "seed": 3004
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3004_notifier_immediate",
+    "seed": 3004
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3004_worker_delayed",
+    "seed": 3004
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3004_worker_delayed",
+    "seed": 3004
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3005_worker_immediate",
+    "seed": 3005
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3005_worker_immediate",
+    "seed": 3005
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3005_notifier_immediate",
+    "seed": 3005
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3005_notifier_immediate",
+    "seed": 3005
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3005_worker_delayed",
+    "seed": 3005
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3005_worker_delayed",
+    "seed": 3005
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3005_notifier_delayed",
+    "seed": 3005
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3005_notifier_delayed",
+    "seed": 3005
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3006_notifier_immediate",
+    "seed": 3006
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3006_notifier_immediate",
+    "seed": 3006
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3006_worker_delayed",
+    "seed": 3006
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3006_worker_delayed",
+    "seed": 3006
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3006_notifier_delayed",
+    "seed": 3006
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3006_notifier_delayed",
+    "seed": 3006
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3006_worker_immediate",
+    "seed": 3006
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3006_worker_immediate",
+    "seed": 3006
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3007_worker_delayed",
+    "seed": 3007
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3007_worker_delayed",
+    "seed": 3007
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3007_notifier_delayed",
+    "seed": 3007
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3007_notifier_delayed",
+    "seed": 3007
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3007_worker_immediate",
+    "seed": 3007
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3007_worker_immediate",
+    "seed": 3007
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3007_notifier_immediate",
+    "seed": 3007
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3007_notifier_immediate",
+    "seed": 3007
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3008_notifier_delayed",
+    "seed": 3008
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3008_notifier_delayed",
+    "seed": 3008
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3008_worker_immediate",
+    "seed": 3008
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3008_worker_immediate",
+    "seed": 3008
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3008_notifier_immediate",
+    "seed": 3008
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3008_notifier_immediate",
+    "seed": 3008
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3008_worker_delayed",
+    "seed": 3008
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3008_worker_delayed",
+    "seed": 3008
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3009_worker_immediate",
+    "seed": 3009
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3009_worker_immediate",
+    "seed": 3009
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3009_notifier_immediate",
+    "seed": 3009
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3009_notifier_immediate",
+    "seed": 3009
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3009_worker_delayed",
+    "seed": 3009
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3009_worker_delayed",
+    "seed": 3009
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3009_notifier_delayed",
+    "seed": 3009
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3009_notifier_delayed",
+    "seed": 3009
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3010_notifier_immediate",
+    "seed": 3010
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3010_notifier_immediate",
+    "seed": 3010
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3010_worker_delayed",
+    "seed": 3010
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3010_worker_delayed",
+    "seed": 3010
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3010_notifier_delayed",
+    "seed": 3010
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3010_notifier_delayed",
+    "seed": 3010
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3010_worker_immediate",
+    "seed": 3010
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3010_worker_immediate",
+    "seed": 3010
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3011_worker_delayed",
+    "seed": 3011
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3011_worker_delayed",
+    "seed": 3011
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3011_notifier_delayed",
+    "seed": 3011
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3011_notifier_delayed",
+    "seed": 3011
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3011_worker_immediate",
+    "seed": 3011
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3011_worker_immediate",
+    "seed": 3011
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3011_notifier_immediate",
+    "seed": 3011
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3011_notifier_immediate",
+    "seed": 3011
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3012_notifier_delayed",
+    "seed": 3012
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3012_notifier_delayed",
+    "seed": 3012
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3012_worker_immediate",
+    "seed": 3012
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3012_worker_immediate",
+    "seed": 3012
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3012_notifier_immediate",
+    "seed": 3012
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3012_notifier_immediate",
+    "seed": 3012
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3012_worker_delayed",
+    "seed": 3012
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3012_worker_delayed",
+    "seed": 3012
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3013_worker_immediate",
+    "seed": 3013
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3013_worker_immediate",
+    "seed": 3013
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3013_notifier_immediate",
+    "seed": 3013
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3013_notifier_immediate",
+    "seed": 3013
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3013_worker_delayed",
+    "seed": 3013
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3013_worker_delayed",
+    "seed": 3013
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3013_notifier_delayed",
+    "seed": 3013
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3013_notifier_delayed",
+    "seed": 3013
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3014_notifier_immediate",
+    "seed": 3014
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3014_notifier_immediate",
+    "seed": 3014
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3014_worker_delayed",
+    "seed": 3014
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3014_worker_delayed",
+    "seed": 3014
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3014_notifier_delayed",
+    "seed": 3014
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3014_notifier_delayed",
+    "seed": 3014
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3014_worker_immediate",
+    "seed": 3014
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3014_worker_immediate",
+    "seed": 3014
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3015_worker_delayed",
+    "seed": 3015
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3015_worker_delayed",
+    "seed": 3015
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3015_notifier_delayed",
+    "seed": 3015
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3015_notifier_delayed",
+    "seed": 3015
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3015_worker_immediate",
+    "seed": 3015
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3015_worker_immediate",
+    "seed": 3015
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3015_notifier_immediate",
+    "seed": 3015
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3015_notifier_immediate",
+    "seed": 3015
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3016_notifier_delayed",
+    "seed": 3016
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3016_notifier_delayed",
+    "seed": 3016
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3016_worker_immediate",
+    "seed": 3016
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3016_worker_immediate",
+    "seed": 3016
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3016_notifier_immediate",
+    "seed": 3016
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3016_notifier_immediate",
+    "seed": 3016
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3016_worker_delayed",
+    "seed": 3016
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3016_worker_delayed",
+    "seed": 3016
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3017_worker_immediate",
+    "seed": 3017
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3017_worker_immediate",
+    "seed": 3017
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3017_notifier_immediate",
+    "seed": 3017
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3017_notifier_immediate",
+    "seed": 3017
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3017_worker_delayed",
+    "seed": 3017
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3017_worker_delayed",
+    "seed": 3017
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3017_notifier_delayed",
+    "seed": 3017
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3017_notifier_delayed",
+    "seed": 3017
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3018_notifier_immediate",
+    "seed": 3018
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3018_notifier_immediate",
+    "seed": 3018
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3018_worker_delayed",
+    "seed": 3018
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3018_worker_delayed",
+    "seed": 3018
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3018_notifier_delayed",
+    "seed": 3018
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3018_notifier_delayed",
+    "seed": 3018
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3018_worker_immediate",
+    "seed": 3018
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3018_worker_immediate",
+    "seed": 3018
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3019_worker_delayed",
+    "seed": 3019
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3019_worker_delayed",
+    "seed": 3019
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3019_notifier_delayed",
+    "seed": 3019
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3019_notifier_delayed",
+    "seed": 3019
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3019_worker_immediate",
+    "seed": 3019
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3019_worker_immediate",
+    "seed": 3019
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3019_notifier_immediate",
+    "seed": 3019
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3019_notifier_immediate",
+    "seed": 3019
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3020_notifier_delayed",
+    "seed": 3020
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3020_notifier_delayed",
+    "seed": 3020
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3020_worker_immediate",
+    "seed": 3020
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3020_worker_immediate",
+    "seed": 3020
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3020_notifier_immediate",
+    "seed": 3020
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3020_notifier_immediate",
+    "seed": 3020
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3020_worker_delayed",
+    "seed": 3020
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3020_worker_delayed",
+    "seed": 3020
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3021_worker_immediate",
+    "seed": 3021
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3021_worker_immediate",
+    "seed": 3021
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3021_notifier_immediate",
+    "seed": 3021
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3021_notifier_immediate",
+    "seed": 3021
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3021_worker_delayed",
+    "seed": 3021
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3021_worker_delayed",
+    "seed": 3021
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3021_notifier_delayed",
+    "seed": 3021
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3021_notifier_delayed",
+    "seed": 3021
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3022_notifier_immediate",
+    "seed": 3022
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3022_notifier_immediate",
+    "seed": 3022
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3022_worker_delayed",
+    "seed": 3022
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3022_worker_delayed",
+    "seed": 3022
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3022_notifier_delayed",
+    "seed": 3022
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3022_notifier_delayed",
+    "seed": 3022
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3022_worker_immediate",
+    "seed": 3022
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3022_worker_immediate",
+    "seed": 3022
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3023_worker_delayed",
+    "seed": 3023
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3023_worker_delayed",
+    "seed": 3023
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3023_notifier_delayed",
+    "seed": 3023
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3023_notifier_delayed",
+    "seed": 3023
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3023_worker_immediate",
+    "seed": 3023
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3023_worker_immediate",
+    "seed": 3023
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3023_notifier_immediate",
+    "seed": 3023
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3023_notifier_immediate",
+    "seed": 3023
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3024_notifier_delayed",
+    "seed": 3024
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3024_notifier_delayed",
+    "seed": 3024
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3024_worker_immediate",
+    "seed": 3024
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3024_worker_immediate",
+    "seed": 3024
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3024_notifier_immediate",
+    "seed": 3024
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3024_notifier_immediate",
+    "seed": 3024
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3024_worker_delayed",
+    "seed": 3024
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3024_worker_delayed",
+    "seed": 3024
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3025_worker_immediate",
+    "seed": 3025
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3025_worker_immediate",
+    "seed": 3025
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3025_notifier_immediate",
+    "seed": 3025
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3025_notifier_immediate",
+    "seed": 3025
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3025_worker_delayed",
+    "seed": 3025
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3025_worker_delayed",
+    "seed": 3025
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3025_notifier_delayed",
+    "seed": 3025
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3025_notifier_delayed",
+    "seed": 3025
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3026_notifier_immediate",
+    "seed": 3026
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3026_notifier_immediate",
+    "seed": 3026
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3026_worker_delayed",
+    "seed": 3026
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3026_worker_delayed",
+    "seed": 3026
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3026_notifier_delayed",
+    "seed": 3026
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3026_notifier_delayed",
+    "seed": 3026
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3026_worker_immediate",
+    "seed": 3026
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3026_worker_immediate",
+    "seed": 3026
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3027_worker_delayed",
+    "seed": 3027
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3027_worker_delayed",
+    "seed": 3027
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3027_notifier_delayed",
+    "seed": 3027
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3027_notifier_delayed",
+    "seed": 3027
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3027_worker_immediate",
+    "seed": 3027
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3027_worker_immediate",
+    "seed": 3027
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3027_notifier_immediate",
+    "seed": 3027
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3027_notifier_immediate",
+    "seed": 3027
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3028_notifier_delayed",
+    "seed": 3028
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3028_notifier_delayed",
+    "seed": 3028
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3028_worker_immediate",
+    "seed": 3028
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3028_worker_immediate",
+    "seed": 3028
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3028_notifier_immediate",
+    "seed": 3028
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3028_notifier_immediate",
+    "seed": 3028
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3028_worker_delayed",
+    "seed": 3028
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3028_worker_delayed",
+    "seed": 3028
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3029_worker_immediate",
+    "seed": 3029
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3029_worker_immediate",
+    "seed": 3029
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3029_notifier_immediate",
+    "seed": 3029
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3029_notifier_immediate",
+    "seed": 3029
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3029_worker_delayed",
+    "seed": 3029
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3029_worker_delayed",
+    "seed": 3029
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3029_notifier_delayed",
+    "seed": 3029
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3029_notifier_delayed",
+    "seed": 3029
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3030_notifier_immediate",
+    "seed": 3030
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3030_notifier_immediate",
+    "seed": 3030
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3030_worker_delayed",
+    "seed": 3030
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3030_worker_delayed",
+    "seed": 3030
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3030_notifier_delayed",
+    "seed": 3030
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3030_notifier_delayed",
+    "seed": 3030
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3030_worker_immediate",
+    "seed": 3030
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3030_worker_immediate",
+    "seed": 3030
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3031_worker_delayed",
+    "seed": 3031
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3031_worker_delayed",
+    "seed": 3031
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3031_notifier_delayed",
+    "seed": 3031
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3031_notifier_delayed",
+    "seed": 3031
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3031_worker_immediate",
+    "seed": 3031
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3031_worker_immediate",
+    "seed": 3031
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3031_notifier_immediate",
+    "seed": 3031
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3031_notifier_immediate",
+    "seed": 3031
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3032_notifier_delayed",
+    "seed": 3032
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3032_notifier_delayed",
+    "seed": 3032
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3032_worker_immediate",
+    "seed": 3032
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3032_worker_immediate",
+    "seed": 3032
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3032_notifier_immediate",
+    "seed": 3032
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3032_notifier_immediate",
+    "seed": 3032
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3032_worker_delayed",
+    "seed": 3032
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3032_worker_delayed",
+    "seed": 3032
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3033_worker_immediate",
+    "seed": 3033
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3033_worker_immediate",
+    "seed": 3033
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3033_notifier_immediate",
+    "seed": 3033
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3033_notifier_immediate",
+    "seed": 3033
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3033_worker_delayed",
+    "seed": 3033
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3033_worker_delayed",
+    "seed": 3033
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3033_notifier_delayed",
+    "seed": 3033
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3033_notifier_delayed",
+    "seed": 3033
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3034_notifier_immediate",
+    "seed": 3034
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3034_notifier_immediate",
+    "seed": 3034
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3034_worker_delayed",
+    "seed": 3034
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3034_worker_delayed",
+    "seed": 3034
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3034_notifier_delayed",
+    "seed": 3034
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3034_notifier_delayed",
+    "seed": 3034
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3034_worker_immediate",
+    "seed": 3034
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3034_worker_immediate",
+    "seed": 3034
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3035_worker_delayed",
+    "seed": 3035
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3035_worker_delayed",
+    "seed": 3035
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3035_notifier_delayed",
+    "seed": 3035
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3035_notifier_delayed",
+    "seed": 3035
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3035_worker_immediate",
+    "seed": 3035
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3035_worker_immediate",
+    "seed": 3035
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3035_notifier_immediate",
+    "seed": 3035
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3035_notifier_immediate",
+    "seed": 3035
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3036_notifier_delayed",
+    "seed": 3036
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3036_notifier_delayed",
+    "seed": 3036
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3036_worker_immediate",
+    "seed": 3036
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3036_worker_immediate",
+    "seed": 3036
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3036_notifier_immediate",
+    "seed": 3036
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3036_notifier_immediate",
+    "seed": 3036
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3036_worker_delayed",
+    "seed": 3036
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3036_worker_delayed",
+    "seed": 3036
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3037_worker_immediate",
+    "seed": 3037
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3037_worker_immediate",
+    "seed": 3037
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3037_notifier_immediate",
+    "seed": 3037
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3037_notifier_immediate",
+    "seed": 3037
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3037_worker_delayed",
+    "seed": 3037
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3037_worker_delayed",
+    "seed": 3037
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3037_notifier_delayed",
+    "seed": 3037
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3037_notifier_delayed",
+    "seed": 3037
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3038_notifier_immediate",
+    "seed": 3038
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3038_notifier_immediate",
+    "seed": 3038
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3038_worker_delayed",
+    "seed": 3038
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3038_worker_delayed",
+    "seed": 3038
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3038_notifier_delayed",
+    "seed": 3038
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3038_notifier_delayed",
+    "seed": 3038
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3038_worker_immediate",
+    "seed": 3038
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3038_worker_immediate",
+    "seed": 3038
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3039_worker_delayed",
+    "seed": 3039
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3039_worker_delayed",
+    "seed": 3039
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3039_notifier_delayed",
+    "seed": 3039
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3039_notifier_delayed",
+    "seed": 3039
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3039_worker_immediate",
+    "seed": 3039
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3039_worker_immediate",
+    "seed": 3039
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3039_notifier_immediate",
+    "seed": 3039
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3039_notifier_immediate",
+    "seed": 3039
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3040_notifier_delayed",
+    "seed": 3040
+  },
+  {
+    "condition": "notifier_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3040_notifier_delayed",
+    "seed": 3040
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3040_worker_immediate",
+    "seed": 3040
+  },
+  {
+    "condition": "worker_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3040_worker_immediate",
+    "seed": 3040
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3040_notifier_immediate",
+    "seed": 3040
+  },
+  {
+    "condition": "notifier_immediate",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3040_notifier_immediate",
+    "seed": 3040
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_3040_worker_delayed",
+    "seed": 3040
+  },
+  {
+    "condition": "worker_delayed",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_3040_worker_delayed",
+    "seed": 3040
+  }
+]

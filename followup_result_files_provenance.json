@@ -1,0 +1,24 @@
+{
+  "source_sha256": "27fe8e15876697ddc18eab42977e86ec6f84f986ee0b5ea12c7c8e76a77d64bc",
+  "mode": "live",
+  "paid_calls": 0,
+  "matplotlib_version": "3.11.2",
+  "inputs": {
+    "status.json": "7c9f95d9baf1be95d998fe0be2eb45a6393eb12f1e4b1e4d4dfc7e4f505a1908",
+    "audit.json": "dff524a2c9d174d3368bf35f99a093afb446758605ffc51d18b5aafaa6c7dfe6",
+    "analysis.json": "7d9ea1b36cab683d78e5dc9698d5893603c14320401617ebe24f9b3e49c21e0e",
+    "results.json": "28ca4fb250b2ef911d141249f987b82fb25ac23437bb5af2ddc470e68a442769"
+  },
+  "outputs": {
+    "condition_means.csv": "4a699ddda60d77f5211aa4f408ebbd8071c9e2d33d9115164f101fd504c943ce",
+    "paired_effects.csv": "2a5392b1fff2829d74ad8566ab6d29c8687a80fefd85d9a821b24fd3a779cbdf",
+    "seed_contrasts.csv": "e198c36bace208526e2d2658c3710c90386b8777e33f96ad46b5782f805ec7d0",
+    "main_runs.csv": "420aa53b2522c251cd706a4afea7928721dbdf47b7ac207949a458cea6222037",
+    "block_means.csv": "590c762306184e42e9444c938e1694fcb533c23d934be30ddb1464ed4002ef2f",
+    "claim_tests.json": "79a518588ed122b8ce3bfa2081e1567b0e33d021c5ab57ccb3a7d4104345d795",
+    "followup_effects.svg": "7ff4c71cf93e8f3e417ae8a2527fecacc27ee8cbbf304ed308f5ff0a9036799b",
+    "followup_effects.png": "3d74a4e68b728218631cc8c724b997a87f5be2466b2edc8077cba3ba932c6755",
+    "followup_blocks.svg": "c4eecef3869f733a4169cb72f84a348d35dd8497c7551229f1a57eb55058ee11",
+    "followup_blocks.png": "6af8c05000a1c193c66f8705a3fe6847b6e20514f1906da61c18e194a30c9b6f"
+  }
+}

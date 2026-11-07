@@ -1,0 +1,143 @@
+{
+  "active_episode_limit": 8,
+  "actual_billing_verified": false,
+  "audit_release_before_choice": 19,
+  "condition_order": "four-position rotation, ten main seeds per position",
+  "conditions": [
+    "worker_immediate",
+    "notifier_immediate",
+    "worker_delayed",
+    "notifier_delayed"
+  ],
+  "deployment_revision": "not_pinned_or_verified",
+  "inference_concurrency": 4,
+  "initial_requests_per_second": 4,
+  "input_cap": 6000,
+  "libraries": {
+    "certifi": "2026.10.23",
+    "jinja2": "3.1.6",
+    "tokenizers": "0.23.3",
+    "transformers": "5.22.2"
+  },
+  "limit_adaption_credits": 100,
+  "main_seeds": [
+    3001,
+    3002,
+    3003,
+    3004,
+    3005,
+    3006,
+    3007,
+    3008,
+    3009,
+    3010,
+    3011,
+    3012,
+    3013,
+    3014,
+    3015,
+    3016,
+    3017,
+    3018,
+    3019,
+    3020,
+    3021,
+    3022,
+    3023,
+    3024,
+    3025,
+    3026,
+    3027,
+    3028,
+    3029,
+    3030,
+    3031,
+    3032,
+    3033,
+    3034,
+    3035,
+    3036,
+    3037,
+    3038,
+    3039,
+    3040
+  ],
+  "minimum_cooldown_seconds": 60,
+  "mode": "live",
+  "model_prices": {
+    "glm-5.2": {
+      "input": "1.40",
+      "output": "4.40"
+    },
+    "qwen3.5-397b": {
+      "input": "0.55",
+      "output": "3.50"
+    }
+  },
+  "models": [
+    "qwen3.5-397b",
+    "glm-5.2"
+  ],
+  "new_limit_adaption_credits": 70,
+  "openrouter_calls": 0,
+  "openrouter_spend_cad": 0,
+  "output_cap": 512,
+  "pilot_seeds": [
+    21,
+    22
+  ],
+  "pricing_source": "https://docs.adaptionlabs.ai/inference-stacks/models/",
+  "primary_rounds": 18,
+  "prior_audit_hash": "631531d361a4e37054b959ed867719faad22a8491868d6c6f0a62f7593c3f27f",
+  "prior_carry_hash": "5f9c869ed7bf40220a637ee52b1b2641617c6e4fa94c998f85aadb5519f19b81",
+  "prior_results_excluded_from_new_analysis": true,
+  "probe_seed": 20,
+  "protocol": "followup-1.0",
+  "rate_limit_rates_per_second": [
+    4,
+    2,
+    1
+  ],
+  "reasoning_request": {
+    "effort": "none"
+  },
+  "reasoning_setting": "requested_none_reported_zero_required",
+  "recovery_rounds": 6,
+  "reported_available_adaption_credits": 4500,
+  "source_hashes": {
+    "FOLLOWUP_PLAN.md": "e6e1a00956b90aa69f91abe5b5aaa5fc2c88933326f611de24fd95ddd44f2d66",
+    "FOLLOWUP_PROTOCOL.md": "d001be8bb1a886a0027dda6d27d8fe01f51cbb1bd60c1f6db5b1e7ac6b5b002f",
+    "followup_study/__init__.py": "256f304be00cf940dbd6d9f0ce336113b3eb2389cd53457dfc574b14ae10e9aa",
+    "followup_study/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "followup_study/analysis.py": "f40abdb3a39883ab7fe5dfb18f0900f8b141989443c2d03b880fa3972b3a104d",
+    "followup_study/authorization.py": "c7b052ec974d9cf2d967ef5591ecc5067c6b3b3882f17d3da75e4258e31e057c",
+    "followup_study/cli.py": "2aabe048bda2df2a654fb5380b90943a52f306eb546f995ab828b911f2fb0246",
+    "followup_study/common.py": "b70058bceb76acd401703ad4a0c945894b3a9452d6d16aa6d8e7a142ec015078",
+    "followup_study/environment.py": "880a5dab7c4853f5be7869aaeee24966f781ecccf67d35faaa594c960a125947",
+    "followup_study/ledger.py": "9b5a8e77f05bb9cd9a5c1aa2547ba7906cbf281696dd4faa4f3bbb2488fd6516",
+    "followup_study/pacing.py": "e7f3227dc293175bf683f4d019fd88dc311f5e0522b4a8d1e8e3371d13fcb240",
+    "followup_study/reporting.py": "2fb89ddda27d5d69e7fe2ee68b1723075235bbf39cd88187411b6fdb2a180592",
+    "followup_study/runner.py": "4f4abc56c8546a301344222ae48a5aca47579d52bb5a778b36b7855a49ea26fa",
+    "followup_study/tokenization.py": "ebfd88bfd38275e4cd559a492161c1d76858f7319ece4ebad271cbf67c9d261a",
+    "followup_study/transport.py": "6d12e2b5f1151ff1c540fac121c1d8348daa1724dc9de835c0d6bba309d0df8e",
+    "key_prompt.py": "0a3fbab0a9aeb321e6fa182315930c6de3af7860da51392b16458d6da8d5c240",
+    "requirements.txt": "70e42ea48ae4efb56071fb7090d4513ab7af8f4a2969f913b94617eb87aedd0a",
+    "tests_followup/test_analysis.py": "7bc5c9ac0bdd9a4fb268448c743ec9766825b50d4417454163b0bd9d49a27592",
+    "tests_followup/test_authorization.py": "1af35620976745424724d12a58b7254b75d7f6a396834f556eb6138437df2aae",
+    "tests_followup/test_cli.py": "181c84474ecdc1efe59de2ee47fee5bd7fd0b691c63a9efd25bf15b3507bbae3",
+    "tests_followup/test_environment.py": "f577cc35e0aa35460e9c538dffee623af4710dcf4a5cce26a60cb811ca5ede1b",
+    "tests_followup/test_ledger.py": "79078216bca3a86f09d088b79e03a0eac65df25de57a5562d18a902b3e65054a",
+    "tests_followup/test_pacing.py": "cb617d5bc84eba32f4680cc683e1228b680e5039c7a44fd8cb116d84697dcf42",
+    "tests_followup/test_reporting.py": "92f7f5c35fbc0acb18e533f9ee90046eceb7a2bd39f5990e9ef62c66da91ec91",
+    "tests_followup/test_runner.py": "1b6a5d155ff6a44f513228ca93fc57e9391ab91bfda0e35ba1a66a206b67f6fc",
+    "tests_followup/test_tokenization.py": "49ffd2b540479ae0c25dd5a18f333bf1e833562883d9b3b44ec67dd5deb225c2",
+    "tests_followup/test_transport.py": "6e18559d634ab2264a6444530748d5d143d1b17d074a9d386b96ce05ff090818"
+  },
+  "started_utc": "2026-11-07T22:43:34.682376+00:00",
+  "stop_after_rate_limit_cycles": 3,
+  "temperature": 0.7,
+  "token_counters": {
+    "glm-5.2": "native_local:5c184e8aca6f8eb198219d90226b1f151171fd46359bf3c477a4d2dcdff57782",
+    "qwen3.5-397b": "native_local:02d39f3ea28cc235daa1bd9710db2321610a3ecfa7c7ece65afe7fa94b037aae"
+  }
+}

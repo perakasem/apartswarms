@@ -1,0 +1,12 @@
+{
+  "cooldown_remaining_seconds": 0.0,
+  "dispatches": 8072,
+  "elapsed_seconds": 2073.670549250004,
+  "enabled": true,
+  "generation": 0,
+  "log_hash": "114134b8fa6490e6376270d8a67bc08c09c414e4bb36b4346f6b3018317bcf65",
+  "next_dispatch_remaining_seconds": 0.24999475000367966,
+  "rate_limit_cycles": 0,
+  "rate_per_second": 4.0,
+  "stopped": false
+}

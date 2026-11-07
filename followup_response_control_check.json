@@ -1,0 +1,26 @@
+{
+  "all_reported_reasoning_tokens_zero": true,
+  "all_requested_reasoning_none_confirmed": true,
+  "models": {
+    "glm-5.2": {
+      "input_tokens": 7425720,
+      "maximum_input_tokens": 2812,
+      "maximum_output_tokens": 330,
+      "median_elapsed_seconds": 0.4741003129965975,
+      "output_tokens": 48122,
+      "responses": 4036
+    },
+    "qwen3.5-397b": {
+      "input_tokens": 8022243,
+      "maximum_input_tokens": 3048,
+      "maximum_output_tokens": 13,
+      "median_elapsed_seconds": 0.4800110415017116,
+      "output_tokens": 49301,
+      "responses": 4036
+    }
+  },
+  "paid_calls": 0,
+  "time_utc": "2026-11-07T23:18:54.961994+00:00",
+  "total_successful_responses": 8072,
+  "unique_response_ids": 8072
+}

@@ -1,3 +1,19 @@
+# Follow-up: repeated safety notices and audit timing
+
+The follow-up study is complete. Read the [follow-up summary](FOLLOWUP_RESULTS_SUMMARY.md), [full report](followup_REPORT.md), [fixed protocol](FOLLOWUP_PROTOCOL.md), and [audit record](followup_audit.json).
+
+The follow-up uses a separate sample with four conditions and 40 seeds per model. Its main window contains choices 1–18. Choices 19–24 provide a descriptive recovery check.
+
+![Follow-up paired effects](followup_effects.png)
+
+[Effect table](followup_paired_effects.csv) · [Condition means](followup_condition_means.csv) · [Selection across blocks](followup_blocks.png) · [Full follow-up archive](followup-full-results.zip)
+
+The earlier study records remain in [full-results.zip](full-results.zip). The new archive also includes their cost records.
+
+Extract the follow-up ZIP into a new folder. Use Python 3.13, the tested version, and run `python3 reproduce_followup.py`. This checks the saved sources, prompts, logs, scores, analysis, cost records, and authorization. It makes no model calls and uses no network connection. Provider account deductions remain unverified.
+
+---
+
 # Worker selection after a correct objection
 
 Read the initial study as a paper: [plain-language research report](INITIAL_STUDY_PAPER.md) or [six-page PDF with chart](INITIAL_STUDY_PAPER.pdf). It explains the task, controlled change, results, and limits.
