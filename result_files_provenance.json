@@ -1,0 +1,17 @@
+{
+  "source_sha256": "ee147339b29affe2e2b1c2df027b0d3cd145e2746cef1f1ec1714e36775f6ba4",
+  "inputs": {
+    "status.json": "fa22b3fe10068e74fd080e077d3cef100bbe4a5b729ccc2e99c31e503b6b3007",
+    "audit.json": "07e45f523f5c518ba8341112498387d9df01b3d81fe480abf22f72e55a2221b2",
+    "analysis.json": "5d8db4a897de562a29fb7e2d9851b37491e042e497c7794aca4b32cf5869fe82",
+    "results.json": "d02459966e9a4ef38bd154e8815c6b3221c7df7b1e8fec7de75135c53662f574"
+  },
+  "outputs": [
+    "condition_means.csv",
+    "paired_effects.csv",
+    "paired_effects.svg",
+    "paired_effects.png"
+  ],
+  "matplotlib_version": "3.11.2",
+  "paid_calls": 0
+}

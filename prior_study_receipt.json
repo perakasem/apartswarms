@@ -1,0 +1,21 @@
+{
+  "actual_billing_verified": false,
+  "attempt_records_sha256": "acb1599429b49ee905e4a467d3100fd953f84b04caa7f422f68f204574ea3038",
+  "attempts": 940,
+  "committed_credits": "10.55734950",
+  "currency": "adaption_credits",
+  "estimated_charged_credits": "0.94606950",
+  "frozen_reason": "An episode failed before all planned turns completed",
+  "ledger_hash": "2e2f6bb6c0f02593af82f1c143d3f4a50262247e5d0b9e73140ff503a5e634f2",
+  "limit_credits": "100",
+  "pending_credits": "0",
+  "prior_frozen": true,
+  "prior_status": "incomplete",
+  "root": "/Users/Administrator/Documents/Codex/2026-11-06/based-on-track-2-linked-here-2/outputs/selection_experiment/results/live",
+  "schema": "paced-prior-carry-1",
+  "status_file_sha256": "3df5c0275dffd57910dbc6347dab8c3a35dc62f2912d2beb61f4a590bf935785",
+  "status_hash": "04714171ea082a4599db5db45e6f04809f9ddc911d2be6208e8bd4ca653e6975",
+  "study_file_sha256": "23c5dd3987209f39b3d84a75be0841c32decf1892403a04c7ac6555228aae6f0",
+  "study_hash": "245064707d63aa2657d5cde39ab9bfbfa7a0326888ec01391bebb63e69eadde7",
+  "unknown_credits": "9.611280"
+}

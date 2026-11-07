@@ -1,0 +1,129 @@
+{
+  "active_episode_limit": 8,
+  "actual_billing_verified": false,
+  "deployment_revision": "not_pinned_or_verified",
+  "inference_concurrency": 4,
+  "initial_requests_per_second": 4,
+  "input_cap": 6000,
+  "libraries": {
+    "certifi": "2026.10.23",
+    "jinja2": "3.1.6",
+    "tokenizers": "0.23.3",
+    "transformers": "5.22.2"
+  },
+  "limit_adaption_credits": 100,
+  "main_seeds": [
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026,
+    2027,
+    2028,
+    2029,
+    2030,
+    2031,
+    2032,
+    2033,
+    2034,
+    2035,
+    2036,
+    2037,
+    2038,
+    2039,
+    2040
+  ],
+  "minimum_cooldown_seconds": 60,
+  "mode": "live",
+  "model_prices": {
+    "glm-5.2": {
+      "input": "1.40",
+      "output": "4.40"
+    },
+    "qwen3.5-397b": {
+      "input": "0.55",
+      "output": "3.50"
+    }
+  },
+  "models": [
+    "qwen3.5-397b",
+    "glm-5.2"
+  ],
+  "openrouter_calls": 0,
+  "openrouter_spend_cad": 0,
+  "output_cap": 512,
+  "pilot_seeds": [
+    11,
+    12
+  ],
+  "pricing_source": "https://docs.adaptionlabs.ai/inference-stacks/models/",
+  "prior_audit_hash": "5b67d3766bdee1264caec17df8d689a88c1286153315e17e4f21a968e9350a31",
+  "prior_carry_hash": "828b395735af6a36a9fb2e2c7a077deb32b1a191077869d5269804dbbc1ccb8d",
+  "prior_main_batch_excluded": true,
+  "probe_seed": 10,
+  "protocol": "paced-1.0",
+  "rate_limit_rates_per_second": [
+    4,
+    2,
+    1
+  ],
+  "reasoning_request": {
+    "effort": "none"
+  },
+  "reasoning_setting": "requested_none_reported_zero_required",
+  "reported_available_adaption_credits": 4500,
+  "source_hashes": {
+    "PACED_PROTOCOL.md": "4fee3f82365bdf12d9c404c7cfc7cbfb04bfb649f30180f1872f4d17b1317bd9",
+    "key_prompt.py": "0a3fbab0a9aeb321e6fa182315930c6de3af7860da51392b16458d6da8d5c240",
+    "paced_study/__init__.py": "256f304be00cf940dbd6d9f0ce336113b3eb2389cd53457dfc574b14ae10e9aa",
+    "paced_study/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "paced_study/analysis.py": "2d864dddb8eec37d4d852c538e038727bf3fd7171f08395dfd9658b9eea4216d",
+    "paced_study/cli.py": "9740c12ac417978e52db315c2782318fd881e371107cca24c719884ca8077c51",
+    "paced_study/common.py": "b70058bceb76acd401703ad4a0c945894b3a9452d6d16aa6d8e7a142ec015078",
+    "paced_study/environment.py": "be889f99342bc5da11ccec347fb648606c4f601590957aef850d0050a26ce497",
+    "paced_study/ledger.py": "b57830fc27941f57d07d59d24ea06cd7a1db9bdfb16b04b93d6ad59efc55d269",
+    "paced_study/pacing.py": "e7f3227dc293175bf683f4d019fd88dc311f5e0522b4a8d1e8e3371d13fcb240",
+    "paced_study/reporting.py": "a472ed6e1a82a3e41c2c66bf31aa21877c4422973b1d42063be08e535f0a1c76",
+    "paced_study/runner.py": "e95a8e569c5e706e719f84b10880501dc87698a8b9be2648bef686fad41feedf",
+    "paced_study/tokenization.py": "17a85b3de7d20765cd3e89a536a458b56a3005835387ac6e4a0d93385c36c893",
+    "paced_study/transport.py": "6d12e2b5f1151ff1c540fac121c1d8348daa1724dc9de835c0d6bba309d0df8e",
+    "requirements.txt": "70e42ea48ae4efb56071fb7090d4513ab7af8f4a2969f913b94617eb87aedd0a",
+    "tests_paced/test_analysis.py": "9200e01c9620321454e38779ca6c9c9b1a160b1aa8dadcc697c4a96febf23578",
+    "tests_paced/test_cli.py": "387b13068cc8ae0db9b49f233014471513963fdab0fd845585cc52d0a3b97b98",
+    "tests_paced/test_environment.py": "2c9525d5cebdd394c8abfb6c63218b788cad6d9055dd5b7876dbdd65652de263",
+    "tests_paced/test_ledger.py": "191eb6a5b400840eaeec40dfd2987a63c582cfc7523f81869091dce36ad9d5eb",
+    "tests_paced/test_pacing.py": "24532890431632279deb32c9dfdd1b1fe5d8d4351a3cdc130b275270f8c3adf0",
+    "tests_paced/test_reporting.py": "69a4ccd7ab29f9178c39a69f480121f5a4f0cd9dbe127561af1c57a639ca8900",
+    "tests_paced/test_runner.py": "b872ab67641f41e2099b90c5b61de638cf503dc3b242931f63771250628404ee",
+    "tests_paced/test_tokenization.py": "e10c09dc200ab8119024bea0dd735cf9e06eb3bddc0bfec0dfac1f3c4d392768",
+    "tests_paced/test_transport.py": "78f80d13fdb250e86cd5deef6a25aa13bd6e67441596a89ec9e81f8aab9d6492"
+  },
+  "started_utc": "2026-11-07T21:53:41.197481+00:00",
+  "stop_after_rate_limit_cycles": 3,
+  "temperature": 0.7,
+  "token_counters": {
+    "glm-5.2": "native_local:0673d489423307ccd9906f64c7d2556e86c29d905d3fc0798c5cbb678a8e652a",
+    "qwen3.5-397b": "native_local:c9690adf7750e4fe79cb238a82879d430509cf854778d9142a6a412f26b3cf10"
+  }
+}

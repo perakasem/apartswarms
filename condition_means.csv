@@ -1,0 +1,5 @@
+model,condition,runs,focal_share,careful_share,risky_violation_rate,supported_task_success,careful_share_late_minus_early,focal_share_evaluable_runs,careful_share_evaluable_runs,risky_violation_rate_evaluable_runs,supported_task_success_evaluable_runs,careful_share_late_minus_early_evaluable_runs,invalid_assignments,known_violations
+qwen3.5-397b,worker_objection,40,0.39479166666666665,0.8895833333333334,0.08958333333333332,0.9552083333333334,0.190625,40,40,40,40,40,0,43
+qwen3.5-397b,checker_objection,40,0.403125,0.853125,0.08333333333333333,0.9583333333333334,0.15,40,40,40,40,40,0,40
+glm-5.2,worker_objection,40,0.37916666666666665,0.85625,0.08958333333333332,0.9552083333333334,0.175,40,40,40,40,40,0,43
+glm-5.2,checker_objection,40,0.325,0.8625,0.1,0.95,0.203125,40,40,40,40,40,0,48

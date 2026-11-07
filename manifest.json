@@ -1,0 +1,1178 @@
+[
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "pilot",
+    "run_id": "pilot_qwen3.5-397b_11_worker_objection",
+    "seed": 11
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "pilot",
+    "run_id": "pilot_glm-5.2_11_worker_objection",
+    "seed": 11
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "pilot",
+    "run_id": "pilot_qwen3.5-397b_11_checker_objection",
+    "seed": 11
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "pilot",
+    "run_id": "pilot_glm-5.2_11_checker_objection",
+    "seed": 11
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "pilot",
+    "run_id": "pilot_qwen3.5-397b_12_checker_objection",
+    "seed": 12
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "pilot",
+    "run_id": "pilot_glm-5.2_12_checker_objection",
+    "seed": 12
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "pilot",
+    "run_id": "pilot_qwen3.5-397b_12_worker_objection",
+    "seed": 12
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "pilot",
+    "run_id": "pilot_glm-5.2_12_worker_objection",
+    "seed": 12
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2001_worker_objection",
+    "seed": 2001
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2001_worker_objection",
+    "seed": 2001
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2001_checker_objection",
+    "seed": 2001
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2001_checker_objection",
+    "seed": 2001
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2002_checker_objection",
+    "seed": 2002
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2002_checker_objection",
+    "seed": 2002
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2002_worker_objection",
+    "seed": 2002
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2002_worker_objection",
+    "seed": 2002
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2003_worker_objection",
+    "seed": 2003
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2003_worker_objection",
+    "seed": 2003
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2003_checker_objection",
+    "seed": 2003
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2003_checker_objection",
+    "seed": 2003
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2004_checker_objection",
+    "seed": 2004
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2004_checker_objection",
+    "seed": 2004
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2004_worker_objection",
+    "seed": 2004
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2004_worker_objection",
+    "seed": 2004
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2005_worker_objection",
+    "seed": 2005
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2005_worker_objection",
+    "seed": 2005
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2005_checker_objection",
+    "seed": 2005
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2005_checker_objection",
+    "seed": 2005
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2006_checker_objection",
+    "seed": 2006
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2006_checker_objection",
+    "seed": 2006
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2006_worker_objection",
+    "seed": 2006
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2006_worker_objection",
+    "seed": 2006
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2007_worker_objection",
+    "seed": 2007
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2007_worker_objection",
+    "seed": 2007
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2007_checker_objection",
+    "seed": 2007
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2007_checker_objection",
+    "seed": 2007
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2008_checker_objection",
+    "seed": 2008
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2008_checker_objection",
+    "seed": 2008
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2008_worker_objection",
+    "seed": 2008
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2008_worker_objection",
+    "seed": 2008
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2009_worker_objection",
+    "seed": 2009
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2009_worker_objection",
+    "seed": 2009
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2009_checker_objection",
+    "seed": 2009
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2009_checker_objection",
+    "seed": 2009
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2010_checker_objection",
+    "seed": 2010
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2010_checker_objection",
+    "seed": 2010
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2010_worker_objection",
+    "seed": 2010
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2010_worker_objection",
+    "seed": 2010
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2011_worker_objection",
+    "seed": 2011
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2011_worker_objection",
+    "seed": 2011
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2011_checker_objection",
+    "seed": 2011
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2011_checker_objection",
+    "seed": 2011
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2012_checker_objection",
+    "seed": 2012
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2012_checker_objection",
+    "seed": 2012
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2012_worker_objection",
+    "seed": 2012
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2012_worker_objection",
+    "seed": 2012
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2013_worker_objection",
+    "seed": 2013
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2013_worker_objection",
+    "seed": 2013
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2013_checker_objection",
+    "seed": 2013
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2013_checker_objection",
+    "seed": 2013
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2014_checker_objection",
+    "seed": 2014
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2014_checker_objection",
+    "seed": 2014
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2014_worker_objection",
+    "seed": 2014
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2014_worker_objection",
+    "seed": 2014
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2015_worker_objection",
+    "seed": 2015
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2015_worker_objection",
+    "seed": 2015
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2015_checker_objection",
+    "seed": 2015
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2015_checker_objection",
+    "seed": 2015
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2016_checker_objection",
+    "seed": 2016
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2016_checker_objection",
+    "seed": 2016
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2016_worker_objection",
+    "seed": 2016
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2016_worker_objection",
+    "seed": 2016
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2017_worker_objection",
+    "seed": 2017
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2017_worker_objection",
+    "seed": 2017
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2017_checker_objection",
+    "seed": 2017
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2017_checker_objection",
+    "seed": 2017
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2018_checker_objection",
+    "seed": 2018
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2018_checker_objection",
+    "seed": 2018
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2018_worker_objection",
+    "seed": 2018
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2018_worker_objection",
+    "seed": 2018
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2019_worker_objection",
+    "seed": 2019
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2019_worker_objection",
+    "seed": 2019
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2019_checker_objection",
+    "seed": 2019
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2019_checker_objection",
+    "seed": 2019
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2020_checker_objection",
+    "seed": 2020
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2020_checker_objection",
+    "seed": 2020
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2020_worker_objection",
+    "seed": 2020
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2020_worker_objection",
+    "seed": 2020
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2021_worker_objection",
+    "seed": 2021
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2021_worker_objection",
+    "seed": 2021
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2021_checker_objection",
+    "seed": 2021
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2021_checker_objection",
+    "seed": 2021
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2022_checker_objection",
+    "seed": 2022
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2022_checker_objection",
+    "seed": 2022
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2022_worker_objection",
+    "seed": 2022
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2022_worker_objection",
+    "seed": 2022
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2023_worker_objection",
+    "seed": 2023
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2023_worker_objection",
+    "seed": 2023
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2023_checker_objection",
+    "seed": 2023
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2023_checker_objection",
+    "seed": 2023
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2024_checker_objection",
+    "seed": 2024
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2024_checker_objection",
+    "seed": 2024
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2024_worker_objection",
+    "seed": 2024
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2024_worker_objection",
+    "seed": 2024
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2025_worker_objection",
+    "seed": 2025
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2025_worker_objection",
+    "seed": 2025
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2025_checker_objection",
+    "seed": 2025
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2025_checker_objection",
+    "seed": 2025
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2026_checker_objection",
+    "seed": 2026
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2026_checker_objection",
+    "seed": 2026
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2026_worker_objection",
+    "seed": 2026
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2026_worker_objection",
+    "seed": 2026
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2027_worker_objection",
+    "seed": 2027
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2027_worker_objection",
+    "seed": 2027
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2027_checker_objection",
+    "seed": 2027
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2027_checker_objection",
+    "seed": 2027
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2028_checker_objection",
+    "seed": 2028
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2028_checker_objection",
+    "seed": 2028
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2028_worker_objection",
+    "seed": 2028
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2028_worker_objection",
+    "seed": 2028
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2029_worker_objection",
+    "seed": 2029
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2029_worker_objection",
+    "seed": 2029
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2029_checker_objection",
+    "seed": 2029
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2029_checker_objection",
+    "seed": 2029
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2030_checker_objection",
+    "seed": 2030
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2030_checker_objection",
+    "seed": 2030
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2030_worker_objection",
+    "seed": 2030
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2030_worker_objection",
+    "seed": 2030
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2031_worker_objection",
+    "seed": 2031
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2031_worker_objection",
+    "seed": 2031
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2031_checker_objection",
+    "seed": 2031
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2031_checker_objection",
+    "seed": 2031
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2032_checker_objection",
+    "seed": 2032
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2032_checker_objection",
+    "seed": 2032
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2032_worker_objection",
+    "seed": 2032
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2032_worker_objection",
+    "seed": 2032
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2033_worker_objection",
+    "seed": 2033
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2033_worker_objection",
+    "seed": 2033
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2033_checker_objection",
+    "seed": 2033
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2033_checker_objection",
+    "seed": 2033
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2034_checker_objection",
+    "seed": 2034
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2034_checker_objection",
+    "seed": 2034
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2034_worker_objection",
+    "seed": 2034
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2034_worker_objection",
+    "seed": 2034
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2035_worker_objection",
+    "seed": 2035
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2035_worker_objection",
+    "seed": 2035
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2035_checker_objection",
+    "seed": 2035
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2035_checker_objection",
+    "seed": 2035
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2036_checker_objection",
+    "seed": 2036
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2036_checker_objection",
+    "seed": 2036
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2036_worker_objection",
+    "seed": 2036
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2036_worker_objection",
+    "seed": 2036
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2037_worker_objection",
+    "seed": 2037
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2037_worker_objection",
+    "seed": 2037
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2037_checker_objection",
+    "seed": 2037
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2037_checker_objection",
+    "seed": 2037
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2038_checker_objection",
+    "seed": 2038
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2038_checker_objection",
+    "seed": 2038
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2038_worker_objection",
+    "seed": 2038
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2038_worker_objection",
+    "seed": 2038
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2039_worker_objection",
+    "seed": 2039
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2039_worker_objection",
+    "seed": 2039
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2039_checker_objection",
+    "seed": 2039
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2039_checker_objection",
+    "seed": 2039
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2040_checker_objection",
+    "seed": 2040
+  },
+  {
+    "condition": "checker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2040_checker_objection",
+    "seed": 2040
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_2040_worker_objection",
+    "seed": 2040
+  },
+  {
+    "condition": "worker_objection",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_2040_worker_objection",
+    "seed": 2040
+  }
+]

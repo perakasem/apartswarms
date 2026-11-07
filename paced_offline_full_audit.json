@@ -1,0 +1,26 @@
+{
+  "audit_source_sha256": "8fbc542ea23778cfcb2442b434377466829c4f1fc68979fa0c95666496463d23",
+  "billing_verified": false,
+  "counts": {
+    "carried_attempts": 0,
+    "complete_runs": 170,
+    "current_attempts": 4040,
+    "events": 12290,
+    "outcomes": 4040,
+    "pacing_dispatches": 0,
+    "peak_concurrent_requests": 4,
+    "rate_limit_cycles": 0,
+    "requests": 4040,
+    "runs": 170,
+    "source_files": 24
+  },
+  "issues": [],
+  "mode": "offline",
+  "paid_calls": 0,
+  "passed": true,
+  "prior_records_written": false,
+  "research_result": false,
+  "scope": "This audit checks saved records, scores, cost carry, and recorded pacing. It is not a model result.",
+  "study_status": "complete",
+  "time_utc": "2026-11-07T21:53:20.854968+00:00"
+}
