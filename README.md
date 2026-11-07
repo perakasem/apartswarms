@@ -1,5 +1,7 @@
 # Worker selection after a correct objection
 
+Read the initial study as a paper: [plain-language research report](INITIAL_STUDY_PAPER.md) or [six-page PDF with chart](INITIAL_STUDY_PAPER.pdf). It explains the task, controlled change, results, and limits.
+
 The Adaption experiment is complete. The new run finished all 40 pairs per model. The results do not show a clear loss of work when a correct objection is credited to the careful worker.
 
 The API repair used `reasoning={"effort":"none"}` and a shared limit of four requests per second. Every accepted response confirmed the setting and reported zero reasoning tokens. The new run had no rate-limit errors, retries, invalid assignments, or missing data.

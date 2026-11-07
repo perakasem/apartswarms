@@ -20,6 +20,18 @@
       "git_blob_sha1": "9f58cbf1d3b6dce4db6b97e01acbf8711be0305d"
     },
     {
+      "path": "INITIAL_STUDY_PAPER.md",
+      "bytes": 15522,
+      "sha256": "76c8a693978d8767ac5d760cfae93cebddabad9d7b470b6bfb8d4c37a13c7ac3",
+      "git_blob_sha1": "a89b832dcc1b0d58a8070d1e17e9db688331e6f3"
+    },
+    {
+      "path": "INITIAL_STUDY_PAPER.pdf",
+      "bytes": 114090,
+      "sha256": "91f36edf12ea65ebe18cc58e7a5afc5456ba138630a3007ac0dab8c5f044062e",
+      "git_blob_sha1": "8850c17ac80de88dc71cbfbdef0d7b219cfbd245"
+    },
+    {
       "path": "PACED_PROTOCOL.md",
       "bytes": 18209,
       "sha256": "4fee3f82365bdf12d9c404c7cfc7cbfb04bfb649f30180f1872f4d17b1317bd9",
@@ -33,9 +45,9 @@
     },
     {
       "path": "README.md",
-      "bytes": 5722,
-      "sha256": "8327c042807cb45e219fb8e88ebaccac98d7c22015d747584da880fdb4bf0ac5",
-      "git_blob_sha1": "b969870aef31982d8e03abcf679f210c7e957e90"
+      "bytes": 5932,
+      "sha256": "8dfa3bb09cf5a04d00cc02248892f52ee418c291e51f7dbfb3828dafed59a673",
+      "git_blob_sha1": "e84fbe07a59a15ba3f0158f2679695bfc0c6f504"
     },
     {
       "path": "REPORT.md",
