@@ -1,88 +1,60 @@
-# Follow-up: repeated safety notices and audit timing
+# Do AI coordinators give less work to careful workers?
 
-The follow-up study is complete. Read the [follow-up summary](FOLLOWUP_RESULTS_SUMMARY.md), [full report](followup_REPORT.md), [fixed protocol](FOLLOWUP_PROTOCOL.md), and [audit record](followup_audit.json).
+These two studies test one possible cause of unsafe AI teams. A careful worker can keep making correct safety objections but lose its influence if the coordinator stops choosing it.
 
-The follow-up uses a separate sample with four conditions and 40 seeds per model. Its main window contains choices 1–18. Choices 19–24 provide a descriptive recovery check.
+**Neither study established this failure in the tested setting.** The first study had wide uncertainty intervals. The follow-up did not show the predicted loss of careful work. Some missing GLM safety outcomes limit its full safety result.
 
-![Follow-up paired effects](followup_effects.png)
+Each run used one live language model as a coordinator and four workers with fixed program rules. Two workers followed the rules. Two could complete a task without the required permission or evidence. The workers did not use separate language models. All had equal stated cost, speed, and skill on permitted tasks.
 
-[Effect table](followup_paired_effects.csv) · [Condition means](followup_condition_means.csv) · [Selection across blocks](followup_blocks.png) · [Full follow-up archive](followup-full-results.zip)
+## Start here
 
-The earlier study records remain in [full-results.zip](full-results.zip). The new archive also includes their cost records.
+| Document | What it explains |
+|---|---|
+| [Exact system prompts](SYSTEM_PROMPTS.md) | The instructions sent to both models, their differences, and the separate task messages |
+| [Initial study paper](INITIAL_STUDY_PAPER.md) · [PDF](INITIAL_STUDY_PAPER.pdf) | The first test, with a concrete example, results, chart, and limits |
+| [Follow-up summary](FOLLOWUP_RESULTS_SUMMARY.md) | The main findings from repeated safety notices and different audit times |
+| [Follow-up reader report](FOLLOWUP_READER_REPORT.md) | The full method, scoring rules, result tables, charts, and technical detail |
 
-Extract the follow-up ZIP into a new folder. Use Python 3.13, the tested version, and run `python3 reproduce_followup.py`. This checks the saved sources, prompts, logs, scores, analysis, cost records, and authorization. It makes no model calls and uses no network connection. Provider account deductions remain unverified.
+## How the studies differ
 
----
+| Design choice | Initial study | Follow-up |
+|---|---|---|
+| Main question | Does credit for one correct safety check reduce one careful worker's later work? | Do repeated worker notices reduce both careful workers' work when audits are delayed? |
+| Changed factor | Credit goes to a worker or an automatic checker | A notice comes directly from a worker or through a relay; audits are immediate or delayed |
+| Facts available to the coordinator | The task facts are visible, with a complete audit before the next choice | The decisive case facts stay private until the audit is released |
+| Main sample | 40 matched pairs per model; 160 runs in total | 40 matched sets of four conditions per model; 320 runs in total |
+| Main outcome | One selected careful worker's share of 24 choices | Both careful workers' share of the first 18 choices |
 
-# Worker selection after a correct objection
+The follow-up used new tasks and a separate sample. Its effect size is not directly interchangeable with the initial effect size.
 
-Read the initial study as a paper: [plain-language research report](INITIAL_STUDY_PAPER.md) or [six-page PDF with chart](INITIAL_STUDY_PAPER.pdf). It explains the task, controlled change, results, and limits.
+Both system prompts explicitly rewarded correct safety holds and gave no credit for violations. Thus, these are tests under a stated safety objective. They do not show what a coordinator would do without that instruction. The study supplied the coordinator role; it did not test how roles form on their own.
 
-The Adaption experiment is complete. The new run finished all 40 pairs per model. The results do not show a clear loss of work when a correct objection is credited to the careful worker.
+## Main findings
 
-The API repair used `reasoning={"effort":"none"}` and a shared limit of four requests per second. Every accepted response confirmed the setting and reported zero reasoning tokens. The new run had no rate-limit errors, retries, invalid assignments, or missing data.
+Values below are percentage points. For example, a fall from 40% to 35% is a change of -5 points.
 
-The main contrast is the worker-credit condition minus the checker-credit condition. A negative value means less work for the focal worker. Values below are percentage points.
+| Study and main measure | Qwen effect and 95% interval | GLM effect and 95% interval |
+|---|---|---|
+| Initial: one careful worker's work share | -0.83 [-8.75, +6.15] | +5.42 [-6.25, +17.08] |
+| Follow-up: both careful workers' work share, delayed audits | +3.47 [+0.56, +6.53] | +0.28 [-0.83, +1.39] |
 
-| Hosted model ID | Focal work-share difference | 95% paired bootstrap interval | Holm-adjusted p |
-|---|---:|---:|---:|
-| qwen3.5-397b | −0.83 | −8.75 to +6.15 | 0.8530 |
-| glm-5.2 | +5.42 | −6.25 to +17.08 | 0.7731 |
+Negative values would indicate less careful work in the main comparison. The first study cannot rule out meaningful losses or gains. Qwen's follow-up result points away from the predicted loss. A possible benefit remains an exploratory finding because the planned test looked for a loss. GLM's small follow-up gap also needs care because invalid outputs affected assignment counts.
 
-Both intervals include zero. The results do not establish that the effect is absent. The intervals still permit meaningful losses or gains in focal work share. The two-model primary tests use the planned Holm adjustment. Each statistical unit is a matched pair of task seeds.
+The reports explain the safety outcomes separately. Less work for one careful worker does not itself prove worse team safety.
 
-Team safety also showed no clear loss from the credit cue. The risky-task violation difference was +0.63 points for Qwen, with a 95% interval of −1.25 to +2.71. It was −1.04 points for GLM, with an interval of −2.50 to +0.42. These are secondary results. Their intervals are not adjusted for multiple comparisons.
+## Data, checks, and costs
 
-Violations still occurred. The table shows observed means across 40 runs in each condition. Each run had 24 tasks, including 12 tasks that required an objection.
+The original data and generated reports remain available. This document update changes the explanation, not the saved experiment records.
 
-| Model | Credit given to | Focal work share | Total careful work share | Risky-task violations |
-|---|---|---:|---:|---:|
-| Qwen | Worker | 39.48% | 88.96% | 43/480, or 8.96% |
-| Qwen | Checker | 40.31% | 85.31% | 40/480, or 8.33% |
-| GLM | Worker | 37.92% | 85.63% | 43/480, or 8.96% |
-| GLM | Checker | 32.50% | 86.25% | 48/480, or 10.00% |
+| Study | Fixed plan | Original generated report | Tables and charts | Complete saved records |
+|---|---|---|---|---|
+| Initial | [Protocol](PACED_PROTOCOL.md) | [Report](REPORT.md) | [Effects](paired_effects.csv) · [Means](condition_means.csv) · [Chart](paired_effects.png) | [ZIP](full-results.zip) |
+| Follow-up | [Protocol](FOLLOWUP_PROTOCOL.md) | [Report](followup_REPORT.md) | [Effects](followup_paired_effects.csv) · [Means](followup_condition_means.csv) · [Effect chart](followup_effects.png) · [Block chart](followup_blocks.png) | [ZIP](followup-full-results.zip) |
 
-Average careful-worker share increased from early to late rounds in all four groups. The increases ranged from 15.00 to 20.31 percentage points. This is a descriptive trend. It is not a separate randomized test of each later objection. The secondary contrasts in that trend differ between models. Do not use them as a replacement for the primary result.
+Offline tests passed before both collections. Final automated checks and separate AI reviews checked the saved results. No human scientific review is claimed. The exact hosted model revisions were not independently verified.
 
-![Paired effects with 95% intervals](paired_effects.png)
+The follow-up added an estimated **15.19 Adaption credits**. The total commitment for all work was **33.96 credits**, including earlier unknown-charge reserves. This stayed within the 70-credit new-study limit and 100-credit total limit. These are local estimates, not verified provider account deductions. The report edits made no model calls.
 
-All 160 main runs finished: 80 per model, with 24 valid assignments per run. The main sample has 3,840 assignments. Eight probes and 192 pilot calls also passed. The total new call count is 4,040. All response IDs are unique.
+To check the saved results, extract each ZIP into its own folder. With Python 3.13, run `python3 reproduce_analysis.py` for the initial study or `python3 reproduce_followup.py` for the follow-up. These checks use no network connection and make no model calls. See [initial publication notes](PUBLICATION.md), the [initial audit](audit.json), and the [follow-up audit](followup_audit.json) for details.
 
-Before paid collection, all 109 offline tests passed with network access blocked. The full local simulation passed 4,040 calls. The native tokenizer check covered 12,384 contexts. After collection, the record audit checked all source copies, linked logs, scores, paired analysis, cost carry, and request spacing. It passed with zero issues. These were automated checks and AI reviews. No human review is claimed.
-
-| Cost scope | Estimated charge | Unknown-charge reserve | Combined amount |
-|---|---:|---:|---:|
-| Earlier work | 0.94606950 | 9.61128000 | 10.55734950 |
-| New paced study | 8.20731385 | 0 | 8.20731385 |
-| Total | 9.15338335 | 9.61128000 | 18.76466335 |
-
-All amounts are Adaption credits. The combined amount is below the approved limit of 100 credits. No pending reserve remains. The earlier unknown charges remain reserved; they are not assumed to be free. These amounts are local estimates from token use and saved prices. They are not verified account deductions. This experiment made no OpenRouter calls. Its OpenRouter spend is CAD$0.
-
-The earlier incomplete main batch remains separate and is excluded in full. Its costs remain in the total. New main seeds were fixed at 2001 through 2040 before collection. No old main turn, probe, or pilot result is included in the main effect estimate.
-
-This is a controlled attribution test. It uses one live model coordinator and four fixed local workers. It changes who receives credit for one correct check in supplied history. The finding does not establish how live workers change, how teams form roles, or how long-term organizations assign work. The model revision was not independently verified. The findings apply to the checked hosted model IDs with reasoning effort set to `none`.
-
-The credit cue can change beliefs about worker competence and the attention given to a worker ID. It does not isolate a dislike of objections. Later objections also depend on prior assignments. Their effect was not separately randomized.
-
-Files for review:
-
-- [Full run report](REPORT.md)
-- [Fixed protocol](PACED_PROTOCOL.md)
-- [API repair details](ADAPTION_FIX.md)
-- [Design limits](DESIGN_LIMITS.md)
-- [Audit record](audit.json)
-- [Paired effect table](paired_effects.csv)
-- [Condition means](condition_means.csv)
-- [Response control check](response_control_check.json)
-
-The local key services were closed after collection. The source-workspace scan found no key in the 1,111 study files checked. This is not a claim about files outside that scan.
-
-See [PUBLICATION.md](PUBLICATION.md) for raw records, provenance limits, and local reproduction. The earlier failed batch is included only for audit and cost history.
-
-**Complete record package**
-
-[Download full-results.zip](full-results.zip). It contains all 172 package files, raw records, source, tests, and a portable verifier.
-
-Extract the ZIP into a new folder. Use Python 3.13 and run `python3 reproduce_analysis.py` there. The verifier uses no network connection or model call.
-
-Read [PUBLICATION.md](PUBLICATION.md) for package scope and verification limits.
+The linked reader reports are the current editions. The original generated reports remain unchanged. Each ZIP retains the original collection records and report. [FILE_MANIFEST.json](FILE_MANIFEST.json) identifies the current root files. The manifests inside each ZIP identify its unchanged contents.
