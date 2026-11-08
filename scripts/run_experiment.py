@@ -184,13 +184,13 @@ def sanity_print(exp, cells, models, seed_of, llm, proj, spent) -> None:
           f"max_reasks = {llm['max_reasks']}, reasoning off = {llm['require_no_reasoning']}")
     total_ub = sum(p["upper"] for p in proj.values())
     cal_known = all(p["calibrated"] is not None for p in proj.values())
+    unit = "USD" if llm["api"] == "openrouter" else "credits"
     for m, p in proj.items():
-        cal = (f"~{p['calibrated']:.2f} credits (probe: {p['calib']['chars_per_token']:.2f} chars/token, "
+        cal = (f"~{p['calibrated']:.2f} {unit} (probe: {p['calib']['chars_per_token']:.2f} chars/token, "
                f"{p['calib']['out_per_call']:.0f} output tokens/call)" if p["calibrated"] is not None
                else "no probe calibration")
         print(f"    {m}: {p['runs']} runs; projected {cal}; upper bound {p['upper']:.2f}")
     total = sum(p["calibrated"] for p in proj.values()) if cal_known else None
-    unit = "USD" if llm["api"] == "openrouter" else "credits"
     print(f"  projected spend: {('~%.2f' % total) if total is not None else 'n/a'} {unit} "
           f"(upper bound {total_ub:.2f}); ledger so far {spent:.2f}; cap {llm['max_credits']}")
     if llm["api"] == "openrouter":
