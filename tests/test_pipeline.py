@@ -91,6 +91,10 @@ baselines: [bayes, bayes_known]
                  "informational: 10 seeds cannot resolve direction"):
         assert line in gate, line
     assert "Reply length after API retries" in rep and "Manipulation check (ρ>0)" in rep
+    assert "## Reply format and awareness" in rep and "descriptive, not causal" in rep
+    assert {"preamble_rate", "eval_aware_rate", "game_frame_rate"} <= set(s.columns)
+    assert (out / "analysis" / "preamble_types.csv").exists()
+    assert (out / "data" / "awareness_hits.csv").exists()
 
 
 def test_confirmatory_family(results):

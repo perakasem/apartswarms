@@ -130,6 +130,8 @@ Reasons are in `DEVIATIONS.md` section E.
 | USD caps (pilot $10, confirmatory $100, global $140) | `_check_budget` | `test_dollar_caps` |
 | `--deadline`; balanced confirmatory seeds | `run_experiment.py`, `build_dataset.load_rounds` | `test_deadline_parsing`, `test_confirmatory_uses_only_seeds_complete_in_every_cell` |
 | Change 9: within-type manipulation check | `manipulation_check` / `_manip_one` | `test_manipulation_check_passes_for_learner_not_for_uniform` |
+| Decision 1: one parsing rule; preamble flag and rates; descriptive type comparison | `parse_reply_full`, `preamble_types`, report "Reply format and awareness" | `test_parser_first_complete_object_rule_and_preamble`, `test_preamble_recorded_in_round_meta`, `test_pilot_full_report_with_gate` |
+| Decision 2: `eval_aware` and `game_frame` kept separate | `build_dataset.AWARENESS`, per-cell rates | `test_awareness_categories_are_separate` |
 | Change 10: immutable prompt doc; runner gate | `sas/prompt_approval.py`, `prompts_approved` | `test_rendered_prompt_doc_matches_current_prompts`, `test_approval_hash_sensitive_to_wording_not_to_cells`, `test_live_run_refuses_unapproved_prompts` |
 
 ## Decisions the team should confirm (DECIDE)

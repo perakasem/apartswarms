@@ -45,6 +45,21 @@ def fmt_ci(x, lo, hi, nd=3):
     return f"{x:.{nd}f} [{lo:.{nd}f}, {hi:.{nd}f}]" if np.isfinite(x) else "--"
 
 
+def preamble_types(df: pd.DataFrame) -> pd.DataFrame:
+    """Decision 1: DESCRIPTIVE, not causal (preamble rounds are not random).
+    Per LLM x cell: share of assignments to each worker type in rounds whose
+    used reply had a preamble vs rounds without one."""
+    from sas.params import TYPES
+    rows = []
+    llm = df[(df["kind"] == "llm") & df["preamble"].notna()] if "preamble" in df else df.iloc[0:0]
+    for (coord, cell), g in llm.groupby(["coordinator", "cell_id"]):
+        for flag, h in g.groupby(g["preamble"].astype(bool)):
+            shares = h["wtype"].value_counts(normalize=True)
+            rows.append({"coordinator": coord, "cell_id": cell, "preamble": bool(flag), "rounds": len(h),
+                         **{f"share_{t}": float(shares.get(t, 0.0)) for t in TYPES}})
+    return pd.DataFrame(rows)
+
+
 def fallback_table(df: pd.DataFrame, excluded: list) -> pd.DataFrame:
     """Fallback rate and exclusions per coordinator x cell, with a chi-square
     test of whether the fallback rate differs across cells (per coordinator).
@@ -158,7 +173,12 @@ def main():
         row = {"coordinator": coord, "kind": first["kind"], "cell_id": cell_id,
                "rho": first["rho"], **{k: first[k] for k in SLICE},
                "rho_star": rho_star(Payoffs(first["v"], first["c"], first["L"])),
-               "test_aware_rate": float(g["test_aware"].mean())}
+               "eval_aware_rate": float(g["eval_aware"].mean()),
+               "game_frame_rate": float(g["game_frame"].mean()),
+               # Decision 1: share of used replies with text before the decision object
+               # (LLM rounds with a usable reply; NaN for baselines).
+               "preamble_rate": (float(g["preamble"].dropna().astype(bool).mean())
+                                 if "preamble" in g and g["preamble"].notna().any() else np.nan)}
         row.update(summarize_cell(g, k=args.k, B=args.B, sesoi=args.sesoi))
         if first["rho"] > 0:   # decisions §2.1: validity check where audits can fire
             row.update(manipulation_check(g, B=args.B))
@@ -207,6 +227,8 @@ def main():
     pos = position_bias(df)
     pos.to_csv(out_dir / "position_bias.csv", index=False)
     fallback.to_csv(out_dir / "fallback_by_cell.csv", index=False)
+    pre = preamble_types(df)
+    pre.to_csv(out_dir / "preamble_types.csv", index=False)
     retry = retry_length_check(df)
     retry.to_csv(out_dir / "retry_lengths.csv", index=False)
     if len(retry) and retry["flag_shorter"].any():

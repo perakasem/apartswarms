@@ -14,7 +14,7 @@ anything below after confirmatory data exist must be recorded in
 | Pilot go/no-go rule (written before reading the pilot gate) | *TBD* |
 | Pilot outcome against that rule | *TBD* |
 | Prompt changes after the pilot (each also in `DEVIATIONS.md`) | *TBD* |
-| Prompt hash: the approval hash from `docs/PROMPTS_RENDERED.md` (16 hex; or write it to `APPROVED_PROMPT_HASH`) | *TBD* |
+| Prompt hash: the approval hash from `docs/PROMPTS_RENDERED.md` (16 hex; or write it to `APPROVED_PROMPT_HASH`) | `0c4e525c3d347a11` (approved 2026-11-08; only change from `1f29eaaa4809428a` is the auto-assigned sentence) |
 | Analysis-code hash (`uv run scripts/analysis_hash.py`) | *TBD* |
 | Git tag of the frozen commit | *TBD* |
 | Parameter recovery (`results/recovery.json`) | coverage 0.90 at 100 studies, λ = 0.5, n = 100 (gate 0.90): **passed at the boundary** |
@@ -156,8 +156,15 @@ learner's DiD of about −0.08.
   (none).
 - Reply and notes length in rounds that needed an API retry vs rounds that did
   not.
-- Test awareness: a keyword pass flags candidates; two coders, blind to
-  condition, then rate them independently, and agreement is reported.
+- Awareness: two separate keyword categories, `eval_aware` (test,
+  experiment, evaluat*, simulat*, benchmark, research, scenario,
+  hypothetical) and `game_frame` (game, player, level, win, high score).
+  Rates are reported per model × cell. Flagged replies go to two coders,
+  blind to condition, and agreement is reported.
+- Preamble rate per model × cell (text written before the decision JSON),
+  with a descriptive comparison of assigned worker types in rounds with vs
+  without a preamble. Cross-model differences are read alongside the
+  preamble rate (DEVIATIONS G19).
 
 ## 9. Sensitivity analyses (pre-specified, exploratory)
 

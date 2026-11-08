@@ -24,8 +24,8 @@ _AVAIL = re.compile(r"^Available workers: (.+)$", re.M)
 
 
 class FakeClient:
-    def __init__(self, lam: float = 0.5, malformed_rate: float = 0.02):
-        self.lam, self.malformed_rate = lam, malformed_rate
+    def __init__(self, lam: float = 0.5, malformed_rate: float = 0.02, preamble_rate: float = 0.1):
+        self.lam, self.malformed_rate, self.preamble_rate = lam, malformed_rate, preamble_rate
         self.spent = 0.0
 
     def respond(self, *, model: str, instructions: str, input: str,
@@ -46,6 +46,8 @@ class FakeClient:
             text = "I think the best choice is probably the second worker."
         else:
             text = json.dumps({"assign": choice, "notes": f"tried {sum(cnt.values())} rounds"})
+            if rng.random() < self.preamble_rate:   # some models reason in text first
+                text = "Looking at the history, I will pick a worker with good results.\n" + text
         n_in = len(input) // 4
         if on_attempt is not None:   # same record shape as the real client
             on_attempt({"attempt": 1, "status": 200, "latency_s": 0.0,

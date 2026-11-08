@@ -33,9 +33,41 @@ def excludes_zero(r, col):
     return lo is not None and np.isfinite(lo) and (lo > 0 or hi < 0)
 
 
+def fmt_rate(x) -> str:
+    return "n/a" if x is None or not np.isfinite(x) else f"{x:.1%}"
+
+
+def reply_section(s: pd.DataFrame, adir: Path) -> list[str]:
+    """Decisions 1-2: preamble and awareness rates per model x cell, and the
+    descriptive preamble comparison."""
+    llm = s[s["kind"] == "llm"]
+    if llm.empty:
+        return []
+    L = ["## Reply format and awareness (per model × cell)", "",
+         "Preamble = text before the decision JSON (written reasoning before deciding). "
+         "eval_aware and game_frame are separate keyword categories; hits are candidates for blind "
+         "coding (`data/awareness_hits.csv`).", "",
+         "| model | cell | preamble | eval_aware | game_frame |", "|---|---|---|---|---|"]
+    for _, r in llm.sort_values(["coordinator", "cell_id"]).iterrows():
+        L.append(f"| {r['coordinator']} | {r['cell_id']} | {fmt_rate(r.get('preamble_rate'))} | "
+                 f"{r['eval_aware_rate']:.1%} | {r['game_frame_rate']:.1%} |")
+    p = adir / "preamble_types.csv"
+    if p.exists() and p.stat().st_size > 1:
+        pt = pd.read_csv(p)
+        have = pt.groupby(["coordinator", "cell_id"])["preamble"].nunique()
+        pt = pt.set_index(["coordinator", "cell_id"]).loc[have[have == 2].index].reset_index()
+        if len(pt):
+            cols = ["coordinator", "cell_id", "preamble", "rounds"] + [c for c in pt if c.startswith("share_")]
+            L += ["", "**Assigned worker type, rounds with vs without a preamble (descriptive, not causal: "
+                  "preamble rounds are not random).**", "",
+                  pt[cols].to_markdown(index=False, floatfmt=".2f")]
+    return L + [""]
+
+
 def section(r: dict, bayes: dict | None) -> list[str]:
     L = [f"### {r['coordinator']} · {r['cell_id']}  (n = {r['n_runs']} runs, "
-         f"fallback rate {r['fallback_rate']:.1%}, test-aware rounds {r['test_aware_rate']:.1%})", ""]
+         f"fallback rate {r['fallback_rate']:.1%}, preamble rate {fmt_rate(r.get('preamble_rate'))}, "
+         f"eval-aware rounds {r['eval_aware_rate']:.1%}, game-frame rounds {r['game_frame_rate']:.1%})", ""]
     learned = r["learning_gap_lo"] > 0
     L.append(f"1. **Did it learn?** careful − over-refuser share = {ci(r, 'learning_gap')}. "
              + ("Yes: the positive control moved." if learned else
@@ -208,6 +240,7 @@ def main():
                    f"{lk['majority']:.3f} (p = {lk['p']:.2f}); fact determines θ: {lk['fact_determines_theta']}.")
     out.append("")
     out += confirmatory_section(adir)
+    out += reply_section(pd.read_csv(adir / "summary.csv"), adir)
     if len(h2):
         lin = [c for c in ["coordinator", "feedback", "c", "pi", "visibility", "framing", "tone", "rho_star",
                            "h2lin_slope", "h2lin_slope_lo", "h2lin_slope_hi", "h2lin_root", "h2lin_root_lo",
