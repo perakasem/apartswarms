@@ -81,5 +81,6 @@ The linked reader reports are the current editions. The original generated repor
 
 ## Additional eight-worker experiment
 
-The [Selection Against Safety experiment](eight_worker_README.md) has a separate protocol, synthetic baseline report, tested source, and dated pilot status. Its live smoke check passed; its research collection is not reported as a completed LLM study. It uses eight fixed workers and a different scoring design. Its observations and credit accounting are separate from the completed studies above.
+Read the **[simplified paper](eight_worker_SIMPLE_PAPER.md)** or **[download its PDF](eight_worker_SIMPLE_PAPER.pdf)** for a plain-language explanation of the question, methods, simulation findings, and limits. The [updated execution status](eight_worker_STATUS.md) distinguishes successful smoke checks from invalid and missing pilot choices.
 
+The [Selection Against Safety experiment](eight_worker_README.md) has a separate protocol, synthetic baseline report, tested source, and dated pilot status. Its live smoke check passed; its research collection is not reported as a completed LLM study. It uses eight fixed workers and a different scoring design. Its observations and credit accounting are separate from the completed studies above.

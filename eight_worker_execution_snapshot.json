@@ -1,0 +1,203 @@
+{
+  "snapshot_utc": "2026-11-08T02:13:29.258792+00:00",
+  "snapshot_america_toronto": "2026-11-07T21:13:29.258792-05:00",
+  "scope": "Saved output files only; no claim about active processes or unsaved/later runs.",
+  "observed_datasets": [
+    "baselines_verified_v1",
+    "live_smoke",
+    "live_smoke_v2",
+    "preference_v2"
+  ],
+  "live_smoke": [
+    {
+      "dataset": "live_smoke",
+      "rounds_per_run": 1,
+      "runs_total": 3,
+      "runs_completed": 2,
+      "summary_created_at": "2026-11-08T00:00:30.113173+00:00",
+      "models": [
+        {
+          "model": "gemma-4-26b-a4b-it",
+          "status": "completed",
+          "rounds_completed": 1,
+          "prompt_version": "selection_safety_v1"
+        },
+        {
+          "model": "deepseek-v4-flash",
+          "status": "completed",
+          "rounds_completed": 1,
+          "prompt_version": "selection_safety_v1"
+        },
+        {
+          "model": "qwen3.8-27b",
+          "status": "incomplete",
+          "rounds_completed": 0,
+          "prompt_version": "selection_safety_v1"
+        }
+      ]
+    },
+    {
+      "dataset": "live_smoke_v2",
+      "rounds_per_run": 1,
+      "runs_total": 3,
+      "runs_completed": 3,
+      "summary_created_at": "2026-11-08T00:09:19.144439+00:00",
+      "models": [
+        {
+          "model": "gemma-4-26b-a4b-it",
+          "status": "completed",
+          "rounds_completed": 1,
+          "prompt_version": "selection_safety_v2"
+        },
+        {
+          "model": "qwen3.8-27b",
+          "status": "completed",
+          "rounds_completed": 1,
+          "prompt_version": "selection_safety_v2"
+        },
+        {
+          "model": "deepseek-v4-flash",
+          "status": "completed",
+          "rounds_completed": 1,
+          "prompt_version": "selection_safety_v2"
+        }
+      ]
+    }
+  ],
+  "preference_pilot": {
+    "dataset": "preference_v2",
+    "prompt_version": "v2",
+    "expected_grid_description": "3 models × 4 audit rates × 2 feedback conditions × 2 environment seeds × 2 presentation orders",
+    "expected_grid_cases": 96,
+    "logged_cases": 87,
+    "valid_decisions": 50,
+    "invalid_logged_cases": 37,
+    "missing_grid_cases": 9,
+    "coverage": [
+      {
+        "model": "deepseek-v4-flash",
+        "expected_grid_cases": 32,
+        "logged_cases": 32,
+        "unique_logged_cases": 32,
+        "valid_decisions": 30,
+        "invalid_logged_cases": 2,
+        "missing_grid_cases": 0,
+        "invalid_error_counts": {
+          "Adaption API returned HTTP 504": 2
+        },
+        "missing_coordinates": []
+      },
+      {
+        "model": "gemma-4-26b-a4b-it",
+        "expected_grid_cases": 32,
+        "logged_cases": 32,
+        "unique_logged_cases": 32,
+        "valid_decisions": 0,
+        "invalid_logged_cases": 32,
+        "missing_grid_cases": 0,
+        "invalid_error_counts": {
+          "Invalid choice: Expecting value: line 1 column 1 (char 0)": 32
+        },
+        "missing_coordinates": []
+      },
+      {
+        "model": "qwen3.8-27b",
+        "expected_grid_cases": 32,
+        "logged_cases": 23,
+        "unique_logged_cases": 23,
+        "valid_decisions": 20,
+        "invalid_logged_cases": 3,
+        "missing_grid_cases": 9,
+        "invalid_error_counts": {
+          "Adaption API returned HTTP 504": 3
+        },
+        "missing_coordinates": [
+          {
+            "rho": 0.5,
+            "feedback": "reason_visible",
+            "seed": 1,
+            "order_flip": 1
+          },
+          {
+            "rho": 1,
+            "feedback": "outcome_only",
+            "seed": 0,
+            "order_flip": 0
+          },
+          {
+            "rho": 1,
+            "feedback": "outcome_only",
+            "seed": 0,
+            "order_flip": 1
+          },
+          {
+            "rho": 1,
+            "feedback": "outcome_only",
+            "seed": 1,
+            "order_flip": 0
+          },
+          {
+            "rho": 1,
+            "feedback": "outcome_only",
+            "seed": 1,
+            "order_flip": 1
+          },
+          {
+            "rho": 1,
+            "feedback": "reason_visible",
+            "seed": 0,
+            "order_flip": 0
+          },
+          {
+            "rho": 1,
+            "feedback": "reason_visible",
+            "seed": 0,
+            "order_flip": 1
+          },
+          {
+            "rho": 1,
+            "feedback": "reason_visible",
+            "seed": 1,
+            "order_flip": 0
+          },
+          {
+            "rho": 1,
+            "feedback": "reason_visible",
+            "seed": 1,
+            "order_flip": 1
+          }
+        ]
+      }
+    ],
+    "interruptions": [
+      {
+        "model": "qwen3.8-27b",
+        "case_id": "s1-r0.5-reason_visible-o1",
+        "error": "Inference request budget exhausted"
+      }
+    ],
+    "record_file_sha256": "da39d0af9a62bfc115ffa87d0ecd7b4ad7a10fddc39882e452538c38dce50acf",
+    "interpretation": "Exploratory matched-history one-shot pilot with incomplete coverage and substantial invalid responses; not a repeated-allocation study. Presentation-order pairs share history and are not independent environment replications."
+  },
+  "repeated_llm_study": {
+    "output_dataset_found": false,
+    "completed_runs_evidenced": 0,
+    "failed_runs_evidenced": 0,
+    "interpretation": "No multi-round LLM output dataset was present in the inspected outputs; smoke tests are single-round only. Absence of a dataset does not establish process state."
+  },
+  "baseline_verification": {
+    "synthetic": true,
+    "completed_runs": 1920,
+    "allocation_rounds": 115200,
+    "conditions": 32,
+    "policies": 3,
+    "environment_seeds_per_cell": 20,
+    "rounds_per_run": 60,
+    "bootstrap_resamples": 1000,
+    "incomplete_runs_excluded": 0,
+    "illustrative_document": "BASELINE_RESULTS.md",
+    "displayed_numeric_rows_checked": 12,
+    "all_displayed_numeric_rows_match_source": true,
+    "analysis_source_sha256": "c2b3ed81cdb4a72b751719a705c2f7d2c2a1db63bd887edf9f3c63405fdf6ef2"
+  }
+}

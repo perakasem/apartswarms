@@ -4,6 +4,8 @@ This document set and its [source archive](eight_worker_source_and_baselines.zip
 
 The completed baseline collection contains **1,920 simulated episodes and 115,200 assignments**. The repaired live smoke test completed one decision for each of three models. Those connectivity checks do not establish the research hypothesis. See the dated [execution status](eight_worker_STATUS.md) for the latest observed pilot progress and failures.
 
+Start with the **[simplified paper](eight_worker_SIMPLE_PAPER.md)** or its **[PDF edition](eight_worker_SIMPLE_PAPER.pdf)**. The live preference pilot recorded 87 cases, of which 50 were valid, before a request-budget interruption; see the [updated status](eight_worker_STATUS.md). No repeated 60-round live study output was found at that snapshot.
+
 ## Documents and results
 
 | File | Purpose |
