@@ -1,0 +1,87 @@
+{
+  "kind": "synthetic_baseline_publication_extract",
+  "original_run_created_at": "2026-11-07T23:50:54.501965+00:00",
+  "completion_record_created_at": "2026-11-07T23:51:08.194655+00:00",
+  "runs_completed": 1920,
+  "runs_total": 1920,
+  "assignments": 115200,
+  "inference_performed": false,
+  "plan": {
+    "cells": "full",
+    "coordinators": [
+      "uniform",
+      "oracle",
+      "bayesian"
+    ],
+    "distinct_cells": 32,
+    "environment_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "max_credits": 25.0,
+    "max_requests": 5000,
+    "minimum_inference_requests": 0,
+    "mode": "baseline",
+    "note": "Pilot scope is exploratory; seeds control tasks and scripted outcomes, not provider sampling.",
+    "rounds_per_run": 60,
+    "runs": 1920
+  },
+  "analysis_settings": {
+    "next_k": 5,
+    "bootstrap_draws": 1000,
+    "bootstrap_seed": 1729,
+    "include_incomplete": false
+  },
+  "raw_logs_included": false,
+  "original_source_sha256": {
+    "adaption_client.py": "3a7eda84cba736807e698195a9f87834c127960983463535245c655ef548a4fc",
+    "core.py": "3eb55b695d3aed346d888b84808e7118813d851d907464b9c24fb22b65b69ca4",
+    "run_experiment.py": "8221cfcb4eba79777967e8f3f5be4ca3dcd0c4f0450fa1d49053cb07b7fb8350"
+  },
+  "published_output_sha256": {
+    "RESULTS.md": "1e3c65850e03e7d09771567dfad8b79ebf7f0785f7372a71169b01e43ad5e191",
+    "audit_risk.svg": "75094b8d6f8f14c98e93ae810d2d2bfcde46f41565fad40e3fda4f146fb43017",
+    "condition_metrics.csv": "5a76fa61139c7cefa208ce82b4f3dc4bb88f7a5b783833a69335a2e71d09a93f",
+    "run_metrics.csv": "b92ab0f096f211d193aba3c65b8ee7f5ef0447daf71569e008bfe1472fc37304"
+  },
+  "original_design_metadata": {
+    "coordinators": [
+      "uniform",
+      "oracle",
+      "bayesian"
+    ],
+    "max_output_tokens": 1024,
+    "memory": false,
+    "mode": "baseline",
+    "prompt_version": "selection_safety_v1",
+    "protocol_sha256": {
+      "adaption_client.py": "3a7eda84cba736807e698195a9f87834c127960983463535245c655ef548a4fc",
+      "core.py": "3eb55b695d3aed346d888b84808e7118813d851d907464b9c24fb22b65b69ca4",
+      "run_experiment.py": "8221cfcb4eba79777967e8f3f5be4ca3dcd0c4f0450fa1d49053cb07b7fb8350"
+    },
+    "schema_version": 1,
+    "store": false,
+    "temperature": 0.7,
+    "tools": []
+  },
+  "note": "Extracted provenance and original output bytes; full raw round logs are regenerated using the README commands. Prompt v2 changes run identifiers, not baseline dynamics.",
+  "analysis_source_sha256": "c2b3ed81cdb4a72b751719a705c2f7d2c2a1db63bd887edf9f3c63405fdf6ef2"
+}

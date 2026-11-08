@@ -78,3 +78,8 @@ The follow-up added an estimated **15.19 Adaption credits**. The total commitmen
 To check the saved results, extract each ZIP into its own folder. With Python 3.13, run `python3 reproduce_analysis.py` for the initial study or `python3 reproduce_followup.py` for the follow-up. These checks use no network connection and make no model calls. See [initial publication notes](PUBLICATION.md), the [initial audit](audit.json), and the [follow-up audit](followup_audit.json) for details.
 
 The linked reader reports are the current editions. The original generated reports remain unchanged. Each ZIP retains the original collection records and report. [FILE_MANIFEST.json](FILE_MANIFEST.json) identifies the current root files. The manifests inside each ZIP identify its unchanged contents.
+
+## Additional eight-worker experiment
+
+The [Selection Against Safety experiment](eight_worker_README.md) has a separate protocol, synthetic baseline report, tested source, and dated pilot status. Its live smoke check passed; its research collection is not reported as a completed LLM study. It uses eight fixed workers and a different scoring design. Its observations and credit accounting are separate from the completed studies above.
+

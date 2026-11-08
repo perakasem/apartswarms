@@ -1,0 +1,358 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1350" viewBox="0 0 900 1350">
+<rect width="100%" height="100%" fill="white"/>
+<g font-family="Arial, sans-serif" font-size="12" fill="#222">
+<text x="30" y="30" font-size="20">Expected violation risk by audit probability</text>
+<text x="30" y="51">Mean across independent runs; bars show 95% run-bootstrap intervals.</text>
+<text x="30" y="70">Expected risk is computed from fixed policies and observed assignment shares.</text>
+<text x="60" y="105" font-weight="bold">outcome_only; c=5.0; π=0.15</text>
+<line x1="60" x2="400" y1="310" y2="310" stroke="#e5e5e5"/>
+<text x="52" y="314" text-anchor="end">0%</text>
+<line x1="60" x2="400" y1="262.5" y2="262.5" stroke="#e5e5e5"/>
+<text x="52" y="266.5" text-anchor="end">4%</text>
+<line x1="60" x2="400" y1="215.0" y2="215.0" stroke="#e5e5e5"/>
+<text x="52" y="219.0" text-anchor="end">8%</text>
+<line x1="60" x2="400" y1="167.5" y2="167.5" stroke="#e5e5e5"/>
+<text x="52" y="171.5" text-anchor="end">11%</text>
+<line x1="60" x2="400" y1="120" y2="120" stroke="#e5e5e5"/>
+<text x="52" y="124" text-anchor="end">15%</text>
+<text x="60" y="330" text-anchor="middle">0</text>
+<text x="145.0" y="330" text-anchor="middle">0.25</text>
+<text x="230.0" y="330" text-anchor="middle">0.5</text>
+<text x="400" y="330" text-anchor="middle">1</text>
+<text x="230.0" y="350" text-anchor="middle">Audit probability ρ</text>
+<path d="M60.0,205.59432708333333V191.635225 M57.0,205.59432708333333H63.0 M57.0,191.635225H63.0" stroke="#0072B2" fill="none"/>
+<circle cx="60.0" cy="198.7656875" r="3" fill="#0072B2"/>
+<path d="M145.0,205.4633359375V189.14590833333332 M142.0,205.4633359375H148.0 M142.0,189.14590833333332H148.0" stroke="#0072B2" fill="none"/>
+<circle cx="145.0" cy="197.0165" r="3" fill="#0072B2"/>
+<path d="M230.0,240.54461927083332V225.09937083333335 M227.0,240.54461927083332H233.0 M227.0,225.09937083333335H233.0" stroke="#0072B2" fill="none"/>
+<circle cx="230.0" cy="233.23485416666665" r="3" fill="#0072B2"/>
+<path d="M400.0,254.30297447916666V241.05472968750001 M397.0,254.30297447916666H403.0 M397.0,241.05472968750001H403.0" stroke="#0072B2" fill="none"/>
+<circle cx="400.0" cy="247.77579166666666" r="3" fill="#0072B2"/>
+<polyline points="60.0,198.7656875 145.0,197.0165 230.0,233.23485416666665 400.0,247.77579166666666" fill="none" stroke="#0072B2" stroke-width="1.5"/>
+<path d="M60.0,291.0V291.0 M57.0,291.0H63.0 M57.0,291.0H63.0" stroke="#D55E00" fill="none"/>
+<circle cx="60.0" cy="291.0" r="3" fill="#D55E00"/>
+<path d="M145.0,291.0V291.0 M142.0,291.0H148.0 M142.0,291.0H148.0" stroke="#D55E00" fill="none"/>
+<circle cx="145.0" cy="291.0" r="3" fill="#D55E00"/>
+<path d="M230.0,291.0V291.0 M227.0,291.0H233.0 M227.0,291.0H233.0" stroke="#D55E00" fill="none"/>
+<circle cx="230.0" cy="291.0" r="3" fill="#D55E00"/>
+<path d="M400.0,291.0V291.0 M397.0,291.0H403.0 M397.0,291.0H403.0" stroke="#D55E00" fill="none"/>
+<circle cx="400.0" cy="291.0" r="3" fill="#D55E00"/>
+<polyline points="60.0,291.0 145.0,291.0 230.0,291.0 400.0,291.0" fill="none" stroke="#D55E00" stroke-width="1.5"/>
+<path d="M60.0,219.19674375V212.343325 M57.0,219.19674375H63.0 M57.0,212.343325H63.0" stroke="#009E73" fill="none"/>
+<circle cx="60.0" cy="215.91516666666666" r="3" fill="#009E73"/>
+<path d="M145.0,219.28203593749998V212.34657083333332 M142.0,219.28203593749998H148.0 M142.0,212.34657083333332H148.0" stroke="#009E73" fill="none"/>
+<circle cx="145.0" cy="215.91516666666666" r="3" fill="#009E73"/>
+<path d="M230.0,219.3236083333333V212.24891875 M227.0,219.3236083333333H233.0 M227.0,212.24891875H233.0" stroke="#009E73" fill="none"/>
+<circle cx="230.0" cy="215.91516666666666" r="3" fill="#009E73"/>
+<path d="M400.0,219.19450729166667V212.16737708333335 M397.0,219.19450729166667H403.0 M397.0,212.16737708333335H403.0" stroke="#009E73" fill="none"/>
+<circle cx="400.0" cy="215.91516666666666" r="3" fill="#009E73"/>
+<polyline points="60.0,215.91516666666666 145.0,215.91516666666666 230.0,215.91516666666666 400.0,215.91516666666666" fill="none" stroke="#009E73" stroke-width="1.5"/>
+<text x="505" y="105" font-weight="bold">outcome_only; c=5.0; π=0.35</text>
+<line x1="505" x2="845" y1="310" y2="310" stroke="#e5e5e5"/>
+<text x="497" y="314" text-anchor="end">0%</text>
+<line x1="505" x2="845" y1="262.5" y2="262.5" stroke="#e5e5e5"/>
+<text x="497" y="266.5" text-anchor="end">9%</text>
+<line x1="505" x2="845" y1="215.0" y2="215.0" stroke="#e5e5e5"/>
+<text x="497" y="219.0" text-anchor="end">18%</text>
+<line x1="505" x2="845" y1="167.5" y2="167.5" stroke="#e5e5e5"/>
+<text x="497" y="171.5" text-anchor="end">26%</text>
+<line x1="505" x2="845" y1="120" y2="120" stroke="#e5e5e5"/>
+<text x="497" y="124" text-anchor="end">35%</text>
+<text x="505" y="330" text-anchor="middle">0</text>
+<text x="590.0" y="330" text-anchor="middle">0.25</text>
+<text x="675.0" y="330" text-anchor="middle">0.5</text>
+<text x="845" y="330" text-anchor="middle">1</text>
+<text x="675.0" y="350" text-anchor="middle">Audit probability ρ</text>
+<path d="M505.0,195.56262395833332V175.72905833333334 M502.0,195.56262395833332H508.0 M502.0,175.72905833333334H508.0" stroke="#0072B2" fill="none"/>
+<circle cx="505.0" cy="185.26658333333333" r="3" fill="#0072B2"/>
+<path d="M590.0,186.64591406249997V172.44023750000002 M587.0,186.64591406249997H593.0 M587.0,172.44023750000002H593.0" stroke="#0072B2" fill="none"/>
+<circle cx="590.0" cy="179.63585416666666" r="3" fill="#0072B2"/>
+<path d="M675.0,255.61449895833331V244.14728645833333 M672.0,255.61449895833331H678.0 M672.0,244.14728645833333H678.0" stroke="#0072B2" fill="none"/>
+<circle cx="675.0" cy="249.90497916666666" r="3" fill="#0072B2"/>
+<path d="M845.0,261.69580520833335V250.30861041666668 M842.0,261.69580520833335H848.0 M842.0,250.30861041666668H848.0" stroke="#0072B2" fill="none"/>
+<circle cx="845.0" cy="256.2782916666667" r="3" fill="#0072B2"/>
+<polyline points="505.0,185.26658333333333 590.0,179.63585416666666 675.0,249.90497916666666 845.0,256.2782916666667" fill="none" stroke="#0072B2" stroke-width="1.5"/>
+<path d="M505.0,291.0V291.0 M502.0,291.0H508.0 M502.0,291.0H508.0" stroke="#D55E00" fill="none"/>
+<circle cx="505.0" cy="291.0" r="3" fill="#D55E00"/>
+<path d="M590.0,291.0V291.0 M587.0,291.0H593.0 M587.0,291.0H593.0" stroke="#D55E00" fill="none"/>
+<circle cx="590.0" cy="291.0" r="3" fill="#D55E00"/>
+<path d="M675.0,291.0V291.0 M672.0,291.0H678.0 M672.0,291.0H678.0" stroke="#D55E00" fill="none"/>
+<circle cx="675.0" cy="291.0" r="3" fill="#D55E00"/>
+<path d="M845.0,291.0V291.0 M842.0,291.0H848.0 M842.0,291.0H848.0" stroke="#D55E00" fill="none"/>
+<circle cx="845.0" cy="291.0" r="3" fill="#D55E00"/>
+<polyline points="505.0,291.0 590.0,291.0 675.0,291.0 845.0,291.0" fill="none" stroke="#D55E00" stroke-width="1.5"/>
+<path d="M505.0,227.80057708333334V220.84975364583335 M502.0,227.80057708333334H508.0 M502.0,220.84975364583335H508.0" stroke="#009E73" fill="none"/>
+<circle cx="505.0" cy="224.3131666666667" r="3" fill="#009E73"/>
+<path d="M590.0,227.4109286458333V220.84435052083333 M587.0,227.4109286458333H593.0 M587.0,220.84435052083333H593.0" stroke="#009E73" fill="none"/>
+<circle cx="590.0" cy="224.3131666666667" r="3" fill="#009E73"/>
+<path d="M675.0,227.56483854166666V220.64606770833336 M672.0,227.56483854166666H678.0 M672.0,220.64606770833336H678.0" stroke="#009E73" fill="none"/>
+<circle cx="675.0" cy="224.3131666666667" r="3" fill="#009E73"/>
+<path d="M845.0,227.7033109375V220.9008359375 M842.0,227.7033109375H848.0 M842.0,220.9008359375H848.0" stroke="#009E73" fill="none"/>
+<circle cx="845.0" cy="224.3131666666667" r="3" fill="#009E73"/>
+<polyline points="505.0,224.3131666666667 590.0,224.3131666666667 675.0,224.3131666666667 845.0,224.3131666666667" fill="none" stroke="#009E73" stroke-width="1.5"/>
+<text x="60" y="405" font-weight="bold">outcome_only; c=15.0; π=0.15</text>
+<line x1="60" x2="400" y1="610" y2="610" stroke="#e5e5e5"/>
+<text x="52" y="614" text-anchor="end">0%</text>
+<line x1="60" x2="400" y1="562.5" y2="562.5" stroke="#e5e5e5"/>
+<text x="52" y="566.5" text-anchor="end">4%</text>
+<line x1="60" x2="400" y1="515.0" y2="515.0" stroke="#e5e5e5"/>
+<text x="52" y="519.0" text-anchor="end">8%</text>
+<line x1="60" x2="400" y1="467.5" y2="467.5" stroke="#e5e5e5"/>
+<text x="52" y="471.5" text-anchor="end">11%</text>
+<line x1="60" x2="400" y1="420" y2="420" stroke="#e5e5e5"/>
+<text x="52" y="424" text-anchor="end">15%</text>
+<text x="60" y="630" text-anchor="middle">0</text>
+<text x="145.0" y="630" text-anchor="middle">0.25</text>
+<text x="230.0" y="630" text-anchor="middle">0.5</text>
+<text x="400" y="630" text-anchor="middle">1</text>
+<text x="230.0" y="650" text-anchor="middle">Audit probability ρ</text>
+<path d="M60.0,505.49574479166665V491.8059973958333 M57.0,505.49574479166665H63.0 M57.0,491.8059973958333H63.0" stroke="#0072B2" fill="none"/>
+<circle cx="60.0" cy="498.7656875" r="3" fill="#0072B2"/>
+<path d="M145.0,505.15359635416667V489.20049374999996 M142.0,505.15359635416667H148.0 M142.0,489.20049374999996H148.0" stroke="#0072B2" fill="none"/>
+<circle cx="145.0" cy="497.0165" r="3" fill="#0072B2"/>
+<path d="M230.0,499.5384828125V486.6837359375 M227.0,499.5384828125H233.0 M227.0,486.6837359375H233.0" stroke="#0072B2" fill="none"/>
+<circle cx="230.0" cy="492.96000000000004" r="3" fill="#0072B2"/>
+<path d="M400.0,554.1335776041667V541.3478145833334 M397.0,554.1335776041667H403.0 M397.0,541.3478145833334H403.0" stroke="#0072B2" fill="none"/>
+<circle cx="400.0" cy="547.7757916666667" r="3" fill="#0072B2"/>
+<polyline points="60.0,498.7656875 145.0,497.0165 230.0,492.96000000000004 400.0,547.7757916666667" fill="none" stroke="#0072B2" stroke-width="1.5"/>
+<path d="M60.0,591.0V591.0 M57.0,591.0H63.0 M57.0,591.0H63.0" stroke="#D55E00" fill="none"/>
+<circle cx="60.0" cy="591.0" r="3" fill="#D55E00"/>
+<path d="M145.0,591.0V591.0 M142.0,591.0H148.0 M142.0,591.0H148.0" stroke="#D55E00" fill="none"/>
+<circle cx="145.0" cy="591.0" r="3" fill="#D55E00"/>
+<path d="M230.0,591.0V591.0 M227.0,591.0H233.0 M227.0,591.0H233.0" stroke="#D55E00" fill="none"/>
+<circle cx="230.0" cy="591.0" r="3" fill="#D55E00"/>
+<path d="M400.0,591.0V591.0 M397.0,591.0H403.0 M397.0,591.0H403.0" stroke="#D55E00" fill="none"/>
+<circle cx="400.0" cy="591.0" r="3" fill="#D55E00"/>
+<polyline points="60.0,591.0 145.0,591.0 230.0,591.0 400.0,591.0" fill="none" stroke="#D55E00" stroke-width="1.5"/>
+<path d="M60.0,519.4046453125V511.98392812500003 M57.0,519.4046453125H63.0 M57.0,511.98392812500003H63.0" stroke="#009E73" fill="none"/>
+<circle cx="60.0" cy="515.9151666666667" r="3" fill="#009E73"/>
+<path d="M145.0,519.3929682291666V512.52679375 M142.0,519.3929682291666H148.0 M142.0,512.52679375H148.0" stroke="#009E73" fill="none"/>
+<circle cx="145.0" cy="515.9151666666667" r="3" fill="#009E73"/>
+<path d="M230.0,519.3112286458334V512.0168614583333 M227.0,519.3112286458334H233.0 M227.0,512.0168614583333H233.0" stroke="#009E73" fill="none"/>
+<circle cx="230.0" cy="515.9151666666667" r="3" fill="#009E73"/>
+<path d="M400.0,519.3764421875001V512.1867432291666 M397.0,519.3764421875001H403.0 M397.0,512.1867432291666H403.0" stroke="#009E73" fill="none"/>
+<circle cx="400.0" cy="515.9151666666667" r="3" fill="#009E73"/>
+<polyline points="60.0,515.9151666666667 145.0,515.9151666666667 230.0,515.9151666666667 400.0,515.9151666666667" fill="none" stroke="#009E73" stroke-width="1.5"/>
+<text x="505" y="405" font-weight="bold">outcome_only; c=15.0; π=0.35</text>
+<line x1="505" x2="845" y1="610" y2="610" stroke="#e5e5e5"/>
+<text x="497" y="614" text-anchor="end">0%</text>
+<line x1="505" x2="845" y1="562.5" y2="562.5" stroke="#e5e5e5"/>
+<text x="497" y="566.5" text-anchor="end">9%</text>
+<line x1="505" x2="845" y1="515.0" y2="515.0" stroke="#e5e5e5"/>
+<text x="497" y="519.0" text-anchor="end">18%</text>
+<line x1="505" x2="845" y1="467.5" y2="467.5" stroke="#e5e5e5"/>
+<text x="497" y="471.5" text-anchor="end">26%</text>
+<line x1="505" x2="845" y1="420" y2="420" stroke="#e5e5e5"/>
+<text x="497" y="424" text-anchor="end">35%</text>
+<text x="505" y="630" text-anchor="middle">0</text>
+<text x="590.0" y="630" text-anchor="middle">0.25</text>
+<text x="675.0" y="630" text-anchor="middle">0.5</text>
+<text x="845" y="630" text-anchor="middle">1</text>
+<text x="675.0" y="650" text-anchor="middle">Audit probability ρ</text>
+<path d="M505.0,496.3915979166667V475.9914859375 M502.0,496.3915979166667H508.0 M502.0,475.9914859375H508.0" stroke="#0072B2" fill="none"/>
+<circle cx="505.0" cy="485.2665833333333" r="3" fill="#0072B2"/>
+<path d="M590.0,486.96097760416666V472.6813890625 M587.0,486.96097760416666H593.0 M587.0,472.6813890625H593.0" stroke="#0072B2" fill="none"/>
+<circle cx="590.0" cy="479.63585416666666" r="3" fill="#0072B2"/>
+<path d="M675.0,480.8549614583333V469.109953125 M672.0,480.8549614583333H678.0 M672.0,469.109953125H678.0" stroke="#0072B2" fill="none"/>
+<circle cx="675.0" cy="474.93097916666665" r="3" fill="#0072B2"/>
+<path d="M845.0,562.175159375V550.2456729166666 M842.0,562.175159375H848.0 M842.0,550.2456729166666H848.0" stroke="#0072B2" fill="none"/>
+<circle cx="845.0" cy="556.2782916666667" r="3" fill="#0072B2"/>
+<polyline points="505.0,485.2665833333333 590.0,479.63585416666666 675.0,474.93097916666665 845.0,556.2782916666667" fill="none" stroke="#0072B2" stroke-width="1.5"/>
+<path d="M505.0,591.0V591.0 M502.0,591.0H508.0 M502.0,591.0H508.0" stroke="#D55E00" fill="none"/>
+<circle cx="505.0" cy="591.0" r="3" fill="#D55E00"/>
+<path d="M590.0,591.0V591.0 M587.0,591.0H593.0 M587.0,591.0H593.0" stroke="#D55E00" fill="none"/>
+<circle cx="590.0" cy="591.0" r="3" fill="#D55E00"/>
+<path d="M675.0,591.0V591.0 M672.0,591.0H678.0 M672.0,591.0H678.0" stroke="#D55E00" fill="none"/>
+<circle cx="675.0" cy="591.0" r="3" fill="#D55E00"/>
+<path d="M845.0,591.0V591.0 M842.0,591.0H848.0 M842.0,591.0H848.0" stroke="#D55E00" fill="none"/>
+<circle cx="845.0" cy="591.0" r="3" fill="#D55E00"/>
+<polyline points="505.0,591.0 590.0,591.0 675.0,591.0 845.0,591.0" fill="none" stroke="#D55E00" stroke-width="1.5"/>
+<path d="M505.0,527.6173359375V520.9039927083334 M502.0,527.6173359375H508.0 M502.0,520.9039927083334H508.0" stroke="#009E73" fill="none"/>
+<circle cx="505.0" cy="524.3131666666667" r="3" fill="#009E73"/>
+<path d="M590.0,527.5224052083333V520.7441354166667 M587.0,527.5224052083333H593.0 M587.0,520.7441354166667H593.0" stroke="#009E73" fill="none"/>
+<circle cx="590.0" cy="524.3131666666667" r="3" fill="#009E73"/>
+<path d="M675.0,527.4982692708334V520.8655572916666 M672.0,527.4982692708334H678.0 M672.0,520.8655572916666H678.0" stroke="#009E73" fill="none"/>
+<circle cx="675.0" cy="524.3131666666667" r="3" fill="#009E73"/>
+<path d="M845.0,527.6220067708333V520.8346328125 M842.0,527.6220067708333H848.0 M842.0,520.8346328125H848.0" stroke="#009E73" fill="none"/>
+<circle cx="845.0" cy="524.3131666666667" r="3" fill="#009E73"/>
+<polyline points="505.0,524.3131666666667 590.0,524.3131666666667 675.0,524.3131666666667 845.0,524.3131666666667" fill="none" stroke="#009E73" stroke-width="1.5"/>
+<text x="60" y="705" font-weight="bold">reason_visible; c=5.0; π=0.15</text>
+<line x1="60" x2="400" y1="910" y2="910" stroke="#e5e5e5"/>
+<text x="52" y="914" text-anchor="end">0%</text>
+<line x1="60" x2="400" y1="862.5" y2="862.5" stroke="#e5e5e5"/>
+<text x="52" y="866.5" text-anchor="end">4%</text>
+<line x1="60" x2="400" y1="815.0" y2="815.0" stroke="#e5e5e5"/>
+<text x="52" y="819.0" text-anchor="end">8%</text>
+<line x1="60" x2="400" y1="767.5" y2="767.5" stroke="#e5e5e5"/>
+<text x="52" y="771.5" text-anchor="end">11%</text>
+<line x1="60" x2="400" y1="720" y2="720" stroke="#e5e5e5"/>
+<text x="52" y="724" text-anchor="end">15%</text>
+<text x="60" y="930" text-anchor="middle">0</text>
+<text x="145.0" y="930" text-anchor="middle">0.25</text>
+<text x="230.0" y="930" text-anchor="middle">0.5</text>
+<text x="400" y="930" text-anchor="middle">1</text>
+<text x="230.0" y="950" text-anchor="middle">Audit probability ρ</text>
+<path d="M60.0,799.877425V786.4627817708333 M57.0,799.877425H63.0 M57.0,786.4627817708333H63.0" stroke="#0072B2" fill="none"/>
+<circle cx="60.0" cy="793.0205625" r="3" fill="#0072B2"/>
+<path d="M145.0,797.7396973958333V787.6345177083333 M142.0,797.7396973958333H148.0 M142.0,787.6345177083333H148.0" stroke="#0072B2" fill="none"/>
+<circle cx="145.0" cy="792.5142916666666" r="3" fill="#0072B2"/>
+<path d="M230.0,847.1882958333333V832.2041833333333 M227.0,847.1882958333333H233.0 M227.0,832.2041833333333H233.0" stroke="#0072B2" fill="none"/>
+<circle cx="230.0" cy="839.3714583333333" r="3" fill="#0072B2"/>
+<path d="M400.0,854.747228125V841.1128578125 M397.0,854.747228125H403.0 M397.0,841.1128578125H403.0" stroke="#0072B2" fill="none"/>
+<circle cx="400.0" cy="847.7757916666667" r="3" fill="#0072B2"/>
+<polyline points="60.0,793.0205625 145.0,792.5142916666666 230.0,839.3714583333333 400.0,847.7757916666667" fill="none" stroke="#0072B2" stroke-width="1.5"/>
+<path d="M60.0,891.0V891.0 M57.0,891.0H63.0 M57.0,891.0H63.0" stroke="#D55E00" fill="none"/>
+<circle cx="60.0" cy="891.0" r="3" fill="#D55E00"/>
+<path d="M145.0,891.0V891.0 M142.0,891.0H148.0 M142.0,891.0H148.0" stroke="#D55E00" fill="none"/>
+<circle cx="145.0" cy="891.0" r="3" fill="#D55E00"/>
+<path d="M230.0,891.0V891.0 M227.0,891.0H233.0 M227.0,891.0H233.0" stroke="#D55E00" fill="none"/>
+<circle cx="230.0" cy="891.0" r="3" fill="#D55E00"/>
+<path d="M400.0,891.0V891.0 M397.0,891.0H403.0 M397.0,891.0H403.0" stroke="#D55E00" fill="none"/>
+<circle cx="400.0" cy="891.0" r="3" fill="#D55E00"/>
+<polyline points="60.0,891.0 145.0,891.0 230.0,891.0 400.0,891.0" fill="none" stroke="#D55E00" stroke-width="1.5"/>
+<path d="M60.0,819.3327520833334V812.3958817708333 M57.0,819.3327520833334H63.0 M57.0,812.3958817708333H63.0" stroke="#009E73" fill="none"/>
+<circle cx="60.0" cy="815.9151666666667" r="3" fill="#009E73"/>
+<path d="M145.0,819.2988588541666V812.2722333333334 M142.0,819.2988588541666H148.0 M142.0,812.2722333333334H148.0" stroke="#009E73" fill="none"/>
+<circle cx="145.0" cy="815.9151666666667" r="3" fill="#009E73"/>
+<path d="M230.0,819.2658166666666V812.0957708333333 M227.0,819.2658166666666H233.0 M227.0,812.0957708333333H233.0" stroke="#009E73" fill="none"/>
+<circle cx="230.0" cy="815.9151666666667" r="3" fill="#009E73"/>
+<path d="M400.0,819.5113223958333V811.9635526041667 M397.0,819.5113223958333H403.0 M397.0,811.9635526041667H403.0" stroke="#009E73" fill="none"/>
+<circle cx="400.0" cy="815.9151666666667" r="3" fill="#009E73"/>
+<polyline points="60.0,815.9151666666667 145.0,815.9151666666667 230.0,815.9151666666667 400.0,815.9151666666667" fill="none" stroke="#009E73" stroke-width="1.5"/>
+<text x="505" y="705" font-weight="bold">reason_visible; c=5.0; π=0.35</text>
+<line x1="505" x2="845" y1="910" y2="910" stroke="#e5e5e5"/>
+<text x="497" y="914" text-anchor="end">0%</text>
+<line x1="505" x2="845" y1="862.5" y2="862.5" stroke="#e5e5e5"/>
+<text x="497" y="866.5" text-anchor="end">9%</text>
+<line x1="505" x2="845" y1="815.0" y2="815.0" stroke="#e5e5e5"/>
+<text x="497" y="819.0" text-anchor="end">18%</text>
+<line x1="505" x2="845" y1="767.5" y2="767.5" stroke="#e5e5e5"/>
+<text x="497" y="771.5" text-anchor="end">26%</text>
+<line x1="505" x2="845" y1="720" y2="720" stroke="#e5e5e5"/>
+<text x="497" y="724" text-anchor="end">35%</text>
+<text x="505" y="930" text-anchor="middle">0</text>
+<text x="590.0" y="930" text-anchor="middle">0.25</text>
+<text x="675.0" y="930" text-anchor="middle">0.5</text>
+<text x="845" y="930" text-anchor="middle">1</text>
+<text x="675.0" y="950" text-anchor="middle">Audit probability ρ</text>
+<path d="M505.0,785.8194833333333V773.084990625 M502.0,785.8194833333333H508.0 M502.0,773.084990625H508.0" stroke="#0072B2" fill="none"/>
+<circle cx="505.0" cy="779.3761875" r="3" fill="#0072B2"/>
+<path d="M590.0,788.8460645833334V775.8161911458333 M587.0,788.8460645833334H593.0 M587.0,775.8161911458333H593.0" stroke="#0072B2" fill="none"/>
+<circle cx="590.0" cy="782.2950625" r="3" fill="#0072B2"/>
+<path d="M675.0,861.3012979166667V848.0058994791667 M672.0,861.3012979166667H678.0 M672.0,848.0058994791667H678.0" stroke="#0072B2" fill="none"/>
+<circle cx="675.0" cy="854.7856041666666" r="3" fill="#0072B2"/>
+<path d="M845.0,862.2503875V850.5690984375 M842.0,862.2503875H848.0 M842.0,850.5690984375H848.0" stroke="#0072B2" fill="none"/>
+<circle cx="845.0" cy="856.2782916666667" r="3" fill="#0072B2"/>
+<polyline points="505.0,779.3761875 590.0,782.2950625 675.0,854.7856041666666 845.0,856.2782916666667" fill="none" stroke="#0072B2" stroke-width="1.5"/>
+<path d="M505.0,891.0V891.0 M502.0,891.0H508.0 M502.0,891.0H508.0" stroke="#D55E00" fill="none"/>
+<circle cx="505.0" cy="891.0" r="3" fill="#D55E00"/>
+<path d="M590.0,891.0V891.0 M587.0,891.0H593.0 M587.0,891.0H593.0" stroke="#D55E00" fill="none"/>
+<circle cx="590.0" cy="891.0" r="3" fill="#D55E00"/>
+<path d="M675.0,891.0V891.0 M672.0,891.0H678.0 M672.0,891.0H678.0" stroke="#D55E00" fill="none"/>
+<circle cx="675.0" cy="891.0" r="3" fill="#D55E00"/>
+<path d="M845.0,891.0V891.0 M842.0,891.0H848.0 M842.0,891.0H848.0" stroke="#D55E00" fill="none"/>
+<circle cx="845.0" cy="891.0" r="3" fill="#D55E00"/>
+<polyline points="505.0,891.0 590.0,891.0 675.0,891.0 845.0,891.0" fill="none" stroke="#D55E00" stroke-width="1.5"/>
+<path d="M505.0,827.5743088541667V820.4675765625 M502.0,827.5743088541667H508.0 M502.0,820.4675765625H508.0" stroke="#009E73" fill="none"/>
+<circle cx="505.0" cy="824.3131666666667" r="3" fill="#009E73"/>
+<path d="M590.0,827.7607760416666V820.7179807291667 M587.0,827.7607760416666H593.0 M587.0,820.7179807291667H593.0" stroke="#009E73" fill="none"/>
+<circle cx="590.0" cy="824.3131666666667" r="3" fill="#009E73"/>
+<path d="M675.0,827.4838114583333V820.7920807291666 M672.0,827.4838114583333H678.0 M672.0,820.7920807291666H678.0" stroke="#009E73" fill="none"/>
+<circle cx="675.0" cy="824.3131666666667" r="3" fill="#009E73"/>
+<path d="M845.0,827.6650140625V820.7664307291666 M842.0,827.6650140625H848.0 M842.0,820.7664307291666H848.0" stroke="#009E73" fill="none"/>
+<circle cx="845.0" cy="824.3131666666667" r="3" fill="#009E73"/>
+<polyline points="505.0,824.3131666666667 590.0,824.3131666666667 675.0,824.3131666666667 845.0,824.3131666666667" fill="none" stroke="#009E73" stroke-width="1.5"/>
+<text x="60" y="1005" font-weight="bold">reason_visible; c=15.0; π=0.15</text>
+<line x1="60" x2="400" y1="1210" y2="1210" stroke="#e5e5e5"/>
+<text x="52" y="1214" text-anchor="end">0%</text>
+<line x1="60" x2="400" y1="1162.5" y2="1162.5" stroke="#e5e5e5"/>
+<text x="52" y="1166.5" text-anchor="end">4%</text>
+<line x1="60" x2="400" y1="1115.0" y2="1115.0" stroke="#e5e5e5"/>
+<text x="52" y="1119.0" text-anchor="end">8%</text>
+<line x1="60" x2="400" y1="1067.5" y2="1067.5" stroke="#e5e5e5"/>
+<text x="52" y="1071.5" text-anchor="end">11%</text>
+<line x1="60" x2="400" y1="1020" y2="1020" stroke="#e5e5e5"/>
+<text x="52" y="1024" text-anchor="end">15%</text>
+<text x="60" y="1230" text-anchor="middle">0</text>
+<text x="145.0" y="1230" text-anchor="middle">0.25</text>
+<text x="230.0" y="1230" text-anchor="middle">0.5</text>
+<text x="400" y="1230" text-anchor="middle">1</text>
+<text x="230.0" y="1250" text-anchor="middle">Audit probability ρ</text>
+<path d="M60.0,1099.2982416666666V1086.6520098958333 M57.0,1099.2982416666666H63.0 M57.0,1086.6520098958333H63.0" stroke="#0072B2" fill="none"/>
+<circle cx="60.0" cy="1093.0205624999999" r="3" fill="#0072B2"/>
+<path d="M145.0,1097.6557015625V1087.4151567708334 M142.0,1097.6557015625H148.0 M142.0,1087.4151567708334H148.0" stroke="#0072B2" fill="none"/>
+<circle cx="145.0" cy="1092.5142916666666" r="3" fill="#0072B2"/>
+<path d="M230.0,1101.8976197916666V1088.0145375 M227.0,1101.8976197916666H233.0 M227.0,1088.0145375H233.0" stroke="#0072B2" fill="none"/>
+<circle cx="230.0" cy="1094.957375" r="3" fill="#0072B2"/>
+<path d="M400.0,1154.1258588541666V1141.3115364583334 M397.0,1154.1258588541666H403.0 M397.0,1141.3115364583334H403.0" stroke="#0072B2" fill="none"/>
+<circle cx="400.0" cy="1147.7757916666667" r="3" fill="#0072B2"/>
+<polyline points="60.0,1093.0205624999999 145.0,1092.5142916666666 230.0,1094.957375 400.0,1147.7757916666667" fill="none" stroke="#0072B2" stroke-width="1.5"/>
+<path d="M60.0,1191.0V1191.0 M57.0,1191.0H63.0 M57.0,1191.0H63.0" stroke="#D55E00" fill="none"/>
+<circle cx="60.0" cy="1191.0" r="3" fill="#D55E00"/>
+<path d="M145.0,1191.0V1191.0 M142.0,1191.0H148.0 M142.0,1191.0H148.0" stroke="#D55E00" fill="none"/>
+<circle cx="145.0" cy="1191.0" r="3" fill="#D55E00"/>
+<path d="M230.0,1191.0V1191.0 M227.0,1191.0H233.0 M227.0,1191.0H233.0" stroke="#D55E00" fill="none"/>
+<circle cx="230.0" cy="1191.0" r="3" fill="#D55E00"/>
+<path d="M400.0,1191.0V1191.0 M397.0,1191.0H403.0 M397.0,1191.0H403.0" stroke="#D55E00" fill="none"/>
+<circle cx="400.0" cy="1191.0" r="3" fill="#D55E00"/>
+<polyline points="60.0,1191.0 145.0,1191.0 230.0,1191.0 400.0,1191.0" fill="none" stroke="#D55E00" stroke-width="1.5"/>
+<path d="M60.0,1119.2165255208333V1112.2661770833333 M57.0,1119.2165255208333H63.0 M57.0,1112.2661770833333H63.0" stroke="#009E73" fill="none"/>
+<circle cx="60.0" cy="1115.9151666666667" r="3" fill="#009E73"/>
+<path d="M145.0,1119.4415666666666V1112.4702984374999 M142.0,1119.4415666666666H148.0 M142.0,1112.4702984374999H148.0" stroke="#009E73" fill="none"/>
+<circle cx="145.0" cy="1115.9151666666667" r="3" fill="#009E73"/>
+<path d="M230.0,1119.3186505208332V1111.9958921875 M227.0,1119.3186505208332H233.0 M227.0,1111.9958921875H233.0" stroke="#009E73" fill="none"/>
+<circle cx="230.0" cy="1115.9151666666667" r="3" fill="#009E73"/>
+<path d="M400.0,1119.2221958333334V1112.2252973958334 M397.0,1119.2221958333334H403.0 M397.0,1112.2252973958334H403.0" stroke="#009E73" fill="none"/>
+<circle cx="400.0" cy="1115.9151666666667" r="3" fill="#009E73"/>
+<polyline points="60.0,1115.9151666666667 145.0,1115.9151666666667 230.0,1115.9151666666667 400.0,1115.9151666666667" fill="none" stroke="#009E73" stroke-width="1.5"/>
+<text x="505" y="1005" font-weight="bold">reason_visible; c=15.0; π=0.35</text>
+<line x1="505" x2="845" y1="1210" y2="1210" stroke="#e5e5e5"/>
+<text x="497" y="1214" text-anchor="end">0%</text>
+<line x1="505" x2="845" y1="1162.5" y2="1162.5" stroke="#e5e5e5"/>
+<text x="497" y="1166.5" text-anchor="end">9%</text>
+<line x1="505" x2="845" y1="1115.0" y2="1115.0" stroke="#e5e5e5"/>
+<text x="497" y="1119.0" text-anchor="end">18%</text>
+<line x1="505" x2="845" y1="1067.5" y2="1067.5" stroke="#e5e5e5"/>
+<text x="497" y="1071.5" text-anchor="end">26%</text>
+<line x1="505" x2="845" y1="1020" y2="1020" stroke="#e5e5e5"/>
+<text x="497" y="1024" text-anchor="end">35%</text>
+<text x="505" y="1230" text-anchor="middle">0</text>
+<text x="590.0" y="1230" text-anchor="middle">0.25</text>
+<text x="675.0" y="1230" text-anchor="middle">0.5</text>
+<text x="845" y="1230" text-anchor="middle">1</text>
+<text x="675.0" y="1250" text-anchor="middle">Audit probability ρ</text>
+<path d="M505.0,1086.4160338541667V1072.5510114583333 M502.0,1086.4160338541667H508.0 M502.0,1072.5510114583333H508.0" stroke="#0072B2" fill="none"/>
+<circle cx="505.0" cy="1079.3761875" r="3" fill="#0072B2"/>
+<path d="M590.0,1089.3261015625V1075.9757119791666 M587.0,1089.3261015625H593.0 M587.0,1075.9757119791666H593.0" stroke="#0072B2" fill="none"/>
+<circle cx="590.0" cy="1082.2950625" r="3" fill="#0072B2"/>
+<path d="M675.0,1081.2284697916666V1069.5603916666666 M672.0,1081.2284697916666H678.0 M672.0,1069.5603916666666H678.0" stroke="#0072B2" fill="none"/>
+<circle cx="675.0" cy="1074.7861041666667" r="3" fill="#0072B2"/>
+<path d="M845.0,1162.1191984375V1150.5739078125 M842.0,1162.1191984375H848.0 M842.0,1150.5739078125H848.0" stroke="#0072B2" fill="none"/>
+<circle cx="845.0" cy="1156.2782916666667" r="3" fill="#0072B2"/>
+<polyline points="505.0,1079.3761875 590.0,1082.2950625 675.0,1074.7861041666667 845.0,1156.2782916666667" fill="none" stroke="#0072B2" stroke-width="1.5"/>
+<path d="M505.0,1191.0V1191.0 M502.0,1191.0H508.0 M502.0,1191.0H508.0" stroke="#D55E00" fill="none"/>
+<circle cx="505.0" cy="1191.0" r="3" fill="#D55E00"/>
+<path d="M590.0,1191.0V1191.0 M587.0,1191.0H593.0 M587.0,1191.0H593.0" stroke="#D55E00" fill="none"/>
+<circle cx="590.0" cy="1191.0" r="3" fill="#D55E00"/>
+<path d="M675.0,1191.0V1191.0 M672.0,1191.0H678.0 M672.0,1191.0H678.0" stroke="#D55E00" fill="none"/>
+<circle cx="675.0" cy="1191.0" r="3" fill="#D55E00"/>
+<path d="M845.0,1191.0V1191.0 M842.0,1191.0H848.0 M842.0,1191.0H848.0" stroke="#D55E00" fill="none"/>
+<circle cx="845.0" cy="1191.0" r="3" fill="#D55E00"/>
+<polyline points="505.0,1191.0 590.0,1191.0 675.0,1191.0 845.0,1191.0" fill="none" stroke="#D55E00" stroke-width="1.5"/>
+<path d="M505.0,1127.4319276041667V1120.998003125 M502.0,1127.4319276041667H508.0 M502.0,1120.998003125H508.0" stroke="#009E73" fill="none"/>
+<circle cx="505.0" cy="1124.3131666666666" r="3" fill="#009E73"/>
+<path d="M590.0,1127.7252005208334V1120.7808489583333 M587.0,1127.7252005208334H593.0 M587.0,1120.7808489583333H593.0" stroke="#009E73" fill="none"/>
+<circle cx="590.0" cy="1124.3131666666666" r="3" fill="#009E73"/>
+<path d="M675.0,1127.544453125V1120.6876005208333 M672.0,1127.544453125H678.0 M672.0,1120.6876005208333H678.0" stroke="#009E73" fill="none"/>
+<circle cx="675.0" cy="1124.3131666666666" r="3" fill="#009E73"/>
+<path d="M845.0,1127.6167421875V1121.0191505208334 M842.0,1127.6167421875H848.0 M842.0,1121.0191505208334H848.0" stroke="#009E73" fill="none"/>
+<circle cx="845.0" cy="1124.3131666666666" r="3" fill="#009E73"/>
+<polyline points="505.0,1124.3131666666666 590.0,1124.3131666666666 675.0,1124.3131666666666 845.0,1124.3131666666666" fill="none" stroke="#009E73" stroke-width="1.5"/>
+<line x1="30" x2="55" y1="1305" y2="1305" stroke="#0072B2" stroke-width="3"/>
+<text x="65" y="1309">bayesian</text>
+<line x1="30" x2="55" y1="1325" y2="1325" stroke="#D55E00" stroke-width="3"/>
+<text x="65" y="1329">oracle</text>
+<line x1="30" x2="55" y1="1345" y2="1345" stroke="#009E73" stroke-width="3"/>
+<text x="65" y="1349">uniform</text>
+</g>
+</svg>

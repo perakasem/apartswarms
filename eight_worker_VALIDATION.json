@@ -1,0 +1,20 @@
+{
+  "checked_at": "2026-11-08T01:01:35.652874+00:00",
+  "command": "python3 -m unittest discover -s selection_safety -p 'test_*.py' -q",
+  "tests_run": 55,
+  "failures": 0,
+  "errors": 0,
+  "python_version": "3.13.7",
+  "source": "publication copy of selection_safety",
+  "uses_mock_api_transports": true,
+  "live_inference_performed_by_this_check": false,
+  "scope": "Automated software tests; not human scientific review or a provider billing audit.",
+  "offline_regeneration": {
+    "completed_at": "2026-11-08T01:02:44.016287+00:00",
+    "runs": 1920,
+    "assignments": 115200,
+    "comparison": "All saved round fields identical to original baselines after excluding run_id and prompt_version",
+    "result": "passed",
+    "inference_calls": 0
+  }
+}
