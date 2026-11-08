@@ -1,0 +1,55 @@
+{
+  "schema": "appendix-source-export-1",
+  "repository": "perakasem/apartswarms",
+  "source_commit": "0a105cf7242c50cf86fa7c8dc1ae31a257033bcc",
+  "archive_path": "prompt-full-results.zip",
+  "archive_git_blob_sha1": "849f15afd47c776cd70c0ab38e2a6fc7e67949ad",
+  "archive_sha256": "aaaf033497590998f769c4fd62ebb0d32d93f8d4ff16aa3e52d14f94c114b3f5",
+  "archive_bytes": 12255305,
+  "archive_matches_published_git_blob": true,
+  "files": [
+    {
+      "archive_member": "reproduce_prompt.py",
+      "publication_path": "reproduce_prompt.py",
+      "bytes": 10743,
+      "sha256": "9743e6b188b2f4e79970bbc474238199c880447ef609b843b1299bffb32380dc",
+      "byte_identical": true
+    },
+    {
+      "archive_member": "audit_prompt.py",
+      "publication_path": "audit_prompt.py",
+      "bytes": 51866,
+      "sha256": "521cd20d74caad1aaa9b46a3dcd0c75a5b6373c10cee50a477f371611d15ba44",
+      "byte_identical": true
+    },
+    {
+      "archive_member": "build_prompt_result_files.py",
+      "publication_path": "build_prompt_result_files.py",
+      "bytes": 14834,
+      "sha256": "ee32399e69e8b2b92af32a4f9c4cb0a4c0d2f9f4fb2fcad95b937f2b4e500982",
+      "byte_identical": true
+    },
+    {
+      "archive_member": "independent_prompt_review.py",
+      "publication_path": "independent_prompt_review.py",
+      "bytes": 34938,
+      "sha256": "201b6f7c2e6cb171489f8391892f345ed5031d52c17706ce27b7235fb44ef17f",
+      "byte_identical": true
+    },
+    {
+      "archive_member": "prompt_requirements.txt",
+      "publication_path": "prompt_requirements.txt",
+      "bytes": 120,
+      "sha256": "2bb47b34dba4ea880b0036104ea76f80569143665c870c114bccf9b93feba92f",
+      "byte_identical": true
+    },
+    {
+      "archive_member": "independent_prompt_review_checks.json",
+      "publication_path": "independent_prompt_review_checks.json",
+      "bytes": 822,
+      "sha256": "2196da2d15a65c04611c9002386214e0ffddde89714155c4801e6ccfc31545fa",
+      "byte_identical": true
+    }
+  ],
+  "scope": "Exact exports for browsing. Run verification from the extracted full archive as described in PROMPT_REPRODUCTION.md; these standalone files do not replace its source and data tree. No inference calls were made."
+}

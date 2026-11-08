@@ -1,5 +1,7 @@
 # Selection Against Safety: eight-worker pilot
 
+See the [technical appendix](eight_worker_APPENDIX.md) for exact prompts, analysis definitions, and the complete synthetic baseline records. The repository-wide [document index](RESEARCH_DOCUMENTS.md) keeps this experiment separate from the completed four-worker studies.
+
 This document set and its [source archive](eight_worker_source_and_baselines.zip) contain the protocol, executable code, and synthetic baseline results for an eight-worker experiment on whether a coordinator's allocation choices reduce the influence of careful workers. It is a separate experiment from the completed four-worker studies in the repository root. Their observations, estimates, and credit totals are not pooled here.
 
 The completed baseline collection contains **1,920 simulated episodes and 115,200 assignments**. The repaired live smoke test completed one decision for each of three models. Those connectivity checks do not establish the research hypothesis. See the dated [execution status](eight_worker_STATUS.md) for the latest observed pilot progress and failures.

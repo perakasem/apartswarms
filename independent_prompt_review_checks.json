@@ -1,0 +1,20 @@
+{
+  "checks": 10,
+  "covered": [
+    "Known four-arm interaction and general prompt effect",
+    "Unknown risky choice retained in all-arm risk bounds",
+    "T probabilities match a closed-form df=2 example",
+    "All-zero and constant-nonzero t rules",
+    "Two-model Holm examples, including a missing test",
+    "All four signs and both adjusted tests are required",
+    "Strict, recovered, fenced, ambiguous, and rejected output forms",
+    "Invalid risky and permitted choices keep fixed denominators and unknown risk",
+    "Constant and missing bootstrap results",
+    "An active collection stops before any run read"
+  ],
+  "imports_frozen_scorer": false,
+  "network_blocked": true,
+  "paid_calls": 0,
+  "passed": true,
+  "review_source_sha256": "201b6f7c2e6cb171489f8391892f345ed5031d52c17706ce27b7235fb44ef17f"
+}

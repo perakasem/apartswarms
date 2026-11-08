@@ -2,6 +2,8 @@
 
 The prompt comparison is complete. Read the [plain-language results](PROMPT_RESULTS_SUMMARY.md), [full report](prompt_REPORT.md), and [fixed protocol](PROMPT_COMPARISON_PROTOCOL.md).
 
+**Supporting documents:** [technical appendix](APPENDIX.md) · [appendix PDF](APPENDIX.pdf) · [data dictionary](DATA_DICTIONARY.md) · [complete document index](RESEARCH_DOCUMENTS.md). The index separates the three completed studies from the additional eight-worker experiment.
+
 The main sample has 320 runs: 40 matched sets per model, with four conditions per set. The original prompt and reduced-guidance prompt were tested in the same collection. The earlier studies are separate samples.
 
 ![Prompt effects and notice-source interaction](prompt_effects.png)
@@ -83,4 +85,7 @@ The linked reader reports are the current editions. The original generated repor
 
 Read the **[simplified paper](eight_worker_SIMPLE_PAPER.md)** or **[download its PDF](eight_worker_SIMPLE_PAPER.pdf)** for a plain-language explanation of the question, methods, simulation findings, and limits. The [updated execution status](eight_worker_STATUS.md) distinguishes successful smoke checks from invalid and missing pilot choices.
 
+Its [technical appendix](eight_worker_APPENDIX.md) provides the exact instructions, full methods, and synthetic-record archive.
+
 The [Selection Against Safety experiment](eight_worker_README.md) has a separate protocol, synthetic baseline report, tested source, and dated pilot status. Its live smoke check passed; its research collection is not reported as a completed LLM study. It uses eight fixed workers and a different scoring design. Its observations and credit accounting are separate from the completed studies above.
+

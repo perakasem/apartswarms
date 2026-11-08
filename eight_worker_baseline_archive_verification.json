@@ -1,0 +1,48 @@
+{
+  "kind": "eight_worker_original_synthetic_baseline_archive_verification",
+  "synthetic_only": true,
+  "inference_performed": false,
+  "source_dataset": "baselines_verified_v1",
+  "original_files": 3852,
+  "archive_members": 3853,
+  "original_uncompressed_bytes": 133069007,
+  "zip_bytes": 6886566,
+  "zip_sha256": "cb555f4d6549833de772279c867c978ffc39bb5e00140d84ac4bcf1b688bb2cf",
+  "under_25_MB": true,
+  "member_hashes_match_originals": true,
+  "zip_crc_check": "passed",
+  "run_files": 1920,
+  "status_files": 1920,
+  "runs_completed": 1920,
+  "runs_total": 1920,
+  "analysis_records": 115200,
+  "analysis_conditions": 96,
+  "path_marker_scan": {
+    "markers": [
+      "/Users/",
+      "/home/",
+      "/workspace/",
+      "/tmp/"
+    ],
+    "matching_files": 0
+  },
+  "credential_marker_scan_note": "Only the already published client source contains generic bearer-header construction and credential-redaction regex literals; no credential files or live model outputs are included.",
+  "readable_companions": [
+    {
+      "path": "eight_worker_analysis.json",
+      "sha256": "512488acfa93699f96a2f70c3dfe007b1183273d3c1a88058e27c7fd02803d35",
+      "source_path": "analysis/analysis.json"
+    },
+    {
+      "path": "eight_worker_trajectories.csv",
+      "sha256": "4e11e26941b4db3a6d433bc7967908de575fb1bfea73b6d8054d6ca1a0916db2",
+      "source_path": "analysis/trajectories.csv"
+    }
+  ],
+  "all_run_rows_verified_synthetic": true,
+  "raw_round_count_verified": 115200,
+  "all_status_records_completed_60_rounds": true,
+  "original_prompt_versions": [
+    "selection_safety_v1"
+  ]
+}
