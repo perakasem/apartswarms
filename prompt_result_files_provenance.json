@@ -1,0 +1,27 @@
+{
+  "source_sha256": "ee32399e69e8b2b92af32a4f9c4cb0a4c0d2f9f4fb2fcad95b937f2b4e500982",
+  "mode": "live",
+  "paid_calls": 0,
+  "matplotlib_version": "3.11.2",
+  "inputs": {
+    "status.json": "5e9b5305a503b0ef04c9b19f2e6439eca84bee2cafaeefdfa4585d716a746c4c",
+    "audit.json": "4f8281025648e9a219bb96fd0cc007752b153d51023d695a089ffc8ba2c88f8c",
+    "analysis.json": "747b81649d671ba55eb939effeb403d3805d8c6d3a69befc332908aecc9c1510",
+    "results.json": "50221c3745d73f318f840a2964be8583fb598e3b8b30a7a0cb7dc4ae3b4e4c58"
+  },
+  "outputs": {
+    "condition_means.csv": "8403b6b5c5b1ea975c4a1d413031b27ea812713959c8b3dc220e7ce04b517187",
+    "paired_effects.csv": "03b24a32f2b5252b27c507a9489c07ba5bfc54671fdb33b0046dec3559aa817c",
+    "seed_contrasts.csv": "e08944a2a54c867c63780ff220cf5b0f8b6f74188387c45e67e1c8115e523c64",
+    "main_runs.csv": "38bc5a0c3851dec9f17f17a95bce35cc0814ac83da1d5393708b49e7b3ea4b76",
+    "block_means.csv": "a0775f4dfc4c18fc996b7895ccd0718f33458c90d9330f5f738897b07ac7901f",
+    "joint_components.csv": "bcd1029af1b212914726461650c21f8ee9954c71e5401bebccc5853191a28aad",
+    "claim_tests.json": "9e08754434d2970fe83f34a3556ca0b36e9ae626a2f5b6588badfd139c16f0f3",
+    "prompt_effects.svg": "11f10ceede0b130100e73d5592ab6a15099ddf69ca0c0e7adc153bd23c9d87a3",
+    "prompt_effects.png": "8aa265b9efa76c499254d95bdac61285373055de62ca8d5181f109f3f76690a4",
+    "prompt_components.svg": "c36990d078e0b27cc2a51741bfc87585caaea837bef1482513bcfc4bb82bcfab",
+    "prompt_components.png": "8a3c902897689ed57177290052a018d2873c0936fa1eab002873a66725bb4aa3",
+    "prompt_blocks.svg": "681c10307dff7c4a445d84c9cc39c9c29282aace98cfe49a89313a8f38a99e53",
+    "prompt_blocks.png": "d65a0d08e137936793af7f24ababb79498117be3cd49161925e0e97fb06d65de"
+  }
+}

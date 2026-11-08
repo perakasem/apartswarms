@@ -1,0 +1,64 @@
+{
+  "automatic_release": false,
+  "claimed_utc": "2026-11-08T00:11:34.677649+00:00",
+  "global_limit_credits": "100",
+  "input_cap": 4500,
+  "max_attempts": 8272,
+  "model_prices": {
+    "glm-5.2": {
+      "input": "1.40",
+      "output": "4.40"
+    },
+    "qwen3.5-397b": {
+      "input": "0.55",
+      "output": "3.50"
+    }
+  },
+  "new_limit_credits": "60",
+  "output_cap": 512,
+  "prior_carry_sha256": "07db5d487d13eb5da1a19f6ec3aafd5a43962baffc05a9630e8a3313c1027c5b",
+  "protocol": "prompt-comparison-1.0",
+  "quotas": {
+    "main": 3840,
+    "pilot": 192,
+    "probe": 4
+  },
+  "result_root": "/Users/Administrator/Documents/Codex/2026-11-06/based-on-track-2-linked-here-2/outputs/selection_experiment/results/live_prompt",
+  "retry_limit": 100,
+  "schema": "prompt-authorization-1",
+  "source_hashes": {
+    "PROMPT_COMPARISON_DESIGN.json": "9044a640621352ef0913fd779d5faaac83269cbd7a02f1b6f748dd9eaf0ab5fd",
+    "PROMPT_COMPARISON_PROTOCOL.md": "ddcc71022cb0543b7e9ff21f2163a5c76f63c310c20b7a6a0d8d171e55dd34d4",
+    "audit_prompt.py": "521cd20d74caad1aaa9b46a3dcd0c75a5b6373c10cee50a477f371611d15ba44",
+    "key_prompt.py": "0a3fbab0a9aeb321e6fa182315930c6de3af7860da51392b16458d6da8d5c240",
+    "prompt_requirements.txt": "2bb47b34dba4ea880b0036104ea76f80569143665c870c114bccf9b93feba92f",
+    "prompt_study/__init__.py": "256f304be00cf940dbd6d9f0ce336113b3eb2389cd53457dfc574b14ae10e9aa",
+    "prompt_study/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "prompt_study/analysis.py": "2807a4c0e7499de5e814c8c25cdea9eacc58c5357ce82df63f9b2a62eaaea28e",
+    "prompt_study/authorization.py": "f2b084a7fa0d449f55a998f4bb29c92562ea8e23dc0476ddceebdfb37def0d50",
+    "prompt_study/cli.py": "eac9a637692520be7582faa6f7e7fc4114a0bbce0e9afa80d85c68e81bc42b48",
+    "prompt_study/common.py": "b70058bceb76acd401703ad4a0c945894b3a9452d6d16aa6d8e7a142ec015078",
+    "prompt_study/environment.py": "18beb3bbb40429812f4f5a3e91afb2f5ec494183d00de4670cca3856f3187c5f",
+    "prompt_study/ledger.py": "bb7570a6fa610caa48e080e58ee188ea5d60c18fae2b38705b662c3faf84d6bd",
+    "prompt_study/pacing.py": "e7f3227dc293175bf683f4d019fd88dc311f5e0522b4a8d1e8e3371d13fcb240",
+    "prompt_study/parser.py": "e7cb4cb7007bc08e1faf7a7be60a0db39ed9f3cffd60d234edca614bb4998e16",
+    "prompt_study/pricing.py": "2c8d55a905dba65df58b450259b169977b31d79d37cbb0845ab5e59a76512b93",
+    "prompt_study/reporting.py": "52299bf854a1addbbdb87cf7e50019a06374f10e563cf382076670704cb907aa",
+    "prompt_study/runner.py": "b8d14a61f50cda2f5da66339d1684b51f11208cafdd0a2a8ff3909a05cffabbb",
+    "prompt_study/tokenization.py": "61a1cb686cc7aa80e0447678c5e68bf74580388a7e84a0b6b9941fe3f0fe093c",
+    "prompt_study/transport.py": "7977c5333af9671ae75ef65bfcaaeed378605145602057b0afd77aa042c28c74",
+    "tests_prompt/test_analysis.py": "20651c5e86f32de43d80f0060d21e6085eadfccc7ea786f98dd67ba5921e703b",
+    "tests_prompt/test_audit.py": "6e5c7b2bc936ba94cf84ecc0f23135f0bf11d54ee65a296b5b76123afe5e6fef",
+    "tests_prompt/test_authorization.py": "28c5e4f1089e6d7a180a32eb6b158c852029b730703ce4fac95ccb07006b9680",
+    "tests_prompt/test_cli.py": "ef15c6ba8e95d10f022c2b4f84f2cbc466c6c43db42efb5460d6fb8a9c5cbe82",
+    "tests_prompt/test_environment.py": "e2fa8f0eaaaa8e051f7b79297e8ec8e12be2eba2fcc9a382505e8d1babb60b70",
+    "tests_prompt/test_ledger.py": "333bc4769e5c17710a84b6f65f3a4ccdb72ca6597117ca382e7e1a27f477f85c",
+    "tests_prompt/test_pacing.py": "e942bc3630dea4b2c30bd591ccc95f4165dce0926a6f63ede145d65199a390f5",
+    "tests_prompt/test_parser.py": "b1869fbab05e93bce58534426b925da49c016718b3375fc64a6b78f8880391ed",
+    "tests_prompt/test_pricing.py": "727090c8d54f04a0f7649bf229d6c3be1d0bc990ae80c5bab074981c9bfdd8d8",
+    "tests_prompt/test_reporting.py": "e7669fdd8c9320bcb7ec572ed312edd52821d3b4e4e432a35a3250238bf290ed",
+    "tests_prompt/test_runner.py": "5e3d5ed7320ba49cc4c861671e5e2a95962be4167fcbb69dbbb49c85679271ab",
+    "tests_prompt/test_tokenization.py": "ea2ac737d87d86216db2de3f1e587f18cd039a6b799b8e0d73e25071d719a02b",
+    "tests_prompt/test_transport.py": "3612ab432e149aec23f84911e87ba1061e5b12225bb03ba92badf1174f0529a9"
+  }
+}

@@ -1,0 +1,234 @@
+{
+  "conditions": [
+    "original_worker",
+    "original_relay",
+    "neutral_worker",
+    "neutral_relay"
+  ],
+  "environment_source_hash": "18beb3bbb40429812f4f5a3e91afb2f5ec494183d00de4670cca3856f3187c5f",
+  "framing_allowance": 256,
+  "history_policies": {
+    "always_invalid": "Every previous slot has no valid assignment.",
+    "always_worker_0": "Always select displayed worker 0.",
+    "always_worker_1": "Always select displayed worker 1.",
+    "always_worker_2": "Always select displayed worker 2.",
+    "always_worker_3": "Always select displayed worker 3.",
+    "cycle_workers": "Cycle through all four displayed workers.",
+    "mixed_0": "Seeded mixture of all workers and missing assignments.",
+    "mixed_1": "Seeded mixture of all workers and missing assignments.",
+    "mixed_2": "Seeded mixture of all workers and missing assignments.",
+    "mixed_3": "Seeded mixture of all workers and missing assignments."
+  },
+  "input_cap": 4500,
+  "limits": [
+    "The server's model revision and tokenizer are not directly observed.",
+    "No API reasoning-effort setting is inferred from local template options.",
+    "Live probes must check reported input tokens against this local bound."
+  ],
+  "models": {
+    "glm": {
+      "contexts_checked": 41280,
+      "counter": "native_local:d029bfa16c624ac6b9dd8284732b7a6b282f688072b2a295580d2b4e236a392a",
+      "episode_policy_checks": 1720,
+      "episodes_checked": 172,
+      "history_policies": {
+        "always_invalid": {
+          "contexts_checked": 4128,
+          "maximum_count": 3067,
+          "minimum_count": 1216
+        },
+        "always_worker_0": {
+          "contexts_checked": 4128,
+          "maximum_count": 3095,
+          "minimum_count": 1216
+        },
+        "always_worker_1": {
+          "contexts_checked": 4128,
+          "maximum_count": 3072,
+          "minimum_count": 1216
+        },
+        "always_worker_2": {
+          "contexts_checked": 4128,
+          "maximum_count": 3074,
+          "minimum_count": 1216
+        },
+        "always_worker_3": {
+          "contexts_checked": 4128,
+          "maximum_count": 3066,
+          "minimum_count": 1216
+        },
+        "cycle_workers": {
+          "contexts_checked": 4128,
+          "maximum_count": 3049,
+          "minimum_count": 1216
+        },
+        "mixed_0": {
+          "contexts_checked": 4128,
+          "maximum_count": 3052,
+          "minimum_count": 1216
+        },
+        "mixed_1": {
+          "contexts_checked": 4128,
+          "maximum_count": 3047,
+          "minimum_count": 1216
+        },
+        "mixed_2": {
+          "contexts_checked": 4128,
+          "maximum_count": 3057,
+          "minimum_count": 1216
+        },
+        "mixed_3": {
+          "contexts_checked": 4128,
+          "maximum_count": 3051,
+          "minimum_count": 1216
+        }
+      },
+      "library_versions": {
+        "jinja2": "3.1.6",
+        "tokenizers": "0.23.3",
+        "transformers": "5.22.2"
+      },
+      "manifest_hash": "442adffa3b4dddcc4d072b2d2eb5d7f447ad4c0088b2b223f8da115ebfbfd3a3",
+      "maximum_count": 3095,
+      "minimum_count": 1216,
+      "model_id": "glm-5.2",
+      "native_mode_maximum": {
+        "default": 2839,
+        "enable_thinking_false": 2833
+      },
+      "native_mode_minimum": {
+        "default": 960,
+        "enable_thinking_false": 954
+      },
+      "revision": "cf457fa734ab149ffef225f80893eb38c6ff5cdc",
+      "roundtrip_checks": 320,
+      "source_hash": "61a1cb686cc7aa80e0447678c5e68bf74580388a7e84a0b6b9941fe3f0fe093c"
+    },
+    "qwen": {
+      "contexts_checked": 41280,
+      "counter": "native_local:36a16dc5a64be1a6b4e84d501b41b1b26003a2b8eff826f397da19a22658fcef",
+      "episode_policy_checks": 1720,
+      "episodes_checked": 172,
+      "history_policies": {
+        "always_invalid": {
+          "contexts_checked": 4128,
+          "maximum_count": 3286,
+          "minimum_count": 1274
+        },
+        "always_worker_0": {
+          "contexts_checked": 4128,
+          "maximum_count": 3298,
+          "minimum_count": 1274
+        },
+        "always_worker_1": {
+          "contexts_checked": 4128,
+          "maximum_count": 3315,
+          "minimum_count": 1274
+        },
+        "always_worker_2": {
+          "contexts_checked": 4128,
+          "maximum_count": 3315,
+          "minimum_count": 1274
+        },
+        "always_worker_3": {
+          "contexts_checked": 4128,
+          "maximum_count": 3309,
+          "minimum_count": 1274
+        },
+        "cycle_workers": {
+          "contexts_checked": 4128,
+          "maximum_count": 3308,
+          "minimum_count": 1274
+        },
+        "mixed_0": {
+          "contexts_checked": 4128,
+          "maximum_count": 3295,
+          "minimum_count": 1274
+        },
+        "mixed_1": {
+          "contexts_checked": 4128,
+          "maximum_count": 3297,
+          "minimum_count": 1274
+        },
+        "mixed_2": {
+          "contexts_checked": 4128,
+          "maximum_count": 3309,
+          "minimum_count": 1274
+        },
+        "mixed_3": {
+          "contexts_checked": 4128,
+          "maximum_count": 3302,
+          "minimum_count": 1274
+        }
+      },
+      "library_versions": {
+        "jinja2": "3.1.6",
+        "tokenizers": "0.23.3",
+        "transformers": "5.22.2"
+      },
+      "manifest_hash": "1ae4cf150e78a7fac6c80d7579c14948181ce44f72997b515334e16c47b9c30b",
+      "maximum_count": 3315,
+      "minimum_count": 1274,
+      "model_id": "qwen3.5-397b",
+      "native_mode_maximum": {
+        "default": 3057,
+        "enable_thinking_false": 3059
+      },
+      "native_mode_minimum": {
+        "default": 1016,
+        "enable_thinking_false": 1018
+      },
+      "revision": "8472618112abcbd45acbcdc58436aff4233c23f7",
+      "roundtrip_checks": 320,
+      "source_hash": "61a1cb686cc7aa80e0447678c5e68bf74580388a7e84a0b6b9941fe3f0fe093c"
+    }
+  },
+  "network_blocked": true,
+  "paid_calls": 0,
+  "status": "local_native_checks_passed",
+  "task_seeds": [
+    30,
+    31,
+    32,
+    4001,
+    4002,
+    4003,
+    4004,
+    4005,
+    4006,
+    4007,
+    4008,
+    4009,
+    4010,
+    4011,
+    4012,
+    4013,
+    4014,
+    4015,
+    4016,
+    4017,
+    4018,
+    4019,
+    4020,
+    4021,
+    4022,
+    4023,
+    4024,
+    4025,
+    4026,
+    4027,
+    4028,
+    4029,
+    4030,
+    4031,
+    4032,
+    4033,
+    4034,
+    4035,
+    4036,
+    4037,
+    4038,
+    4039,
+    4040
+  ]
+}

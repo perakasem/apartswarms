@@ -1,0 +1,20 @@
+{
+  "cached_discount_assumed": false,
+  "checked_utc": "2026-11-08T00:11:34.459572+00:00",
+  "http_status": 200,
+  "inference_calls": 0,
+  "model_prices": {
+    "glm-5.2": {
+      "input": "1.40",
+      "output": "4.40"
+    },
+    "qwen3.5-397b": {
+      "input": "0.55",
+      "output": "3.50"
+    }
+  },
+  "retrieval": "HTTPS with certificate verification via certifi",
+  "sha256": "c043cc889285c04cd7c8ab1da7c090e3b132783b888038d546dd895230d720b2",
+  "source": "https://docs.adaptionlabs.ai/inference-stacks/models/",
+  "unit": "credits per million tokens"
+}

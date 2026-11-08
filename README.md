@@ -1,3 +1,23 @@
+# Prompt comparison: safety guidance and worker selection
+
+The prompt comparison is complete. Read the [plain-language results](PROMPT_RESULTS_SUMMARY.md), [full report](prompt_REPORT.md), and [fixed protocol](PROMPT_COMPARISON_PROTOCOL.md).
+
+The main sample has 320 runs: 40 matched sets per model, with four conditions per set. The original prompt and reduced-guidance prompt were tested in the same collection. The earlier studies are separate samples.
+
+![Prompt effects and notice-source interaction](prompt_effects.png)
+
+[Full-claim components](prompt_components.png) · [Selection by block](prompt_blocks.png) · [Condition means](prompt_condition_means.csv) · [Effect table](prompt_paired_effects.csv) · [Full data and code](prompt-full-results.zip)
+
+The [record audit](prompt_audit.json), [separate numeric check](prompt_independent_numeric_review.json), and [archive check](prompt_archive_verification.json) report the verification results. These checks are automated. They do not imply human scientific review.
+
+To check the archive, extract it into a new folder. Use Python 3.13 and install `scipy==1.18.1`. Then run `python3 -B reproduce_prompt.py`. The check blocks network access and makes no model calls. The archive includes pinned requirements for the runner and charts. Provider account deductions are not verified.
+
+---
+
+## Earlier studies
+
+The text below preserves the earlier study report. Its cost totals do not include this prompt comparison.
+
 # Do AI coordinators give less work to careful workers?
 
 These two studies test one possible cause of unsafe AI teams. A careful worker can keep making correct safety objections but lose its influence if the coordinator stops choosing it.

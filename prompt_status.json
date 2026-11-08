@@ -1,0 +1,58 @@
+{
+  "finished_utc": "2026-11-08T00:46:29.323894+00:00",
+  "ledger": {
+    "actual_billing_verified": false,
+    "attempts": 21124,
+    "carried": {
+      "attempts": 13052,
+      "committed_credits": "33.95719530",
+      "estimated_charged_credits": "24.34591530",
+      "ledger_hash": "0f0d9b04fd5148aae809526a2c9dd8f07bbc219bb12e1ba70f30911ffc8e5dfe",
+      "pending_credits": "0",
+      "unknown_credits": "9.611280"
+    },
+    "carried_attempts": 13052,
+    "committed_credits": "47.85559265",
+    "counts": {
+      "glm-5.2": {
+        "primary_by_phase": {
+          "main": 3840,
+          "pilot": 192,
+          "probe": 4
+        },
+        "retries": 0
+      },
+      "qwen3.5-397b": {
+        "primary_by_phase": {
+          "main": 3840,
+          "pilot": 192,
+          "probe": 4
+        },
+        "retries": 0
+      }
+    },
+    "currency": "adaption_credits",
+    "current": {
+      "attempts": 8072,
+      "committed_credits": "13.89839735",
+      "estimated_charged_credits": "13.89839735",
+      "pending_credits": "0",
+      "unknown_credits": "0"
+    },
+    "current_attempts": 8072,
+    "estimated_charged_credits": "38.24431265",
+    "frozen": false,
+    "frozen_reason": "",
+    "limit_credits": "100",
+    "mode": "live",
+    "new_limit_credits": "60",
+    "new_remaining_credits": "46.10160265",
+    "pending_credits": "0",
+    "remaining_credits": "52.14440735",
+    "unknown_credits": "9.611280"
+  },
+  "main_runs": 320,
+  "mode": "live",
+  "result_root": "/Users/Administrator/Documents/Codex/2026-11-06/based-on-track-2-linked-here-2/outputs/selection_experiment/results/live_prompt",
+  "status": "complete"
+}

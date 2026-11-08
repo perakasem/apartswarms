@@ -1,0 +1,2354 @@
+[
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "pilot",
+    "run_id": "pilot_qwen3.5-397b_31_original_worker",
+    "seed": 31
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "pilot",
+    "run_id": "pilot_glm-5.2_31_original_worker",
+    "seed": 31
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "pilot",
+    "run_id": "pilot_qwen3.5-397b_31_original_relay",
+    "seed": 31
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "pilot",
+    "run_id": "pilot_glm-5.2_31_original_relay",
+    "seed": 31
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "pilot",
+    "run_id": "pilot_qwen3.5-397b_31_neutral_worker",
+    "seed": 31
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "pilot",
+    "run_id": "pilot_glm-5.2_31_neutral_worker",
+    "seed": 31
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "pilot",
+    "run_id": "pilot_qwen3.5-397b_31_neutral_relay",
+    "seed": 31
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "pilot",
+    "run_id": "pilot_glm-5.2_31_neutral_relay",
+    "seed": 31
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "pilot",
+    "run_id": "pilot_qwen3.5-397b_32_original_relay",
+    "seed": 32
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "pilot",
+    "run_id": "pilot_glm-5.2_32_original_relay",
+    "seed": 32
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "pilot",
+    "run_id": "pilot_qwen3.5-397b_32_neutral_worker",
+    "seed": 32
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "pilot",
+    "run_id": "pilot_glm-5.2_32_neutral_worker",
+    "seed": 32
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "pilot",
+    "run_id": "pilot_qwen3.5-397b_32_neutral_relay",
+    "seed": 32
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "pilot",
+    "run_id": "pilot_glm-5.2_32_neutral_relay",
+    "seed": 32
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "pilot",
+    "run_id": "pilot_qwen3.5-397b_32_original_worker",
+    "seed": 32
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "pilot",
+    "run_id": "pilot_glm-5.2_32_original_worker",
+    "seed": 32
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4001_original_worker",
+    "seed": 4001
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4001_original_worker",
+    "seed": 4001
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4001_original_relay",
+    "seed": 4001
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4001_original_relay",
+    "seed": 4001
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4001_neutral_worker",
+    "seed": 4001
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4001_neutral_worker",
+    "seed": 4001
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4001_neutral_relay",
+    "seed": 4001
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4001_neutral_relay",
+    "seed": 4001
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4002_original_relay",
+    "seed": 4002
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4002_original_relay",
+    "seed": 4002
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4002_neutral_worker",
+    "seed": 4002
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4002_neutral_worker",
+    "seed": 4002
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4002_neutral_relay",
+    "seed": 4002
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4002_neutral_relay",
+    "seed": 4002
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4002_original_worker",
+    "seed": 4002
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4002_original_worker",
+    "seed": 4002
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4003_neutral_worker",
+    "seed": 4003
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4003_neutral_worker",
+    "seed": 4003
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4003_neutral_relay",
+    "seed": 4003
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4003_neutral_relay",
+    "seed": 4003
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4003_original_worker",
+    "seed": 4003
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4003_original_worker",
+    "seed": 4003
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4003_original_relay",
+    "seed": 4003
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4003_original_relay",
+    "seed": 4003
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4004_neutral_relay",
+    "seed": 4004
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4004_neutral_relay",
+    "seed": 4004
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4004_original_worker",
+    "seed": 4004
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4004_original_worker",
+    "seed": 4004
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4004_original_relay",
+    "seed": 4004
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4004_original_relay",
+    "seed": 4004
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4004_neutral_worker",
+    "seed": 4004
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4004_neutral_worker",
+    "seed": 4004
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4005_original_worker",
+    "seed": 4005
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4005_original_worker",
+    "seed": 4005
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4005_original_relay",
+    "seed": 4005
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4005_original_relay",
+    "seed": 4005
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4005_neutral_worker",
+    "seed": 4005
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4005_neutral_worker",
+    "seed": 4005
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4005_neutral_relay",
+    "seed": 4005
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4005_neutral_relay",
+    "seed": 4005
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4006_original_relay",
+    "seed": 4006
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4006_original_relay",
+    "seed": 4006
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4006_neutral_worker",
+    "seed": 4006
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4006_neutral_worker",
+    "seed": 4006
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4006_neutral_relay",
+    "seed": 4006
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4006_neutral_relay",
+    "seed": 4006
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4006_original_worker",
+    "seed": 4006
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4006_original_worker",
+    "seed": 4006
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4007_neutral_worker",
+    "seed": 4007
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4007_neutral_worker",
+    "seed": 4007
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4007_neutral_relay",
+    "seed": 4007
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4007_neutral_relay",
+    "seed": 4007
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4007_original_worker",
+    "seed": 4007
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4007_original_worker",
+    "seed": 4007
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4007_original_relay",
+    "seed": 4007
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4007_original_relay",
+    "seed": 4007
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4008_neutral_relay",
+    "seed": 4008
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4008_neutral_relay",
+    "seed": 4008
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4008_original_worker",
+    "seed": 4008
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4008_original_worker",
+    "seed": 4008
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4008_original_relay",
+    "seed": 4008
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4008_original_relay",
+    "seed": 4008
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4008_neutral_worker",
+    "seed": 4008
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4008_neutral_worker",
+    "seed": 4008
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4009_original_worker",
+    "seed": 4009
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4009_original_worker",
+    "seed": 4009
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4009_original_relay",
+    "seed": 4009
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4009_original_relay",
+    "seed": 4009
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4009_neutral_worker",
+    "seed": 4009
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4009_neutral_worker",
+    "seed": 4009
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4009_neutral_relay",
+    "seed": 4009
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4009_neutral_relay",
+    "seed": 4009
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4010_original_relay",
+    "seed": 4010
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4010_original_relay",
+    "seed": 4010
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4010_neutral_worker",
+    "seed": 4010
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4010_neutral_worker",
+    "seed": 4010
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4010_neutral_relay",
+    "seed": 4010
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4010_neutral_relay",
+    "seed": 4010
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4010_original_worker",
+    "seed": 4010
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4010_original_worker",
+    "seed": 4010
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4011_neutral_worker",
+    "seed": 4011
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4011_neutral_worker",
+    "seed": 4011
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4011_neutral_relay",
+    "seed": 4011
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4011_neutral_relay",
+    "seed": 4011
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4011_original_worker",
+    "seed": 4011
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4011_original_worker",
+    "seed": 4011
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4011_original_relay",
+    "seed": 4011
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4011_original_relay",
+    "seed": 4011
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4012_neutral_relay",
+    "seed": 4012
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4012_neutral_relay",
+    "seed": 4012
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4012_original_worker",
+    "seed": 4012
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4012_original_worker",
+    "seed": 4012
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4012_original_relay",
+    "seed": 4012
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4012_original_relay",
+    "seed": 4012
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4012_neutral_worker",
+    "seed": 4012
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4012_neutral_worker",
+    "seed": 4012
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4013_original_worker",
+    "seed": 4013
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4013_original_worker",
+    "seed": 4013
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4013_original_relay",
+    "seed": 4013
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4013_original_relay",
+    "seed": 4013
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4013_neutral_worker",
+    "seed": 4013
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4013_neutral_worker",
+    "seed": 4013
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4013_neutral_relay",
+    "seed": 4013
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4013_neutral_relay",
+    "seed": 4013
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4014_original_relay",
+    "seed": 4014
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4014_original_relay",
+    "seed": 4014
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4014_neutral_worker",
+    "seed": 4014
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4014_neutral_worker",
+    "seed": 4014
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4014_neutral_relay",
+    "seed": 4014
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4014_neutral_relay",
+    "seed": 4014
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4014_original_worker",
+    "seed": 4014
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4014_original_worker",
+    "seed": 4014
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4015_neutral_worker",
+    "seed": 4015
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4015_neutral_worker",
+    "seed": 4015
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4015_neutral_relay",
+    "seed": 4015
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4015_neutral_relay",
+    "seed": 4015
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4015_original_worker",
+    "seed": 4015
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4015_original_worker",
+    "seed": 4015
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4015_original_relay",
+    "seed": 4015
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4015_original_relay",
+    "seed": 4015
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4016_neutral_relay",
+    "seed": 4016
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4016_neutral_relay",
+    "seed": 4016
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4016_original_worker",
+    "seed": 4016
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4016_original_worker",
+    "seed": 4016
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4016_original_relay",
+    "seed": 4016
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4016_original_relay",
+    "seed": 4016
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4016_neutral_worker",
+    "seed": 4016
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4016_neutral_worker",
+    "seed": 4016
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4017_original_worker",
+    "seed": 4017
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4017_original_worker",
+    "seed": 4017
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4017_original_relay",
+    "seed": 4017
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4017_original_relay",
+    "seed": 4017
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4017_neutral_worker",
+    "seed": 4017
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4017_neutral_worker",
+    "seed": 4017
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4017_neutral_relay",
+    "seed": 4017
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4017_neutral_relay",
+    "seed": 4017
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4018_original_relay",
+    "seed": 4018
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4018_original_relay",
+    "seed": 4018
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4018_neutral_worker",
+    "seed": 4018
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4018_neutral_worker",
+    "seed": 4018
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4018_neutral_relay",
+    "seed": 4018
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4018_neutral_relay",
+    "seed": 4018
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4018_original_worker",
+    "seed": 4018
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4018_original_worker",
+    "seed": 4018
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4019_neutral_worker",
+    "seed": 4019
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4019_neutral_worker",
+    "seed": 4019
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4019_neutral_relay",
+    "seed": 4019
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4019_neutral_relay",
+    "seed": 4019
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4019_original_worker",
+    "seed": 4019
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4019_original_worker",
+    "seed": 4019
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4019_original_relay",
+    "seed": 4019
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4019_original_relay",
+    "seed": 4019
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4020_neutral_relay",
+    "seed": 4020
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4020_neutral_relay",
+    "seed": 4020
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4020_original_worker",
+    "seed": 4020
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4020_original_worker",
+    "seed": 4020
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4020_original_relay",
+    "seed": 4020
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4020_original_relay",
+    "seed": 4020
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4020_neutral_worker",
+    "seed": 4020
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4020_neutral_worker",
+    "seed": 4020
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4021_original_worker",
+    "seed": 4021
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4021_original_worker",
+    "seed": 4021
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4021_original_relay",
+    "seed": 4021
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4021_original_relay",
+    "seed": 4021
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4021_neutral_worker",
+    "seed": 4021
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4021_neutral_worker",
+    "seed": 4021
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4021_neutral_relay",
+    "seed": 4021
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4021_neutral_relay",
+    "seed": 4021
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4022_original_relay",
+    "seed": 4022
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4022_original_relay",
+    "seed": 4022
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4022_neutral_worker",
+    "seed": 4022
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4022_neutral_worker",
+    "seed": 4022
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4022_neutral_relay",
+    "seed": 4022
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4022_neutral_relay",
+    "seed": 4022
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4022_original_worker",
+    "seed": 4022
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4022_original_worker",
+    "seed": 4022
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4023_neutral_worker",
+    "seed": 4023
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4023_neutral_worker",
+    "seed": 4023
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4023_neutral_relay",
+    "seed": 4023
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4023_neutral_relay",
+    "seed": 4023
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4023_original_worker",
+    "seed": 4023
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4023_original_worker",
+    "seed": 4023
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4023_original_relay",
+    "seed": 4023
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4023_original_relay",
+    "seed": 4023
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4024_neutral_relay",
+    "seed": 4024
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4024_neutral_relay",
+    "seed": 4024
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4024_original_worker",
+    "seed": 4024
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4024_original_worker",
+    "seed": 4024
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4024_original_relay",
+    "seed": 4024
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4024_original_relay",
+    "seed": 4024
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4024_neutral_worker",
+    "seed": 4024
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4024_neutral_worker",
+    "seed": 4024
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4025_original_worker",
+    "seed": 4025
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4025_original_worker",
+    "seed": 4025
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4025_original_relay",
+    "seed": 4025
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4025_original_relay",
+    "seed": 4025
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4025_neutral_worker",
+    "seed": 4025
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4025_neutral_worker",
+    "seed": 4025
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4025_neutral_relay",
+    "seed": 4025
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4025_neutral_relay",
+    "seed": 4025
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4026_original_relay",
+    "seed": 4026
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4026_original_relay",
+    "seed": 4026
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4026_neutral_worker",
+    "seed": 4026
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4026_neutral_worker",
+    "seed": 4026
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4026_neutral_relay",
+    "seed": 4026
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4026_neutral_relay",
+    "seed": 4026
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4026_original_worker",
+    "seed": 4026
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4026_original_worker",
+    "seed": 4026
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4027_neutral_worker",
+    "seed": 4027
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4027_neutral_worker",
+    "seed": 4027
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4027_neutral_relay",
+    "seed": 4027
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4027_neutral_relay",
+    "seed": 4027
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4027_original_worker",
+    "seed": 4027
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4027_original_worker",
+    "seed": 4027
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4027_original_relay",
+    "seed": 4027
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4027_original_relay",
+    "seed": 4027
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4028_neutral_relay",
+    "seed": 4028
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4028_neutral_relay",
+    "seed": 4028
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4028_original_worker",
+    "seed": 4028
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4028_original_worker",
+    "seed": 4028
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4028_original_relay",
+    "seed": 4028
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4028_original_relay",
+    "seed": 4028
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4028_neutral_worker",
+    "seed": 4028
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4028_neutral_worker",
+    "seed": 4028
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4029_original_worker",
+    "seed": 4029
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4029_original_worker",
+    "seed": 4029
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4029_original_relay",
+    "seed": 4029
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4029_original_relay",
+    "seed": 4029
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4029_neutral_worker",
+    "seed": 4029
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4029_neutral_worker",
+    "seed": 4029
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4029_neutral_relay",
+    "seed": 4029
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4029_neutral_relay",
+    "seed": 4029
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4030_original_relay",
+    "seed": 4030
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4030_original_relay",
+    "seed": 4030
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4030_neutral_worker",
+    "seed": 4030
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4030_neutral_worker",
+    "seed": 4030
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4030_neutral_relay",
+    "seed": 4030
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4030_neutral_relay",
+    "seed": 4030
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4030_original_worker",
+    "seed": 4030
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4030_original_worker",
+    "seed": 4030
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4031_neutral_worker",
+    "seed": 4031
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4031_neutral_worker",
+    "seed": 4031
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4031_neutral_relay",
+    "seed": 4031
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4031_neutral_relay",
+    "seed": 4031
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4031_original_worker",
+    "seed": 4031
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4031_original_worker",
+    "seed": 4031
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4031_original_relay",
+    "seed": 4031
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4031_original_relay",
+    "seed": 4031
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4032_neutral_relay",
+    "seed": 4032
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4032_neutral_relay",
+    "seed": 4032
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4032_original_worker",
+    "seed": 4032
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4032_original_worker",
+    "seed": 4032
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4032_original_relay",
+    "seed": 4032
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4032_original_relay",
+    "seed": 4032
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4032_neutral_worker",
+    "seed": 4032
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4032_neutral_worker",
+    "seed": 4032
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4033_original_worker",
+    "seed": 4033
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4033_original_worker",
+    "seed": 4033
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4033_original_relay",
+    "seed": 4033
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4033_original_relay",
+    "seed": 4033
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4033_neutral_worker",
+    "seed": 4033
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4033_neutral_worker",
+    "seed": 4033
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4033_neutral_relay",
+    "seed": 4033
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4033_neutral_relay",
+    "seed": 4033
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4034_original_relay",
+    "seed": 4034
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4034_original_relay",
+    "seed": 4034
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4034_neutral_worker",
+    "seed": 4034
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4034_neutral_worker",
+    "seed": 4034
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4034_neutral_relay",
+    "seed": 4034
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4034_neutral_relay",
+    "seed": 4034
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4034_original_worker",
+    "seed": 4034
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4034_original_worker",
+    "seed": 4034
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4035_neutral_worker",
+    "seed": 4035
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4035_neutral_worker",
+    "seed": 4035
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4035_neutral_relay",
+    "seed": 4035
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4035_neutral_relay",
+    "seed": 4035
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4035_original_worker",
+    "seed": 4035
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4035_original_worker",
+    "seed": 4035
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4035_original_relay",
+    "seed": 4035
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4035_original_relay",
+    "seed": 4035
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4036_neutral_relay",
+    "seed": 4036
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4036_neutral_relay",
+    "seed": 4036
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4036_original_worker",
+    "seed": 4036
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4036_original_worker",
+    "seed": 4036
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4036_original_relay",
+    "seed": 4036
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4036_original_relay",
+    "seed": 4036
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4036_neutral_worker",
+    "seed": 4036
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4036_neutral_worker",
+    "seed": 4036
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4037_original_worker",
+    "seed": 4037
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4037_original_worker",
+    "seed": 4037
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4037_original_relay",
+    "seed": 4037
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4037_original_relay",
+    "seed": 4037
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4037_neutral_worker",
+    "seed": 4037
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4037_neutral_worker",
+    "seed": 4037
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4037_neutral_relay",
+    "seed": 4037
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4037_neutral_relay",
+    "seed": 4037
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4038_original_relay",
+    "seed": 4038
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4038_original_relay",
+    "seed": 4038
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4038_neutral_worker",
+    "seed": 4038
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4038_neutral_worker",
+    "seed": 4038
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4038_neutral_relay",
+    "seed": 4038
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4038_neutral_relay",
+    "seed": 4038
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4038_original_worker",
+    "seed": 4038
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4038_original_worker",
+    "seed": 4038
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4039_neutral_worker",
+    "seed": 4039
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4039_neutral_worker",
+    "seed": 4039
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4039_neutral_relay",
+    "seed": 4039
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4039_neutral_relay",
+    "seed": 4039
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4039_original_worker",
+    "seed": 4039
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4039_original_worker",
+    "seed": 4039
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4039_original_relay",
+    "seed": 4039
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4039_original_relay",
+    "seed": 4039
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4040_neutral_relay",
+    "seed": 4040
+  },
+  {
+    "condition": "neutral_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4040_neutral_relay",
+    "seed": 4040
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4040_original_worker",
+    "seed": 4040
+  },
+  {
+    "condition": "original_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4040_original_worker",
+    "seed": 4040
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4040_original_relay",
+    "seed": 4040
+  },
+  {
+    "condition": "original_relay",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4040_original_relay",
+    "seed": 4040
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "qwen3.5-397b",
+    "phase": "main",
+    "run_id": "main_qwen3.5-397b_4040_neutral_worker",
+    "seed": 4040
+  },
+  {
+    "condition": "neutral_worker",
+    "model_id": "glm-5.2",
+    "phase": "main",
+    "run_id": "main_glm-5.2_4040_neutral_worker",
+    "seed": 4040
+  }
+]

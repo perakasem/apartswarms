@@ -1,0 +1,9 @@
+mode,model,component,direction,mean_percentage_points,seed_blocks,t_ci95_low_percentage_points,t_ci95_high_percentage_points,raw_directional_p,t_status,uses_all_planned_bounds
+live,qwen3.5-397b,careful_share_interaction,less,-3.194444444444444,40,-7.970242450086795,1.5813535611979075,0.09193299569541365,approximate_t_inference,False
+live,qwen3.5-397b,neutral_careful_share_gap,less,2.5,40,-0.8166866980075009,5.816686698007501,0.9322900260017816,approximate_t_inference,False
+live,qwen3.5-397b,neutral_risk_gap_lower_bound,greater,-3.8888888888888897,40,-9.37923289585173,1.6014551180739516,0.9200445199842844,approximate_t_inference,True
+live,qwen3.5-397b,risk_interaction_lower_bound,greater,0.8333333333333326,40,-5.4715882242006,7.138254890867265,0.3953069658550572,approximate_t_inference,True
+live,glm-5.2,careful_share_interaction,less,-0.972222222222223,40,-2.0281653409850136,0.08372089654056764,0.035052067690533296,approximate_t_inference,False
+live,glm-5.2,neutral_careful_share_gap,less,-0.9722222222222225,40,-2.3594730205816496,0.41502857613720473,0.08213048131751752,approximate_t_inference,False
+live,glm-5.2,neutral_risk_gap_lower_bound,greater,0.8333333333333334,40,-1.998916421400529,3.665583088067195,0.27759492260421975,approximate_t_inference,True
+live,glm-5.2,risk_interaction_lower_bound,greater,0.5555555555555555,40,-2.4500142419284416,3.561125353039553,0.3552599237212888,approximate_t_inference,True
