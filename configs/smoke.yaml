@@ -1,0 +1,12 @@
+# Offline end-to-end check: fake LLM client + all baselines. No network, no cost.
+name: smoke
+stage: smoke
+T: 60
+factors:
+  rho: [0.0, 1.0]
+  feedback: [outcome, reason]
+  c: [5]
+  pi: [0.25]
+seeds: {start: 0, n: 4}
+models: [fake]
+baselines: [bayes, bayes_known, "softmax:0.5", oracle, uniform]

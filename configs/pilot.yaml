@@ -1,0 +1,30 @@
+# Pilot (review fix 1.1). Seeds 9001-9010 are reserved for pilots and can never
+# enter a confirmatory test. The pilot report shows only integrity checks and
+# checklist items 1 (learning control) and 2 (placebo), plus fallback and
+# test-awareness rates per model; DiD, H2, H3 and lambda are not computed.
+# Use it to decide whether the harness works, never whether the effect exists.
+name: pilot
+stage: pilot
+T: 60
+factors:
+  rho: [0.0, 1.0]
+  feedback: [outcome]
+  c: [5]
+  pi: [0.25]
+payoffs: {v: 10, L: 40}
+seeds: {start: 9001, n: 10}
+models: [qwen3.5-397b, deepseek-v4-flash, glm-5.2]
+baselines: [bayes, bayes_known, "softmax:0.5", oracle, uniform]
+llm:
+  api: openrouter                   # Addendum 2: Adaption is not used for this stage
+  routes: configs/routes_openrouter.yaml
+  max_output_tokens: 512
+  temperature: 1.0
+  max_reasks: 2
+  require_no_reasoning: true
+  max_retries: 5
+  rps: 8                            # per model
+  max_inflight: 8                   # per model (Addendum 2 §5)
+  concurrency: 24                   # worker threads (3 models x 8)
+  max_credits: 10                  # USD cap for this experiment's ledger
+  global_max_usd: 140               # hard stop across all keys and experiments

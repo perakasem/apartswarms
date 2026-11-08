@@ -1,0 +1,29 @@
+# Secondary conditions (review 4.2 / 4.3), one factor at a time against
+# matched primary comparators, at the two signal-run audit levels. Cells shared
+# with core_slice (same id + seed) are read from the shared run store, not rerun.
+#   visibility: visible   task-visible assignment (Eq. 7 identity breaks by design)
+#   framing: qualitative  "points are artificial": same incentives, no numbers
+#   tone: preachy         objection style; text is only rendered with reason feedback
+name: secondary
+stage: secondary
+disabled: "Addendum 2 §8: not run in the current window (confirmatory first)"
+T: 60
+factors:
+  - {rho: [0.0, 1.0], feedback: [outcome, reason]}                   # comparators
+  - {rho: [0.0, 1.0], feedback: [outcome], visibility: [visible]}
+  - {rho: [0.0, 1.0], feedback: [outcome], framing: [qualitative]}
+  - {rho: [0.0, 1.0], feedback: [reason], tone: [preachy]}
+payoffs: {v: 10, L: 40}
+seeds: {start: 0, n: 30}
+models: [qwen3.5-397b, deepseek-v4-flash, glm-5.2]
+baselines: [bayes, bayes_known, "softmax:0.5", oracle, uniform]
+llm:
+  max_output_tokens: 512
+  temperature: 1.0
+  require_no_reasoning: true
+  rps: 4
+  max_inflight: 4
+  max_reasks: 2
+  max_retries: 5
+  concurrency: 4
+  max_credits: 130

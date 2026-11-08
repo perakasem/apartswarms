@@ -1,0 +1,26 @@
+# OpenRouter routes (Addendum 2). One pinned provider per model, no fallbacks.
+# Chosen 2026-11-08 from GET /api/v1/models/<slug>/endpoints by reliability:
+# status 0 and 100% uptime over 30 min and 1 day; fp4 quantizations avoided.
+# The endpoints API returned no latency/throughput figures, so the probe
+# measures latency per pinned provider. Prices: USD per 1M tokens (projection
+# only; the ledger records OpenRouter's billed usage.cost per call).
+# The model label (left) is the run-store coordinator name; slug + provider +
+# reasoning are part of the run fingerprint, so these runs never mix with Adaption runs.
+qwen3.5-397b:
+  slug: qwen/qwen3.5-397b-a17b
+  provider: alibaba                 # first-party; uptime 100/100
+  reasoning: {enabled: false}       # endpoint lists `reasoning`, not `reasoning_effort`
+  price_in: 0.39
+  price_out: 2.34
+glm-5.2:
+  slug: z-ai/glm-5.2
+  provider: together                # uptime 100/100 (z-ai/fp8 first-party: 99.78 over 1 day)
+  reasoning: {effort: none}         # supported_efforts: xhigh, high, none
+  price_in: 1.40
+  price_out: 4.40
+deepseek-v4-flash:
+  slug: deepseek/deepseek-v4-flash
+  provider: deepinfra/fp8           # uptime 100/100
+  reasoning: {effort: none}         # supported_efforts: xhigh, high, none
+  price_in: 0.09
+  price_out: 0.18

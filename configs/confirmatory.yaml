@@ -1,0 +1,33 @@
+# Confirmatory study (docs/PREREGISTRATION.md). Frozen before data collection.
+# Core sweep: the signal-run cell (rho=0, c=5, pi=0.25, outcome-only feedback,
+# blind, points, neutral) with rho varied across rho* = 0.375 for H2.
+# Family per model: H1 and H3 in the rho=0 cell, H2 on this sweep; Holm across all.
+# Seeds: 30 per cell (H1 power ~0.85 for a Bayes-sized DiD); 100 in the primary
+# cell so a null can be tested for equivalence (TOST power ~0.9 at 100, ~0.25 at 30).
+name: confirmatory
+stage: confirmatory
+T: 60
+factors:
+  rho: [0.0, 0.25, 0.5, 1.0]
+  feedback: [outcome]
+  c: [5]
+  pi: [0.25]
+payoffs: {v: 10, L: 40}
+seeds: {start: 0, n: 30}
+seeds_by_cell:
+  rho0_fb-outcome_c5_pi0.25: {start: 0, n: 100}
+models: [qwen3.5-397b, deepseek-v4-flash, glm-5.2]
+baselines: [bayes, bayes_known, "softmax:0.5", oracle, uniform]
+llm:
+  api: openrouter                   # Addendum 2: Adaption is not used for this stage
+  routes: configs/routes_openrouter.yaml
+  max_output_tokens: 512
+  temperature: 1.0
+  max_reasks: 2
+  require_no_reasoning: true
+  max_retries: 5
+  rps: 8                            # per model
+  max_inflight: 8                   # per model (Addendum 2 §5)
+  concurrency: 24                   # worker threads (3 models x 8)
+  max_credits: 100                  # USD cap for this experiment's ledger
+  global_max_usd: 140               # hard stop across all keys and experiments

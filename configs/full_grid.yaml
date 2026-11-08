@@ -1,0 +1,25 @@
+# Exploratory full factorial (review 4.1 factor table), three model families
+# reported separately. Estimates with CIs; no confirmatory tests.
+# c=5 -> rho* = 0.375; c=15 -> rho* = 0.625. rho = 0.75 is added at c = 15 so
+# the switch point there is bracketed by two levels above rho* (review 2, H2).
+name: full_grid
+stage: full_grid
+disabled: "Addendum 2 §8: not run in the current window (confirmatory first)"
+T: 60
+factors:
+  - {rho: [0.0, 0.25, 0.5, 1.0], feedback: [outcome, reason], c: [5], pi: [0.15, 0.35]}
+  - {rho: [0.0, 0.25, 0.5, 0.75, 1.0], feedback: [outcome, reason], c: [15], pi: [0.15, 0.35]}
+payoffs: {v: 10, L: 40}
+seeds: {start: 0, n: 30}
+models: [qwen3.5-397b, deepseek-v4-flash, glm-5.2]
+baselines: [bayes, bayes_known, "softmax:0.5", oracle, uniform]
+llm:
+  max_output_tokens: 512
+  temperature: 1.0
+  max_reasks: 2
+  require_no_reasoning: true
+  max_retries: 5
+  rps: 4
+  max_inflight: 4
+  concurrency: 4
+  max_credits: 450
