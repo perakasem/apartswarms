@@ -67,7 +67,7 @@ Models: qwen3.5-397b, deepseek-v4-flash, glm-5.2, served through OpenRouter,
 one pinned provider each (`configs/routes_openrouter.yaml`; DEVIATIONS G2).
 Temperature 1.0, reasoning disabled, at most 2 re-asks.
 
-Budget and time: confirmatory cap $100, global hard stop $140, optional
+Budget and time: confirmatory cap $180, global hard stop $280 (DEVIATIONS G16), optional
 `--deadline`. Runs go seed by seed. If the run stops early (deadline or cap),
 the analysis uses, per model, only seeds complete in every cell that schedules
 them. The realised n per cell is reported, and the TOST power at that n

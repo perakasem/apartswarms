@@ -65,9 +65,10 @@ def recovery_passed() -> tuple[bool, str]:
     return True, f"parameter recovery passed (coverage {r['coverage']:.2f}, {r['studies']} studies)"
 
 
-def wall_time(cfg_path: Path, latency: dict) -> str:
-    """Projected wall time: per model, runs in waves of max_inflight, each run
-    T sequential calls at the measured median latency; models run in parallel."""
+def wall_time(cfg_path: Path, latency: dict, inflight: int | None = None) -> str:
+    """Projected wall time: per model, runs in waves of `inflight` (default: the
+    config's max_inflight), each run T sequential calls at the measured median
+    latency; models run in parallel. Ignores retries and rate limits."""
     e = load_experiment(cfg_path)
     st = e.llm_settings()
     per = {}
@@ -75,7 +76,7 @@ def wall_time(cfg_path: Path, latency: dict) -> str:
         if m not in latency:
             continue
         runs = sum(len(e.seeds_for(c)) for c in e.cells())
-        waves = -(-runs // st["max_inflight"])
+        waves = -(-runs // (inflight or st["max_inflight"]))
         per[m] = waves * e.T * latency[m]
     if not per:
         return "n/a"
@@ -89,7 +90,12 @@ def main():
     ap.add_argument("--config", required=True)
     ap.add_argument("--model", action="append")
     ap.add_argument("--repeats", type=int, default=2, help="calls per sample prompt")
+    ap.add_argument("--wall-time-only", action="store_true",
+                    help="print projected wall times from saved probe results and exit (no API calls)")
     args = ap.parse_args()
+    if args.wall_time_only:
+        wall_times_from_saved()
+        return
     ok, msg = recovery_passed()
     print(msg)
     if not ok:
@@ -177,9 +183,25 @@ def main():
     if api == "openrouter":
         missing = set(aliases) - used_keys
         print("every live key exercised: " + ("yes" if not missing else f"NO, missing {sorted(missing)}"))
-    lat = {m: v for m, v in latency.items() if v}
+    print_wall_times({m: v for m, v in latency.items() if v})
+
+
+def print_wall_times(lat: dict) -> None:
     for cfg in ("pilot", "confirmatory"):
-        print(f"projected wall time, {cfg}: {wall_time(ROOT / 'configs' / f'{cfg}.yaml', lat)}")
+        for n in (8, 16):
+            print(f"projected wall time, {cfg}, {n} in flight per model: "
+                  f"{wall_time(ROOT / 'configs' / f'{cfg}.yaml', lat, n)}")
+
+
+def wall_times_from_saved(api: str = "openrouter") -> None:
+    """--wall-time-only: reuse the saved probe latencies; no API calls."""
+    lat = {}
+    for f in sorted(OUT.glob(f"{api}-*.json")):
+        r = json.loads(f.read_text())
+        if r.get("median_latency_s"):
+            lat[r["model"]] = r["median_latency_s"]
+    print("median latency (s): " + ", ".join(f"{m} {v:.1f}" for m, v in lat.items()))
+    print_wall_times(lat)
 
 
 if __name__ == "__main__":

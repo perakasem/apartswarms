@@ -23,8 +23,8 @@ llm:
   max_reasks: 2
   require_no_reasoning: true
   max_retries: 5
-  rps: 8                            # per model
-  max_inflight: 8                   # per model (Addendum 2 §5)
-  concurrency: 24                   # worker threads (3 models x 8)
-  max_credits: 10                  # USD cap for this experiment's ledger
-  global_max_usd: 140               # hard stop across all keys and experiments
+  rps: 16                           # per model
+  max_inflight: 16                  # per model (budget update 2026-11-08; 429 backoff unchanged)
+  concurrency: 48                   # worker threads (3 models x 16)
+  max_credits: 15                 # USD cap for this experiment's ledger
+  global_max_usd: 280               # hard stop across all keys and experiments

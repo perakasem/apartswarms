@@ -276,8 +276,8 @@ def test_live_run_prints_sanity_block_and_waits_for_confirm(tmp_path):
                         "--allow-unprobed"], cwd=root, capture_output=True, text=True, env=env)
     assert r.returncode == 0, r.stderr
     for line in ("stage = pilot", "seeds: 10 (9001-9010)", "pilot design check: OK", "API: openrouter",
-                 "qwen3.5-397b -> qwen/qwen3.5-397b-a17b @ alibaba", "temperature = 1.0", "cap 10",
-                 "global hard stop: $140.00", "not started"):
+                 "qwen3.5-397b -> qwen/qwen3.5-397b-a17b @ alibaba", "temperature = 1.0", "cap 15",
+                 "global hard stop: $280.00", "not started"):
         assert line in r.stdout, line
     assert not (tmp_path / "runs").exists()                            # nothing ran, no API call
 
