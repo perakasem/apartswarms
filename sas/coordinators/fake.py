@@ -1,4 +1,4 @@
-"""Offline stand-in for the Adaption client. It reads the *rendered prompt*
+"""Offline stand-in for the OpenRouter client. It reads the *rendered prompt*
 (so the prompt/parse path is exercised end to end) and answers like a noisy
 scoreboard learner. Occasionally returns malformed output to exercise the
 re-ask/fallback path.
@@ -69,7 +69,7 @@ class FlakyFakeClient(FakeClient):
         self._lock = threading.Lock()
 
     def respond(self, **kw) -> dict:
-        from ..adaption import TransientAPIError
+        from ..api import TransientAPIError
         with self._lock:
             self.calls += 1
             n = self.calls
@@ -90,8 +90,27 @@ class BrokeFakeClient(FakeClient):
         self.ok_calls, self.calls = ok_calls, 0
 
     def respond(self, **kw) -> dict:
-        from ..adaption import KeysExhausted
+        from ..api import KeysExhausted
         self.calls += 1
         if self.calls > self.ok_calls:
             raise KeysExhausted("all OpenRouter keys retired: k1: HTTP 402; k2: HTTP 402; k3: HTTP 402")
+        return super().respond(**kw)
+
+
+class RateLimitedFakeClient(FakeClient):
+    """Model name "fake-ratelimited": sustained 429 after `ok_calls` calls
+    (rehearses per-model containment: this model stops, others continue)."""
+    def __init__(self, ok_calls: int = 10, **kw):
+        super().__init__(**kw)
+        self.ok_calls, self.calls = ok_calls, 0
+        import threading
+        self._lock = threading.Lock()
+
+    def respond(self, **kw) -> dict:
+        from ..api import RateLimited
+        with self._lock:
+            self.calls += 1
+            n = self.calls
+        if n > self.ok_calls:
+            raise RateLimited(f"sustained rate limiting on {kw['model']}: simulated")
         return super().respond(**kw)

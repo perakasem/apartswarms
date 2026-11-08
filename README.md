@@ -13,7 +13,7 @@ analysis.
 
 ```bash
 uv sync
-cp .env.example .env        # add ADAPTION_API_KEY
+cp .env.example .env        # add OPENROUTER_API_KEYS
 uv run pytest               # offline; no network or credits
 ```
 
@@ -47,8 +47,10 @@ completed work:
 - Every finished round is checkpointed, and rerunning the same command
   resumes each run from its last round.
 - Exit code 0 means everything is complete, 2 means incomplete but
-  resumable (just rerun), and 1 means a systemic error to fix first: budget
-  cap, reasoning control, rate limits, HTTP 4xx, or a replay mismatch.
+  resumable (just rerun; includes budget caps and sustained rate limiting),
+  and 1 means a systemic error to fix first: reasoning control, HTTP 4xx,
+  provider/model mismatch, or a replay mismatch. A model-level failure stops
+  only that model; the others continue.
 - To rehearse an outage offline, use the model name `fake-flaky`.
 
 **TODO (optional, not implemented): Pilot C** (PRD §9 Stage 2). One-shot paired
@@ -63,7 +65,7 @@ Configs: `smoke.yaml` (fake LLM, offline), `pilot.yaml`, `confirmatory.yaml`,
 
 ```
 sas/            params (formal model), tasks, tapes (common random numbers), env,
-                prompts, adaption (API client), coordinators/, analysis, grid
+                prompts, api + openrouter (API client), coordinators/, analysis, grid
 scripts/        run_experiment, run_baselines, probe_models, leakage_check,
                 power_sim, build_dataset, analyze, figures, report
 results/runs/   shared run store: <coordinator>/<cell_id>/<fingerprint>/seed<NNNN>.jsonl

@@ -125,22 +125,19 @@ class Experiment:
         return sorted(out)
 
     def llm_settings(self) -> dict:
-        return {"api": "adaption", "max_output_tokens": 512, "temperature": None,
+        return {"api": "openrouter", "max_output_tokens": 512, "temperature": None,
                 "require_no_reasoning": True, "max_reasks": 2, "rps": 4, "max_inflight": 4,
                 "concurrency": 4, "max_credits": 10, "max_retries": 5, "global_max_usd": 140.0,
-                "routes": "configs/routes_openrouter.yaml", **self.llm}
+                "routes": "configs/routes_openrouter.yaml", "max_inflight_by_model": {},
+                "inflight_floor": None, **self.llm}
 
     def routes(self) -> dict:
         """OpenRouter model label -> {slug, provider, reasoning, price_in, price_out}."""
-        s = self.llm_settings()
-        if s["api"] != "openrouter":
-            return {}
-        return yaml.safe_load((ROOT / s["routes"]).read_text())
+        return yaml.safe_load((ROOT / self.llm_settings()["routes"]).read_text())
 
     def api_host(self) -> str:
-        from .adaption import API_BASE as ADAPTION
-        from .openrouter import API_BASE as OPENROUTER
-        return OPENROUTER if self.llm_settings()["api"] == "openrouter" else ADAPTION
+        from .openrouter import API_BASE
+        return API_BASE
 
     def coordinators(self) -> list[str]:
         return list(self.models) + ["baseline-" + b.replace(":", "") for b in self.baselines]
@@ -168,6 +165,8 @@ def load_experiment(path: str | Path) -> Experiment:
         raise ValueError(f"{path}: every config needs a `stage` ({', '.join(STAGES)})")
     if exp.stage not in STAGES:
         raise ValueError(f"stage must be one of {STAGES}")
+    if exp.llm_settings()["api"] != "openrouter":
+        raise ValueError(f"{path}: llm.api must be openrouter (the only supported client)")
     unknown = set(by_cell) - {c.cell_id for c in exp.cells()}
     if unknown:
         raise ValueError(f"seeds_by_cell names cells not in this design: {sorted(unknown)}")
@@ -192,8 +191,8 @@ def fingerprint_for(exp: Experiment, coordinator: str, cell: Cell) -> str:
     if coordinator.startswith("baseline-"):
         spec = next(b for b in exp.baselines if "baseline-" + b.replace(":", "") == coordinator)
         return baseline_fingerprint(cell, exp.T, spec)
-    # API host and pinned route (never the key) are part of the cache key: OpenRouter
-    # and Adaption runs, or two providers for one model, never reuse each other.
+    # API host and pinned route (never the key) are part of the cache key: two
+    # providers for one model never reuse each other's runs.
     route = exp.routes().get(coordinator, {})
     return llm_fingerprint(cell, exp.T, coordinator, exp.llm_settings(),
                            api_host=exp.api_host(), route=route)
@@ -231,10 +230,10 @@ def templates_hash() -> str:
 
 
 def client_versions() -> dict:
-    """No Adaption SDK is used (raw HTTPS via httpx); record what is."""
+    """Raw HTTPS via httpx (no provider SDK); record what is used."""
     import importlib.metadata as md
-    out = {"client": "sas.adaption (httpx)"}
-    for pkg in ("httpx", "adaption"):
+    out = {"client": "sas.openrouter (httpx)"}
+    for pkg in ("httpx",):
         try:
             out[f"{pkg}_version"] = md.version(pkg)
         except md.PackageNotFoundError:

@@ -11,12 +11,12 @@ anything below after confirmatory data exist must be recorded in
 
 | Field | Value |
 |---|---|
-| Pilot go/no-go rule (written before reading the pilot gate) | *TBD* |
-| Pilot outcome against that rule | *TBD* |
-| Prompt changes after the pilot (each also in `DEVIATIONS.md`) | *TBD* |
+| Pilot go/no-go rule (written before reading the pilot gate) | "Proceed because (a) the replay audit, leakage test and violation identity pass, and (b) each gate failure traces to two or fewer lock-in runs, while the learning point estimates point the predicted way for all three models at ρ = 1. Gate checks are re-estimated, with CIs, in the confirmatory data. A failure there is reported as a finding, not fixed." **Written after reading the pilot gate** (DEVIATIONS G23). |
+| Pilot outcome against that rule | **Proceed.** Integrity passes (0 replay mismatches in 9,600 rounds; leakage p = 0.58; Eq. (7) residual ≈ 0 in 5 of 6 LLM cells). Gate failures: positive control (deepseek-v4-flash, glm-5.2), placebo at ρ = 0 (qwen3.5-397b, 2 lock-in runs); every manipulation check and fallback gate passes; learning point estimates positive for all three models at ρ = 1 (DEVIATIONS G23) |
+| Prompt changes after the pilot (each also in `DEVIATIONS.md`) | None |
 | Prompt hash: the approval hash from `docs/PROMPTS_RENDERED.md` (16 hex; or write it to `APPROVED_PROMPT_HASH`) | `0c4e525c3d347a11` (approved 2026-11-08; only change from `1f29eaaa4809428a` is the auto-assigned sentence) |
-| Analysis-code hash (`uv run scripts/analysis_hash.py`) | *TBD* |
-| Git tag of the frozen commit | *TBD* |
+| Analysis-code hash (`uv run scripts/analysis_hash.py`) | `e248bc3af0833a477abc3b9631f929cadea6b3691a60a65df7a7ad2d02b97b80` (2026-11-08; covers `sas/analysis*.py`, `sas/prereg.py`, `scripts/analyze.py`, `scripts/report.py`) |
+| Git tag of the frozen commit | `prereg-v1` |
 | Parameter recovery (`results/recovery.json`) | coverage 0.90 at 100 studies, λ = 0.5, n = 100 (gate 0.90): **passed at the boundary** |
 
 ## 1. Studies and their roles
@@ -24,7 +24,7 @@ anything below after confirmatory data exist must be recorded in
 | Config | Role | Seeds | Purpose |
 |---|---|---|---|
 | `configs/pilot.yaml` | pilot | 9001–9010 | Does the harness work? Never used in any confirmatory test |
-| `configs/confirmatory.yaml` | confirmatory | 0–29 per cell; 0–99 in the primary cell | H1, H2, H3 |
+| `configs/confirmatory.yaml` | confirmatory | Targets: 0–179 in the primary cell (ρ = 0); 0–59 at ρ = 0.25 and ρ = 0.5; 0–29 at ρ = 1 (DEVIATIONS G24). Achieved n is set by `--deadline` | H1, H2, H3 |
 | `configs/full_grid.yaml`, `configs/secondary.yaml` | exploratory | 0–29 | Estimates with CIs; no tests |
 
 Seeds 9000–9999 are reserved for pilots. The harness refuses a pilot config
@@ -49,9 +49,11 @@ run whose stage is not `confirmatory`, and no stage ever reads pilot runs.
 3. **Decide by the rule in §0.** Harness changes after the pilot are allowed and
    recorded in `DEVIATIONS.md`. They change the run fingerprint, so pilot runs
    are never reused.
-4. Fill in §0 and tag the commit. Then run the confirmatory config to its fixed seed counts. There are no interim
-   looks at confirmatory outcomes and no optional extension: the sample size is
-   the seed count in the config.
+4. Fill in §0 and tag the commit. Then run the confirmatory config once, in
+   seed-major order, with `--deadline`. **Achieved n is set by `--deadline`.
+   The confirmatory analysis uses all seeds complete by then; power at the
+   achieved n is reported.** There are no interim looks at confirmatory
+   outcomes and no optional extension beyond the targets in §1 (DEVIATIONS G24).
 5. Infrastructure interruptions (HTTP 504s, crashes, rate limits) are resumed
    from checkpoints. They are not stopping decisions.
 
@@ -124,7 +126,12 @@ Simulated TOST power at a true DiD of 0 (`results/power_sim.csv`):
 | 60 | 0.65–0.76 |
 | 100 | 0.89–0.98 |
 
-The primary cell therefore gets 100 seeds.
+The primary cell originally got 100 seeds. After the pilot, power was
+re-estimated from the pilot LLM runs (`scripts/power_from_pilot.py`): LLM
+coordinators lock onto one worker per run, so between-run spread is
+1.2–1.8× Bayes at n = 100, giving TOST power 0.39–0.51 for qwen and glm and
+H1 power 0.77 for deepseek. The primary cell target is therefore 180 seeds and
+the ρ = 0.25 / 0.5 sweep cells 60 (DEVIATIONS G24, with caveats).
 
 Simulated power for H1 at 30 seeds is about 0.85 against a rational
 learner's DiD of about −0.08.

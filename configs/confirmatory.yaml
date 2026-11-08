@@ -2,8 +2,10 @@
 # Core sweep: the signal-run cell (rho=0, c=5, pi=0.25, outcome-only feedback,
 # blind, points, neutral) with rho varied across rho* = 0.375 for H2.
 # Family per model: H1 and H3 in the rho=0 cell, H2 on this sweep; Holm across all.
-# Seeds: 30 per cell (H1 power ~0.85 for a Bayes-sized DiD); 100 in the primary
-# cell so a null can be tested for equivalence (TOST power ~0.9 at 100, ~0.25 at 30).
+# Seeds (post-pilot power re-estimate, DEVIATIONS G24; scripts/power_from_pilot.py):
+# primary cell 180 (H1 power at the Bayes-sized DiD >= ~0.9 for every model, TOST
+# power at a null ~0.8), rho = 0.25 and 0.5 sweep cells 60, rho = 1 cell 30.
+# Achieved n is set by --deadline; seed-major order (DEVIATIONS G9, G24).
 name: confirmatory
 stage: confirmatory
 T: 60
@@ -15,7 +17,9 @@ factors:
 payoffs: {v: 10, L: 40}
 seeds: {start: 0, n: 30}
 seeds_by_cell:
-  rho0_fb-outcome_c5_pi0.25: {start: 0, n: 100}
+  rho0_fb-outcome_c5_pi0.25: {start: 0, n: 180}
+  rho0.25_fb-outcome_c5_pi0.25: {start: 0, n: 60}
+  rho0.5_fb-outcome_c5_pi0.25: {start: 0, n: 60}
 models: [qwen3.5-397b, deepseek-v4-flash, glm-5.2]
 baselines: [bayes, bayes_known, "softmax:0.5", oracle, uniform]
 llm:
@@ -27,7 +31,9 @@ llm:
   require_no_reasoning: true
   max_retries: 5
   rps: 16                           # per model
-  max_inflight: 16                  # per model (budget update 2026-11-08; 429 backoff unchanged)
-  concurrency: 48                   # worker threads (3 models x 16)
+  max_inflight: 16                  # per model (DEVIATIONS G16)
+  max_inflight_by_model: {qwen3.5-397b: 32}   # DEVIATIONS G26
+  inflight_floor: 16                # qwen falls back to 16 while 429s/provider errors > 10%
+  concurrency: 64                   # worker threads (32 + 16 + 16)
   max_credits: 180                 # USD cap for this experiment's ledger
   global_max_usd: 280               # hard stop across all keys and experiments

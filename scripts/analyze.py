@@ -32,6 +32,7 @@ from sas.analysis import (_event_sums, assignment_events, did_from_sums, h2_line
                           h2_test, holm, manipulation_check, paired_did_gap, position_bias,
                           regression_did, replay_audit, retry_length_check, script_fidelity,
                           summarize_cell)
+from sas.analysis_descriptive import lockin_table, run_level, share_gap_table  # noqa: E402
 from sas.codehash import analysis_code_hash  # noqa: E402
 from sas.grid import check_stages, load_experiment  # noqa: E402
 from sas.params import Payoffs, rho_star  # noqa: E402
@@ -254,6 +255,11 @@ def main():
         "summary": summary.replace({np.nan: None}).to_dict("records"),
         "h2": h2.replace({np.nan: None}).to_dict("records"),
     }, indent=1, default=str))
+    # Secondary, descriptive (DEVIATIONS G25): not in the confirmatory family.
+    runs_desc = run_level(df)
+    runs_desc.to_csv(out_dir / "run_level.csv", index=False)
+    share_gap_table(runs_desc, B=args.B).to_csv(out_dir / "share_gap.csv", index=False)
+    lockin_table(runs_desc, B=args.B).to_csv(out_dir / "lockin.csv", index=False)
     write_latex(summary, out_dir / "table_main.tex", args.k)
     print(f"wrote {out_dir}")
 

@@ -103,9 +103,12 @@ def main():
               "fact_determines_theta": det}
 
     if args.model:
-        from sas.adaption import AdaptionClient
-        client = AdaptionClient(max_credits=0.5)
-        client.spent = 0.0
+        import yaml
+        from sas.grid import ROOT
+        from sas.openrouter import KeyPool, OpenRouterClient, load_keys
+        routes = yaml.safe_load((ROOT / "configs/routes_openrouter.yaml").read_text())
+        client = OpenRouterClient(routes=routes, pool=KeyPool(load_keys()), max_usd=0.5, global_max_usd=280.0,
+                                  ledger_path=None, global_ledger_path=RESULTS / "openrouter_ledger.jsonl")
         sample = ts[: args.llm_n]
         hits = 0
         for t in sample:

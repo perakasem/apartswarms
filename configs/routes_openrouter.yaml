@@ -5,13 +5,13 @@
 # measures latency per pinned provider. Prices: USD per 1M tokens (projection
 # only; the ledger records OpenRouter's billed usage.cost per call).
 # The model label (left) is the run-store coordinator name; slug + provider +
-# reasoning are part of the run fingerprint, so these runs never mix with Adaption runs.
+# reasoning are part of the run fingerprint, so a provider change never reuses old runs.
 qwen3.5-397b:
   slug: qwen/qwen3.5-397b-a17b
-  provider: alibaba                 # first-party; uptime 100/100
+  provider: parasail/fp8            # uptime 100/100; alibaba dropped 2026-11-08 (DEVIATIONS G21)
   reasoning: {enabled: false}       # endpoint lists `reasoning`, not `reasoning_effort`
-  price_in: 0.39
-  price_out: 2.34
+  price_in: 0.50
+  price_out: 3.60
 glm-5.2:
   slug: z-ai/glm-5.2
   provider: together                # uptime 100/100 (z-ai/fp8 first-party: 99.78 over 1 day)

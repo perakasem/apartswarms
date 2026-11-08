@@ -9,7 +9,7 @@ from pathlib import Path
 import httpx
 import pytest
 
-from sas.adaption import BudgetExceeded, KeysExhausted, ReasoningControlError, TransientAPIError
+from sas.api import BudgetExceeded, KeysExhausted, ReasoningControlError, TransientAPIError
 from sas.openrouter import KeyPool, OpenRouterClient
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -166,11 +166,14 @@ def test_cache_key_has_host_and_route_not_key(tmp_path, monkeypatch):
     from sas.env import Cell
     monkeypatch.setattr(grid, "RUNS", tmp_path / "runs")
     base = dict(name="t", T=20, models=["qwen3.5-397b"], stage="confirmatory")
-    ad = grid.Experiment(**base, llm={"api": "adaption", "temperature": 1.0})
     orx = grid.Experiment(**base, llm={"api": "openrouter", "temperature": 1.0})
-    a = grid.run_path(ad, "qwen3.5-397b", Cell(0.0), 0)
     b = grid.run_path(orx, "qwen3.5-397b", Cell(0.0), 0)
-    assert a != b                                               # never mix providers
+    routes = grid.Experiment.routes(orx)
+    moved = {**routes, "qwen3.5-397b": {**routes["qwen3.5-397b"], "provider": "atlas-cloud/fp8"}}
+    monkeypatch.setattr(grid.Experiment, "routes", lambda self: moved)
+    assert grid.run_path(orx, "qwen3.5-397b", Cell(0.0), 0) != b   # never mix providers
+    monkeypatch.undo()
+    monkeypatch.setattr(grid, "RUNS", tmp_path / "runs")
     monkeypatch.setenv("OPENROUTER_API_KEYS", "x,y,z")
     assert grid.run_path(orx, "qwen3.5-397b", Cell(0.0), 0) == b   # keys are not an input
 
@@ -195,3 +198,83 @@ def test_load_keys_strips_per_key_quotes(monkeypatch):
     from sas.openrouter import load_keys
     monkeypatch.setenv("OPENROUTER_API_KEYS", '"sk-or-v1-a", \'sk-or-v1-b\' ,sk-or-v1-c,')
     assert load_keys() == ["sk-or-v1-a", "sk-or-v1-b", "sk-or-v1-c"]
+
+
+def test_ledger_tolerates_torn_line(tmp_path):
+    from sas.api import ledger_total
+    ledger = tmp_path / "l.jsonl"
+    ledger.write_text(json.dumps({"credits": 1.5}) + "\n" + '{"credits": 2.')
+    assert ledger_total(ledger) == 1.5
+
+
+def test_429_retries_only_that_call_without_pausing_the_model(tmp_path):
+    responses = iter([httpx.Response(429, headers={"retry-after": "1"}), httpx.Response(200, json=ok_body())])
+    slept = []
+    _, client = make({k: 50.0 for k in KEYS}, lambda r, k: next(responses), tmp_path)
+    client._sleep = slept.append
+    r = client.respond(model="m", instructions="s", input="u")
+    gate = client.gates["m"]
+    assert r["attempts"] == 2 and gate.rate_limits == 1 and gate.rps == 8.0
+    assert len(slept) == 1 and 2.0 <= slept[0] <= 10.0          # short jittered wait, >= Retry-After
+
+
+def test_occasional_429s_never_stop_a_model(tmp_path):
+    n = {"i": 0}
+
+    def chat(r, k):
+        n["i"] += 1
+        return httpx.Response(429) if n["i"] % 10 == 0 else httpx.Response(200, json=ok_body(cost=0.0001))
+    _, client = make({k: 50.0 for k in KEYS}, chat, tmp_path)
+    client.gates["m"].rps = 1e6
+    for _ in range(300):                 # ~10% 429: the old 3-cycle rule stopped here
+        client.respond(model="m", instructions="s", input="u")
+    assert client.gates["m"].rate_limits >= 30
+
+
+def test_sustained_429_raises_rate_limited(tmp_path):
+    from sas.api import RateLimited
+    _, client = make({k: 50.0 for k in KEYS}, lambda r, k: httpx.Response(429), tmp_path)
+    with pytest.raises(RateLimited):
+        client.respond(model="m", instructions="s", input="u")
+
+
+def test_gate_saturation_window():
+    from sas.api import RateGate
+    g = RateGate(window=10, saturation=0.5)
+    for _ in range(5):
+        g.ok()
+    assert not any(g.rate_limited() for _ in range(5))   # 5/10: not over half
+    assert g.rate_limited()                              # 6/10
+
+
+def test_runner_contains_rate_limit_to_one_model(tmp_path):
+    cfg = tmp_path / "c.yaml"
+    cfg.write_text("name: contain\nstage: smoke\nT: 20\nfactors: {rho: [0.0]}\nseeds: [0, 1, 2]\n"
+                   "models: [fake-ratelimited, fake]\n")
+    env = {**os.environ, "SAS_RESULTS": str(tmp_path)}
+    r = subprocess.run([sys.executable, "scripts/run_experiment.py", "--config", str(cfg)], cwd=ROOT,
+                       capture_output=True, text=True, env=env)
+    assert r.returncode == 2, r.stdout + r.stderr                # resumable, not systemic
+    assert "RATE LIMITED fake-ratelimited" in r.stdout
+    assert r.stdout.count("done fake ") == 3                     # the other model finished every run
+    assert "stopped on sustained rate limiting" in r.stdout
+
+
+def test_inflight_limit_falls_back_and_restores():
+    from sas.api import RateGate
+    g = RateGate(rps=1e6, max_inflight=32, floor=16, health_window=50)
+    for i in range(50):
+        g.ok() if i % 5 else g.rate_limited()      # 20% errors > 10%
+    assert g.limit == 16 and g.fallbacks == 1
+    for _ in range(50):
+        g.ok()                                     # clean window: <= 2%
+    assert g.limit == 32
+
+
+def test_client_sets_per_model_inflight(tmp_path):
+    routes = {**ROUTES, "q": {**ROUTES["m"]}}
+    pool = KeyPool(KEYS, transport=transport({}, lambda r, k: httpx.Response(200, json=ok_body())))
+    c = OpenRouterClient(routes=routes, pool=pool, max_usd=1, global_max_usd=1, ledger_path=None,
+                         global_ledger_path=None, max_inflight=16, inflight_by_model={"q": 32}, inflight_floor=16)
+    assert (c.gates["q"].limit, c.gates["q"].floor) == (32, 16)
+    assert (c.gates["m"].limit, c.gates["m"].floor) == (16, None)

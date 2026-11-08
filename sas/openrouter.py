@@ -1,8 +1,5 @@
 """OpenRouter chat-completions client with a pool of API keys (Addendum 2).
 
-Same interface as AdaptionClient.respond, so the coordinator, run store,
-resume, stage enforcement and raw attempt logging are unchanged.
-
 Per request (docs read 2026-11-08):
   POST https://openrouter.ai/api/v1/chat/completions
   provider = {"order": [<one slug>], "allow_fallbacks": false, "require_parameters": true}
@@ -35,8 +32,20 @@ from pathlib import Path
 
 import httpx
 
-from .adaption import (AdaptionError, BudgetExceeded, KeysExhausted, RateGate,
-                       ReasoningControlError, TransientAPIError, ledger_total)
+from .api import (APIError, BudgetExceeded, KeysExhausted, RateGate, RateLimited,
+                  ReasoningControlError, TransientAPIError, ledger_total)
+
+MAX_429_PER_CALL = 30       # one call rejected this often -> treat as sustained
+
+
+def rate_limit_wait(n: int, retry_after: str | None) -> float:
+    """Seconds before resending a call that got its n-th (1-based) 429:
+    jittered 2-10 s growing with n, at least Retry-After (capped at 60 s)."""
+    wait = random.uniform(2.0, min(10.0, 2.0 + 2.0 * n))
+    try:
+        return max(wait, min(60.0, float(retry_after))) if retry_after else wait
+    except ValueError:
+        return wait
 
 API_BASE = "https://openrouter.ai/api/v1"
 ROOT = Path(__file__).resolve().parent.parent
@@ -53,7 +62,7 @@ def load_keys() -> list[str]:
     keys = [k.strip().strip('"').strip("'").strip() for k in raw.split(",")]
     keys = [k for k in keys if k]
     if not keys:
-        raise AdaptionError("OPENROUTER_API_KEYS not set (environment or .env)")
+        raise APIError("OPENROUTER_API_KEYS not set (environment or .env)")
     return keys
 
 
@@ -61,7 +70,7 @@ class KeyPool:
     def __init__(self, keys: list[str], *, min_balance_usd: float = 2.0, refresh_every: int = 50,
                  transport: httpx.BaseTransport | None = None, timeout: float = 30.0):
         if not keys:
-            raise AdaptionError("empty key pool")
+            raise APIError("empty key pool")
         self._keys = {f"k{i + 1}": k for i, k in enumerate(keys)}
         self.aliases = list(self._keys)
         self.min_balance = min_balance_usd
@@ -183,6 +192,7 @@ class OpenRouterClient:
     def __init__(self, *, routes: dict, pool: KeyPool, max_usd: float, global_max_usd: float,
                  ledger_path: Path | None, global_ledger_path: Path | None,
                  require_no_reasoning: bool = True, rps: float = 8.0, max_inflight: int = 8,
+                 inflight_by_model: dict | None = None, inflight_floor: int | None = None,
                  timeout: float = 120.0, max_retries: int = 5, backoff_base_s: float = 5.0,
                  backoff_max_s: float = 120.0, transport: httpx.BaseTransport | None = None,
                  sleep=time.sleep):
@@ -190,7 +200,12 @@ class OpenRouterClient:
         self.max_credits, self.global_max = max_usd, global_max_usd
         self.ledger_path, self.global_ledger = ledger_path, global_ledger_path
         self.require_no_reasoning = require_no_reasoning
-        self.gates = {m: RateGate(rps=rps, max_inflight=max_inflight) for m in routes}
+        # Per-model in-flight limit; a model above `inflight_floor` falls back to it
+        # while its 429/provider-error rate is high (RateGate).
+        by = inflight_by_model or {}
+        self.gates = {m: RateGate(rps=max(rps, float(by.get(m, max_inflight))), max_inflight=int(by.get(m, max_inflight)),
+                                  floor=inflight_floor if by.get(m, max_inflight) > (inflight_floor or 0) else None)
+                      for m in routes}
         self.max_retries, self.backoff_base_s, self.backoff_max_s = max_retries, backoff_base_s, backoff_max_s
         self._sleep = sleep
         self.spent = ledger_total(ledger_path) if ledger_path else 0.0
@@ -200,9 +215,6 @@ class OpenRouterClient:
         self._http = httpx.Client(base_url=API_BASE, timeout=timeout, transport=transport,
                                   follow_redirects=False)
 
-    @property
-    def gate(self):   # the runner reads .gate.cycles for messages; report the worst model
-        return max(self.gates.values(), key=lambda g: g.cycles)
 
     def _log(self, entry: dict, usd: float):
         line = json.dumps({"t": time.time(), **entry, "credits": usd, "usd": usd})
@@ -252,11 +264,11 @@ class OpenRouterClient:
     def respond(self, *, model: str, instructions: str, input: str, max_output_tokens: int = 512,
                 temperature: float | None = None, on_attempt=None, prefer_key: str | None = None) -> dict:
         if model not in self.routes:
-            raise AdaptionError(f"no OpenRouter route for model {model!r}")
+            raise APIError(f"no OpenRouter route for model {model!r}")
         route = self.routes[model]
         payload = self.payload(model, instructions, input, max_output_tokens, temperature)
         gate = self.gates[model]
-        errors, retries, attempt = [], 0, 0
+        errors, retries, attempt, n429 = [], 0, 0, 0
         while True:
             self._check_budget()
             alias = self.pool.acquire(prefer=prefer_key)
@@ -292,6 +304,7 @@ class OpenRouterClient:
             meta = err.get("metadata") or {}
 
             if status == 200:
+                gate.ok()
                 return self._accept(model, route, data, latency, attempt, alias)
             if status == 402 and meta.get("reason") == "in_flight_budget_exhausted":
                 ra = resp.headers.get("retry-after") if resp is not None else None
@@ -305,18 +318,23 @@ class OpenRouterClient:
                 attempt -= 1
                 continue
             if status == 429:
+                # Retry only this call; the model stops only on sustained limiting.
+                n429 += 1
+                if gate.rate_limited():
+                    raise RateLimited(f"sustained rate limiting on {model}: over "
+                                      f"{gate.saturation:.0%} of the last {gate.window} attempts were 429")
+                if n429 >= MAX_429_PER_CALL:
+                    raise RateLimited(f"one call on {model} got {n429} 429s")
                 ra = resp.headers.get("retry-after") if resp is not None else None
-                gate.rate_limited(float(ra) if ra and ra.isdigit() else None)
-                if gate.cycles >= 3:
-                    raise AdaptionError(f"three rate-limit cycles on {model}; stopping")
-                errors.append("429")
+                self._sleep(rate_limit_wait(n429, ra))
                 continue
             if isinstance(status, int) and 400 <= status < 500 and status != 408:
-                raise AdaptionError(f"HTTP {status}: {self.pool.redact(json.dumps(err) or '')[:400]}")
+                raise APIError(f"HTTP {status}: {self.pool.redact(json.dumps(err) or '')[:400]}")
             # 5xx, 408, timeouts, transport and empty/bad bodies: OpenRouter does not
             # bill failed generations; logged at $0 with the status for accounting.
             self._log({"model": model, "status": status, "key_alias": alias, "uncertain": True,
                        "latency_s": round(latency, 1)}, 0.0)
+            gate.provider_error()
             with self._lock:
                 self.transient_failures += 1
             errors.append(str(status))
@@ -343,10 +361,10 @@ class OpenRouterClient:
                                         f"(reasoning_tokens={r_tok!r}, reasoning text {len(r_text)} chars)")
         pinned = _norm(route["provider"].split("/")[0])
         if provider and pinned not in _norm(provider) and _norm(provider) not in pinned:
-            raise AdaptionError(f"{model}: served by {provider!r}, pinned {route['provider']!r}")
+            raise APIError(f"{model}: served by {provider!r}, pinned {route['provider']!r}")
         served = data.get("model")
         if served and not str(served).startswith(route["slug"].split(":")[0]):
-            raise AdaptionError(f"model mismatch: asked {route['slug']}, got {served}")
+            raise APIError(f"model mismatch: asked {route['slug']}, got {served}")
         return {"text": text, "usage": {"input": int(usage.get("prompt_tokens") or 0),
                                         "output": int(usage.get("completion_tokens") or 0), "reasoning": r_tok},
                 "latency_s": round(latency, 3), "credits": cost, "attempts": attempt,

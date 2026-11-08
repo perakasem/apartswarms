@@ -1,5 +1,5 @@
 """Pre-flight for each coordinator model, before any grid run (costs a few
-hundredths of a credit). Sends real coordinator prompts, including the
+hundredths of a US dollar). Sends real coordinator prompts, including the
 longest one a run can produce (round T, reason feedback, task visible), and
 checks for each reply:
   * HTTP OK and the reasoning control honoured (reasoning_tokens == 0)
@@ -21,7 +21,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from sas.adaption import AdaptionClient, AdaptionError  # noqa: E402
+from sas.api import APIError  # noqa: E402
+from sas.openrouter import KeyPool, OpenRouterClient, load_keys  # noqa: E402
 from sas.coordinators import Uniform, parse_reply  # noqa: E402
 from sas.env import Cell, Observation, run_episode  # noqa: E402
 from sas.grid import RESULTS, ROOT, load_experiment  # noqa: E402
@@ -104,26 +105,20 @@ def main():
     llm = exp.llm_settings()
     api = llm["api"]
     OUT.mkdir(parents=True, exist_ok=True)
-    aliases = [None]
-    if api == "openrouter":
-        from sas.openrouter import KeyPool, OpenRouterClient, load_keys
-        pool = KeyPool(load_keys())
-        status = pool.refresh()
-        print("keys: " + ", ".join(
-            f"{a}: {'RETIRED ' + v['retired'] if v['retired'] else ('balance unknown' if v['remaining'] == float('inf') else '$%.2f' % v['remaining'])}"
-            for a, v in status.items()))
-        aliases = [a for a, v in status.items() if not v["retired"]]
-        if not aliases:
-            sys.exit("no usable OpenRouter key")
-        client = OpenRouterClient(routes=exp.routes(), pool=pool, max_usd=1.0,
-                                  global_max_usd=llm["global_max_usd"],
-                                  ledger_path=OUT / "openrouter_probe_ledger.jsonl",
-                                  global_ledger_path=RESULTS / "openrouter_ledger.jsonl",
-                                  max_retries=llm["max_retries"])
-        client.spent = 0.0   # the probe's own cap ($1) is per invocation
-    else:
-        client = AdaptionClient(max_credits=1.0, ledger_path=OUT / "ledger.jsonl")
-        client.spent = 0.0   # the probe cap is per invocation
+    pool = KeyPool(load_keys())
+    status = pool.refresh()
+    print("keys: " + ", ".join(
+        f"{a}: {'RETIRED ' + v['retired'] if v['retired'] else ('balance unknown' if v['remaining'] == float('inf') else '$%.2f' % v['remaining'])}"
+        for a, v in status.items()))
+    aliases = [a for a, v in status.items() if not v["retired"]]
+    if not aliases:
+        sys.exit("no usable OpenRouter key")
+    client = OpenRouterClient(routes=exp.routes(), pool=pool, max_usd=1.0,
+                              global_max_usd=llm["global_max_usd"],
+                              ledger_path=OUT / "openrouter_probe_ledger.jsonl",
+                              global_ledger_path=RESULTS / "openrouter_ledger.jsonl",
+                              max_retries=llm["max_retries"])
+    client.spent = 0.0   # the probe's own cap ($1) is per invocation
 
     latency = {}
     used_keys = set()
@@ -140,22 +135,21 @@ def main():
                        "system_chars": len(system_prompt(cell, exp.T))}
                 t0 = time.monotonic()
                 try:
-                    kw = {"prefer_key": prefer} if api == "openrouter" else {}
                     r = client.respond(model=model, instructions=system_prompt(cell, exp.T), input=prompt,
                                        max_output_tokens=llm["max_output_tokens"],
-                                       temperature=llm["temperature"], **kw)
+                                       temperature=llm["temperature"], prefer_key=prefer)
                     parsed = parse_reply(r["text"], obs.available)
                     # Addendum 2 §3: the probe requires the reasoning-token field to be
                     # present and zero on the pinned provider (the client already refuses
                     # non-zero counts and reasoning text).
-                    strict = api != "openrouter" or (r.get("reasoning_field_present") and r["usage"]["reasoning"] == 0)
+                    strict = r.get("reasoning_field_present") and r["usage"]["reasoning"] == 0
                     rec.update(ok=parsed is not None and bool(strict), text=r["text"][:300], usage=r["usage"],
                                latency_s=r["latency_s"], credits=r["credits"], status=r["status"],
                                provider=r.get("provider"), key_alias=r.get("key_alias"),
                                served_model=r.get("served_model"),
                                reasoning_field_present=r.get("reasoning_field_present"))
                     used_keys.add(r.get("key_alias"))
-                except AdaptionError as e:
+                except APIError as e:
                     rec.update(ok=False, error=str(e)[:300], latency_s=time.monotonic() - t0)
                 ok &= rec["ok"]
                 results.append(rec)
@@ -172,17 +166,16 @@ def main():
                   "reasoning_tokens": sorted({str(r.get("usage", {}).get("reasoning")) for r in results}),
                   "results": results}
         (OUT / f"{api}-{model}.json").write_text(json.dumps(report, indent=1))
-        unit = "USD" if api == "openrouter" else "credits"
+        unit = "USD"
         print(f"==> {model}{' @ ' + route['provider'] if route else ''}: {'PASSED' if ok else 'FAILED'}; "
               f"reasoning tokens {report['reasoning_tokens']}; median latency "
               f"{latency[model] if latency[model] is not None else float('nan'):.1f}s; max input tokens "
               f"{report['max_input_tokens']}; {report['credits']:.5f} {unit}")
-        if not ok and api == "openrouter" and any("reasoning" in r.get("error", "") for r in results):
+        if not ok and any("reasoning" in r.get("error", "") for r in results):
             print(f"STOP: {model} did not run with zero reasoning tokens on {route.get('provider')}. "
                   "Do not substitute a model; ask the team (Addendum 2 §3).")
-    if api == "openrouter":
-        missing = set(aliases) - used_keys
-        print("every live key exercised: " + ("yes" if not missing else f"NO, missing {sorted(missing)}"))
+    missing = set(aliases) - used_keys
+    print("every live key exercised: " + ("yes" if not missing else f"NO, missing {sorted(missing)}"))
     print_wall_times({m: v for m, v in latency.items() if v})
 
 

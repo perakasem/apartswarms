@@ -9,7 +9,7 @@ import pandas as pd
 import pytest
 
 import sas.grid as grid
-from sas.adaption import TransientAPIError
+from sas.api import TransientAPIError
 from sas.coordinators import FakeClient, LLMCoordinator
 from sas.env import Cell, ReplayMismatch
 from sas.grid import Experiment, execute_run, load_experiment, partial_progress, read_run, run_path
@@ -231,7 +231,7 @@ def test_manifest_fields_and_attempt_log(store):
     path = execute_run(e, cell, 0, llm(FakeClient(malformed_rate=0), e), "fake")
     lines = [json.loads(x) for x in path.read_text().splitlines()]
     h = lines[0]
-    for key in ("stage", "task_pool_hash", "templates_hash", "httpx_version", "adaption_version",
+    for key in ("stage", "task_pool_hash", "templates_hash", "httpx_version",
                 "client", "git_sha", "config_hash", "fingerprint", "started", "schema_version"):
         assert key in h, key
     assert h["stage"] == "secondary" and lines[-1]["event"] == "end"
@@ -270,13 +270,13 @@ def test_live_run_prints_sanity_block_and_waits_for_confirm(tmp_path):
     root = Path(__file__).resolve().parent.parent
     from sas.prompt_approval import approval_hash
     (tmp_path / "approved").write_text(approval_hash())
-    env = {**os.environ, "SAS_RESULTS": str(tmp_path), "ADAPTION_API_KEY": "",
+    env = {**os.environ, "SAS_RESULTS": str(tmp_path),
            "SAS_APPROVED_FILE": str(tmp_path / "approved")}
     r = subprocess.run([sys.executable, "scripts/run_experiment.py", "--config", "configs/pilot.yaml",
                         "--allow-unprobed"], cwd=root, capture_output=True, text=True, env=env)
     assert r.returncode == 0, r.stderr
     for line in ("stage = pilot", "seeds: 10 (9001-9010)", "pilot design check: OK", "API: openrouter",
-                 "qwen3.5-397b -> qwen/qwen3.5-397b-a17b @ alibaba", "temperature = 1.0", "cap 15",
+                 "qwen3.5-397b -> qwen/qwen3.5-397b-a17b @ parasail/fp8", "temperature = 1.0", "cap 15",
                  "global hard stop: $280.00", "not started"):
         assert line in r.stdout, line
     assert not (tmp_path / "runs").exists()                            # nothing ran, no API call

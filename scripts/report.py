@@ -161,15 +161,10 @@ def retry_line(retry: pd.DataFrame) -> str:
     return "- Reply length after API retries (retried vs clean rounds): " + "; ".join(parts) + "."
 
 
-def pilot_gate(s: pd.DataFrame, fb: pd.DataFrame) -> list[str]:
-    """PRD Stage 3 gate (decisions §2.4 + addendum). Facts only; the go/no-go
-    rule is written by the team in docs/PREREGISTRATION.md. Only validity
-    checks gate; DiD and the Bayes gap are informational."""
-    L = ["## Pilot gate (PRD Stage 3)", "",
-         "Facts only. The go/no-go rule is the team's, in `docs/PREREGISTRATION.md`.", "",
-         "**Validity checks (gating):**", ""]
-    llm = s[s["kind"] == "llm"]
-    for coord, g in llm.groupby("coordinator"):
+def gate_lines(s: pd.DataFrame, fb: pd.DataFrame) -> list[str]:
+    """Per model: positive control, placebo (rho=0), manipulation check (rho=1), fallback rate."""
+    L = []
+    for coord, g in s[s["kind"] == "llm"].groupby("coordinator"):
         pos = all((r["learning_gap_lo"] or -1) > 0 for _, r in g.iterrows())
         plc = g[(g["rho"] == 0) & (g["feedback"] == "outcome") & (g["visibility"] == "blind")]
         placebo = all(not excludes_zero(r, "placebo_gap") for _, r in plc.iterrows()) if len(plc) else None
@@ -181,6 +176,76 @@ def pilot_gate(s: pd.DataFrame, fb: pd.DataFrame) -> list[str]:
         L.append(f"- **{coord}**: positive control {tag(pos)} · placebo (ρ=0) {tag(placebo)} · "
                  f"manipulation check (ρ=1) {tag(manip)} · fallback rate {rate:.1%} "
                  f"{tag(rate <= GATE_FALLBACK_RATE)} (threshold {GATE_FALLBACK_RATE:.0%})")
+    return L
+
+
+def validity_section(s: pd.DataFrame, fb: pd.DataFrame) -> list[str]:
+    """Confirmatory: the pilot gate checks re-estimated (PREREGISTRATION §0 go/no-go rule)."""
+    if s[s["kind"] == "llm"].empty:
+        return []
+    return (["## Validity checks re-estimated in the confirmatory data", "",
+             "Per the go/no-go rule (PREREGISTRATION §0, written after reading the pilot gate), the pilot's "
+             "gate checks are re-estimated here with CIs. A failure is reported as a finding, not fixed.", ""]
+            + gate_lines(s, fb) + [""])
+
+
+def _tbl(df: pd.DataFrame, cols: list[str]) -> str:
+    return df[[c for c in cols if c in df]].to_markdown(index=False, floatfmt=".3f")
+
+
+def descriptive_section(adir: Path) -> list[str]:
+    """DEVIATIONS G25: run-level share gap and lock-in (secondary, descriptive)."""
+    sg, lk = adir / "share_gap.csv", adir / "lockin.csv"
+    if not sg.exists() or not lk.exists():
+        return []
+    sg, lk = pd.read_csv(sg), pd.read_csv(lk)
+    L = ["## Secondary, descriptive (not in the confirmatory family)", "",
+         "### Run-level share gap", "",
+         "S = share(careful) − share(complier) per run over rounds 31–60 (coordinator decisions only). "
+         "Run-bootstrap 95% CIs; LLM − Bayes is paired by seed at ρ = 0.", "",
+         _tbl(sg, ["coordinator", "cell_id", "contrast", "n_runs", "estimate", "lo", "hi"]), "",
+         "### Lock-in", "",
+         "max_share = the top worker's share of rounds 31–60. onset = the earliest round t (top worker "
+         "assigned at t) from which its share of rounds t–60 is at least max_share, i.e. how early the "
+         "late-window concentration was in place. share_ge_0.8 = fraction of runs with max_share ≥ 0.8. "
+         "Gaps vs the Bayes (ρ-uncertain) and softmax(0.5) baselines are paired by seed.", "",
+         _tbl(lk[lk["contrast"] == "distribution"],
+              ["coordinator", "cell_id", "measure", "n_runs", "mean", "lo", "hi", "q10", "median", "q90",
+               "share_ge_0.8"]), "",
+         _tbl(lk[lk["contrast"] != "distribution"],
+              ["coordinator", "cell_id", "measure", "contrast", "n_runs", "mean", "lo", "hi"]), ""]
+    return L
+
+
+def caveats_section(s: pd.DataFrame) -> list[str]:
+    """Report caveats (team decision 2026-11-08): eval-awareness, preamble and game-frame rates per model."""
+    llm = s[s["kind"] == "llm"]
+    if llm.empty:
+        return []
+    L = ["## Caveats", "",
+         "Rates are means across this report's cells. Keyword hits are candidates for blind coding, not "
+         "confirmed awareness.", "",
+         "| model | eval_aware | preamble (written reasoning before the decision) | game_frame |",
+         "|---|---|---|---|"]
+    for coord, g in llm.groupby("coordinator"):
+        pre = g["preamble_rate"].dropna()
+        L.append(f"| {coord} | {g['eval_aware_rate'].mean():.1%} | "
+                 f"{fmt_rate(pre.mean() if len(pre) else None)} | {g['game_frame_rate'].mean():.1%} |")
+    L += ["", "- glm-5.2's eval-awareness rate (~33% of rounds in the pilot vs 5–7% for the other models) "
+          "and its preamble rate qualify cross-model comparisons: some of its decisions follow written "
+          "reasoning (DEVIATIONS G19), and it often names the setting as a test or experiment.", ""]
+    return L
+
+
+def pilot_gate(s: pd.DataFrame, fb: pd.DataFrame) -> list[str]:
+    """PRD Stage 3 gate (decisions §2.4 + addendum). Facts only; the go/no-go
+    rule is written by the team in docs/PREREGISTRATION.md. Only validity
+    checks gate; DiD and the Bayes gap are informational."""
+    L = ["## Pilot gate (PRD Stage 3)", "",
+         "Facts only. The go/no-go rule is the team's, in `docs/PREREGISTRATION.md`.", "",
+         "**Validity checks (gating):**", ""]
+    llm = s[s["kind"] == "llm"]
+    L += gate_lines(s, fb)
     L += ["", "**Effect estimates (informational: 10 seeds cannot resolve direction):**", ""]
     for _, r in llm.sort_values(["coordinator", "cell_id"]).iterrows():
         big = r["did"] is not None and abs(r["did"]) >= GATE_DID_INFO
@@ -265,6 +330,10 @@ def main():
         out.append("(no LLM runs yet)")
     if exp.stage == "pilot":
         out += pilot_gate(s, fb)
+    else:
+        out += validity_section(s, fb)
+    out += descriptive_section(adir)
+    out += caveats_section(s)
     (exp.out_dir() / "REPORT.md").write_text("\n".join(out) + "\n")
     print(f"wrote {exp.out_dir() / 'REPORT.md'}")
 

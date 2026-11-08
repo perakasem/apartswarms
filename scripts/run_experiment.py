@@ -1,19 +1,22 @@
 """Run LLM coordinators over an experiment grid.
 
 Resumable at three levels, so HTTP 504s, crashes or Ctrl-C never lose paid work:
-  * per call: 5xx/timeouts are retried with exponential backoff (sas/adaption.py)
+  * per call: 5xx/timeouts are retried with exponential backoff, and a 429
+    resends only that call after a short jittered wait (sas/openrouter.py)
   * per round: every completed round is fsynced to the run's .partial file, and
     a rerun continues from the first missing round (sas/grid.py)
   * per grid: completed runs are skipped; just rerun the same command
 A run that still fails transiently is re-queued once in the same invocation.
-Three transient run failures in a row trip a circuit breaker (the API is
-likely down): in-flight runs stop after their current round and the script
-exits with code 2. Exit codes: 0 all complete, 2 incomplete but resumable,
-1 a systemic error to fix first (budget cap, reasoning control, rate limits,
-HTTP 4xx, replay mismatch).
+Failures are contained per model: three transient run failures in a row on one
+model (its provider is likely down), sustained rate limiting, or a systemic
+error stop that model only; its in-flight runs pause after their current round
+and the other models continue. Budget caps, an empty key pool and Ctrl-C stop
+every model. Exit codes: 0 all complete, 2 incomplete but resumable (including
+budget caps and rate limiting), 1 a systemic error to fix first (reasoning
+control, HTTP 4xx, provider/model mismatch, replay mismatch).
 
 Job order is seed-major (all cells and models for seed s before seed s+1),
-so a stop at any point leaves a balanced design.
+so a stop at any point leaves a balanced design (per model, if one stops early).
 
   uv run scripts/run_experiment.py --config configs/confirmatory.yaml --dry-run
   uv run scripts/run_experiment.py --config configs/confirmatory.yaml
@@ -34,10 +37,10 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from sas.adaption import (AdaptionClient, AdaptionError, BudgetExceeded, KeysExhausted,  # noqa: E402
-                          RateGate, TransientAPIError, ledger_total)
+from sas.api import (APIError, BudgetExceeded, KeysExhausted, RateLimited,  # noqa: E402
+                     TransientAPIError, ledger_total)
 from sas.coordinators import (BrokeFakeClient, FakeClient, FlakyFakeClient, LLMCoordinator,  # noqa: E402
-                              Uniform)
+                              RateLimitedFakeClient, Uniform)
 from sas.env import Observation, ReplayMismatch, run_episode  # noqa: E402
 from sas.grid import (RESULTS, StopRequested, execute_run, load_experiment,  # noqa: E402
                       partial_progress, resolve_run, run_path)
@@ -82,12 +85,12 @@ def probe_file(api: str, model: str) -> Path:
     return PROBES / f"{api}-{model}.json"
 
 
-def probe_passed(model: str, api: str = "adaption") -> bool:
+def probe_passed(model: str, api: str = "openrouter") -> bool:
     path = probe_file(api, model)
     return path.exists() and json.loads(path.read_text()).get("passed") is True
 
 
-def probe_calibration(model: str, api: str = "adaption") -> dict | None:
+def probe_calibration(model: str, api: str = "openrouter") -> dict | None:
     """Real token use from the probe: characters per input token, and mean
     output tokens per call (which also sizes the notes echoed back as input)."""
     path = probe_file(api, model)
@@ -127,11 +130,9 @@ def estimate_tokens(exp, cell, calib: dict | None = None) -> tuple[int, int]:
 
 
 def price_fn(exp, model: str):
-    """(input tokens, output tokens) -> credits (Adaption) or USD (OpenRouter)."""
-    route = exp.routes().get(model)
-    if route:
-        return lambda n_in, n_out: (n_in * route["price_in"] + n_out * route["price_out"]) / 1e6
-    return lambda n_in, n_out: AdaptionClient.cost(model, n_in, n_out)
+    """(input tokens, output tokens) -> USD from the route's price table."""
+    route = exp.routes()[model]
+    return lambda n_in, n_out: (n_in * route["price_in"] + n_out * route["price_out"]) / 1e6
 
 
 def project_cost(exp, jobs, resumable, models, cells) -> dict:
@@ -184,7 +185,7 @@ def sanity_print(exp, cells, models, seed_of, llm, proj, spent) -> None:
           f"max_reasks = {llm['max_reasks']}, reasoning off = {llm['require_no_reasoning']}")
     total_ub = sum(p["upper"] for p in proj.values())
     cal_known = all(p["calibrated"] is not None for p in proj.values())
-    unit = "USD" if llm["api"] == "openrouter" else "credits"
+    unit = "USD"
     for m, p in proj.items():
         cal = (f"~{p['calibrated']:.2f} {unit} (probe: {p['calib']['chars_per_token']:.2f} chars/token, "
                f"{p['calib']['out_per_call']:.0f} output tokens/call)" if p["calibrated"] is not None
@@ -193,9 +194,8 @@ def sanity_print(exp, cells, models, seed_of, llm, proj, spent) -> None:
     total = sum(p["calibrated"] for p in proj.values()) if cal_known else None
     print(f"  projected spend: {('~%.2f' % total) if total is not None else 'n/a'} {unit} "
           f"(upper bound {total_ub:.2f}); ledger so far {spent:.2f}; cap {llm['max_credits']}")
-    if llm["api"] == "openrouter":
-        print(f"  global hard stop: ${llm['global_max_usd']:.2f} across all keys and experiments "
-              f"(global ledger so far ${ledger_total(RESULTS / 'openrouter_ledger.jsonl'):.2f})")
+    print(f"  global hard stop: ${llm['global_max_usd']:.2f} across all keys and experiments "
+          f"(global ledger so far ${ledger_total(RESULTS / 'openrouter_ledger.jsonl'):.2f})")
     print("=" * 72)
 
 
@@ -234,7 +234,7 @@ def main():
           + (f" ({n_partial} will resume from a checkpoint)" if n_partial else ""))
 
     if args.dry_run:
-        unit = "USD" if llm["api"] == "openrouter" else "credits"
+        unit = "USD"
         proj = project_cost(exp, jobs, resumable, models, cells)
         for m, p in proj.items():
             cal = f"~{p['calibrated']:.2f} (probe-calibrated)" if p["calibrated"] is not None else "no probe yet"
@@ -247,7 +247,7 @@ def main():
     if not jobs:
         return
 
-    FAKES = {"fake", "fake-flaky", "fake-broke"}
+    FAKES = {"fake", "fake-flaky", "fake-broke", "fake-ratelimited"}
     live = sorted({m for m, _, _ in jobs if m not in FAKES})
     if live and exp.disabled:
         sys.exit(f"refusing to start: config disabled ({exp.disabled})")
@@ -269,7 +269,7 @@ def main():
             return
     exp.out_dir().mkdir(parents=True, exist_ok=True)
     client = None
-    if live and llm["api"] == "openrouter":
+    if live:
         from sas.openrouter import KeyPool, OpenRouterClient, load_keys
         pool = KeyPool(load_keys())
         print("key balances (alias: remaining USD): " + ", ".join(
@@ -281,18 +281,21 @@ def main():
                                   global_ledger_path=RESULTS / "openrouter_ledger.jsonl",
                                   require_no_reasoning=llm["require_no_reasoning"],
                                   rps=llm["rps"], max_inflight=llm["max_inflight"],
+                                  inflight_by_model=llm["max_inflight_by_model"],
+                                  inflight_floor=llm["inflight_floor"],
                                   max_retries=llm["max_retries"])
         print(f"ledger so far: ${client.spent:.4f} of cap ${llm['max_credits']}; "
               f"global ${client.global_spent:.4f} of ${llm['global_max_usd']}")
-    elif live:
-        client = AdaptionClient(gate=RateGate(rps=llm["rps"], max_inflight=llm["max_inflight"]),
-                                max_credits=llm["max_credits"],
-                                require_no_reasoning=llm["require_no_reasoning"],
-                                max_retries=llm["max_retries"],
-                                ledger_path=exp.out_dir() / "ledger.jsonl")
-        print(f"ledger so far: {client.spent:.4f} credits of cap {llm['max_credits']}")
-    fakes = {"fake": FakeClient(), "fake-flaky": FlakyFakeClient(), "fake-broke": BrokeFakeClient()}
-    stop = threading.Event()
+    fakes = {"fake": FakeClient(), "fake-flaky": FlakyFakeClient(), "fake-broke": BrokeFakeClient(),
+             "fake-ratelimited": RateLimitedFakeClient()}
+    # One stop event per model: a model-level failure (systemic error, sustained
+    # 429, transient circuit breaker) pauses only that model's runs; budget caps,
+    # an empty key pool and Ctrl-C stop every model.
+    stops = {m: threading.Event() for m in {j[0] for j in jobs}}
+
+    def stop_all():
+        for ev in stops.values():
+            ev.set()
 
     def one(job):
         m, cell, seed = job
@@ -305,16 +308,30 @@ def main():
                  "route": {k: route[k] for k in ("slug", "provider", "reasoning") if k in route},
                  "llm_settings": {k: llm[k] for k in
                                   ("max_output_tokens", "temperature", "max_reasks", "require_no_reasoning")}}
-        return execute_run(exp, cell, seed, coord, m, extra, stop=stop)
+        return execute_run(exp, cell, seed, coord, m, extra, stop=stops[m])
 
     tag = lambda j: f"{j[0]} {j[1].cell_id} seed{j[2]}"  # noqa: E731
-    done, attempts, consecutive = 0, {j: 0 for j in jobs}, 0
-    systemic = None
+    done, attempts = 0, {j: 0 for j in jobs}
+    consecutive = {m: 0 for m in stops}          # transient run failures in a row, per model
+    systemic: dict[str, str] = {}                # model -> error that needs a fix
+    rate_limited: dict[str, str] = {}            # model -> sustained-429 stop (resumable)
     budget_stop = None
     deadline_hit = False
     queue = list(jobs)
-    workers = args.concurrency or llm["concurrency"]
+    # Runs in flight per model = that model's current in-flight limit (its rate
+    # gate's, which falls back under 429s/provider errors), so each model gets
+    # its own share of threads; total threads = sum of the per-model maxima.
+    by_model = llm["max_inflight_by_model"]
+    model_max = {m: int(by_model.get(m, llm["max_inflight"])) for m in stops}
+
+    def cap(m):
+        if client is not None and m in getattr(client, "gates", {}):
+            return client.gates[m].limit
+        return model_max[m]
+
+    workers = args.concurrency or max(llm["concurrency"], sum(model_max.values()))
     pool = ThreadPoolExecutor(max_workers=workers)
+    n_running = {m: 0 for m in stops}
     running: dict = {}
     try:
         while queue or running:
@@ -322,30 +339,35 @@ def main():
                 deadline_hit = True
                 print(f"deadline {args.deadline} reached: starting no new runs; "
                       f"{len(running)} in-flight run(s) will finish", flush=True)
-            while queue and len(running) < workers and not stop.is_set() and not deadline_hit:
-                j = queue.pop(0)
+            while len(running) < workers and not deadline_hit:
+                j = next((x for x in queue if not stops[x[0]].is_set() and n_running[x[0]] < cap(x[0])), None)
+                if j is None:
+                    break
+                queue.remove(j)
                 attempts[j] += 1
+                n_running[j[0]] += 1
                 running[pool.submit(one, j)] = j
             if not running:
                 break
             finished, _ = wait(running, return_when=FIRST_COMPLETED, timeout=30)
             for fut in finished:
                 j = running.pop(fut)
+                n_running[j[0]] -= 1
                 try:
                     fut.result()
                     done += 1
-                    consecutive = 0
+                    consecutive[j[0]] = 0
                     print(f"[{done}/{len(jobs)}] done {tag(j)}", flush=True)
                 except StopRequested as e:
                     print(f"paused {tag(j)} ({e}); checkpoint kept", flush=True)
                 except TransientAPIError as e:
-                    consecutive += 1
+                    consecutive[j[0]] += 1
                     kept = partial_progress(run_path(exp, *j))
                     print(f"transient failure {tag(j)} after {kept} rounds: {e}", flush=True)
-                    if consecutive >= BREAKER_CONSECUTIVE:
-                        print(f"circuit breaker: {consecutive} transient failures in a row; "
-                              "stopping new work, in-flight runs pause after their current round")
-                        stop.set()
+                    if consecutive[j[0]] >= BREAKER_CONSECUTIVE:
+                        print(f"circuit breaker: {consecutive[j[0]]} transient failures in a row on {j[0]}; "
+                              f"stopping {j[0]} (other models continue)", flush=True)
+                        stops[j[0]].set()
                     elif attempts[j] <= REQUEUES:
                         queue.append(j)        # resumes from its checkpoint
                 except (BudgetExceeded, KeysExhausted) as e:
@@ -353,15 +375,22 @@ def main():
                     budget_stop = f"{type(e).__name__}: {e}"
                     print(f"STOP ({tag(j)}): {budget_stop}; in-flight runs pause after their current round",
                           flush=True)
-                    stop.set()
-                except (AdaptionError, ReplayMismatch) as e:
-                    systemic = f"{type(e).__name__}: {e}"
-                    print(f"SYSTEMIC ERROR on {tag(j)}: {systemic}", flush=True)
-                    stop.set()
+                    stop_all()
+                except RateLimited as e:
+                    if not stops[j[0]].is_set():
+                        rate_limited[j[0]] = str(e)
+                        print(f"RATE LIMITED {tag(j)}: {e}; stopping {j[0]} (other models continue)", flush=True)
+                        stops[j[0]].set()
+                except (APIError, ReplayMismatch) as e:
+                    if not stops[j[0]].is_set():
+                        systemic[j[0]] = f"{type(e).__name__}: {e}"
+                        print(f"SYSTEMIC ERROR on {tag(j)}: {systemic[j[0]]}; stopping {j[0]} "
+                              "(other models continue)", flush=True)
+                        stops[j[0]].set()
     except KeyboardInterrupt:
         print("\ninterrupted: in-flight runs will pause after their current round "
               "(Ctrl-C again to quit immediately; completed rounds are already on disk)")
-        stop.set()
+        stop_all()
         try:
             wait(running)
         except KeyboardInterrupt:
@@ -373,9 +402,11 @@ def main():
     if client:
         print(f"spend: {client.spent:.4f} cumulative for {exp.name} "
               f"({client.transient_failures} transient failed attempts this invocation)")
-        if llm["api"] == "openrouter":
-            print("key status: " + ", ".join(f"{a}: {'retired' if v['retired'] else 'live'}"
-                                             for a, v in client.pool.status().items()))
+        print("key status: " + ", ".join(f"{a}: {'retired' if v['retired'] else 'live'}"
+                                         for a, v in client.pool.status().items()))
+        print("429s this invocation: " + ", ".join(f"{m}: {g.rate_limits}" for m, g in client.gates.items()))
+        print("in-flight fallbacks: " + ", ".join(f"{m}: {g.fallbacks} (limit now {g.limit}/{g.max_inflight})"
+                                                  for m, g in client.gates.items()))
     if budget_stop:
         print(f"stopped cleanly: {budget_stop}")
     if deadline_hit:
@@ -384,8 +415,11 @@ def main():
         part = sum(1 for j in remaining if partial_progress(run_path(exp, *j)))
         print(f"{len(remaining)} run(s) incomplete ({part} with checkpoints). "
               "Rerun the same command to resume.")
+    for m, msg in rate_limited.items():
+        print(f"{m} stopped on sustained rate limiting ({msg}); rerun later to resume")
     if systemic:
-        print(f"fix before rerunning: {systemic}")
+        for m, msg in systemic.items():
+            print(f"fix before rerunning {m}: {msg}")
         sys.exit(1)
     sys.exit(2 if remaining else 0)
 
