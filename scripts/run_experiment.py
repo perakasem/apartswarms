@@ -234,12 +234,13 @@ def main():
           + (f" ({n_partial} will resume from a checkpoint)" if n_partial else ""))
 
     if args.dry_run:
+        unit = "USD" if llm["api"] == "openrouter" else "credits"
         proj = project_cost(exp, jobs, resumable, models, cells)
         for m, p in proj.items():
             cal = f"~{p['calibrated']:.2f} (probe-calibrated)" if p["calibrated"] is not None else "no probe yet"
-            print(f"  {m}: {p['runs']} runs, {cal}; upper bound {p['upper']:.2f} credits")
+            print(f"  {m}: {p['runs']} runs, {cal}; upper bound {p['upper']:.2f} {unit}")
         spent = ledger_total(exp.out_dir() / "ledger.jsonl")
-        print(f"upper bound total ~{sum(p['upper'] for p in proj.values()):.2f} credits; ledger so far "
+        print(f"upper bound total ~{sum(p['upper'] for p in proj.values()):.2f} {unit}; ledger so far "
               f"{spent:.2f}; cumulative cap {llm['max_credits']}. Upper bound assumes notes at the "
               f"{NOTES_MAX_CHARS}-char limit every round; neither figure includes retries or re-asks.")
         return
