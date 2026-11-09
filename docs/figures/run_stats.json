@@ -1,0 +1,20 @@
+{
+ "qwen3.5-397b": {
+  "runs": 330,
+  "runs_resumed_from_checkpoint": 83,
+  "first_end": "15:11:25",
+  "last_end": "17:17:37"
+ },
+ "deepseek-v4-flash": {
+  "runs": 330,
+  "runs_resumed_from_checkpoint": 118,
+  "first_end": "15:13:33",
+  "last_end": "16:29:37"
+ },
+ "glm-5.2": {
+  "runs": 330,
+  "runs_resumed_from_checkpoint": 0,
+  "first_end": "15:05:37",
+  "last_end": "16:10:20"
+ }
+}
